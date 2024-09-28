@@ -74,10 +74,10 @@ Please cite the following when using ``TSCC`` in your academic publication.
       author = {Karen Schulz, Jan Erik Kunze, Dominik Martin, Thorsten Mietzel, Andre Niemann},
       title = {TSCC: Time Series Check and Correct},
       year = {2024},
-      version = {1.0},
+      version = {0.1.0},
       organization = {Institute of Hydraulic Engineering and Water Resources Management, University Duisburg-Essen},
       url = {https://pypi.org/project/TSCC/},
-      note = {Licensed under the MIT License. See https://opensource.org/licenses/MIT for details.}
+      note = {Licensed under the GNU General Public License v3 (GPLv3) License. See https://www.gnu.org/licenses/gpl-3.0.en.html for details.}
    }
 
 
