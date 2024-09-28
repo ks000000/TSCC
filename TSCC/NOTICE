@@ -1,0 +1,97 @@
+NOTICE FILE
+
+This product includes third-party software components listed below. These components are subject to their respective license terms.
+
+1. denseweight==0.1.2
+   License: MIT License
+
+2. haversine==2.7.0
+   License: MIT License
+
+3. imbalanced-learn
+   License: MIT License
+
+4. joblib==1.4.2
+   License: BSD License
+
+5. matplotlib==3.6.1
+   License: PSF License (Python Software Foundation License)
+
+6. numpy==1.23.4
+   License: BSD License
+
+9. pandas==1.5.1
+   License: BSD License
+
+10. pandas_profiling==3.6.6
+    License: MIT License
+
+11. plotly==5.11.0
+    License: MIT License
+
+12. pykalman==0.9.5
+    License: BSD License
+
+13. pyproj==3.4.0
+    License: MIT License
+
+14. python_dateutil==2.8.2
+    License: BSD License
+
+15. pytz==2022.5
+    License: MIT License
+
+16. resreg==0.2
+    License: GNU General Public License v3 (GPLv3)
+
+17. requests==2.28.1
+    License: Apache License 2.0
+
+18. scikit_learn==1.2.2
+    License: BSD License
+
+19. scipy==1.9.3
+    License: BSD License
+
+20. seaborn==0.13.0
+    License: BSD License
+
+21. Shapely==1.8.5.post1
+    License: BSD License
+
+22. smogn==0.1.2
+    License: GNU General Public License v3 (GPLv3)
+
+23. statsmodels==0.13.4
+    License: BSD License
+
+24. tensorflow==2.15.0
+    License: Apache License 2.0
+
+25. tqdm==4.66.5
+    License: MIT License
+
+---
+
+### Copied Code:
+26. **missingpy**
+    - This package was copied into this project.
+    - License: GNU General Public License v3 (GPLv3)
+      You may obtain a copy of the License at
+      https://www.gnu.org/licenses/gpl-3.0.en.html
+    - Usage: Portions of this project include code from missingpy for data imputation.
+
+27. **GAIN (Generative Adversarial Imputation Networks)**
+    - Source: https://github.com/jsyoon0823/GAIN
+    - License: Apache License, Version 2.0
+      You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+    - Usage: Portions of this project include code from GAIN for data imputation.
+
+---
+
+The above components are provided under the terms of their respective licenses. The full text of the licenses can be found in the corresponding LICENSE files distributed with these packages or on their respective repositories and documentation.
+
+If you redistribute any portion of this product, you are responsible for complying with the terms of the licenses for each third-party component.
+
+This software and its components are licensed as described above.
