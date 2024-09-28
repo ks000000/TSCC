@@ -1,0 +1,739 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Model evaluation error metrics &#8212; TSCC 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'model_error_metrics';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Evaluation wrapper" href="evaluation_handler.html" />
+    <link rel="prev" title="Data quality coefficients" href="data_quality_coefficients.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 28, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="api_reference.html" class="nav-link">API-Reference</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Model...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-TSCC.assessment.model_error_metrics">
+<span id="model-evaluation-error-metrics"></span><h1>Model evaluation error metrics<a class="headerlink" href="#module-TSCC.assessment.model_error_metrics" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.NSE">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">NSE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_true</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#NSE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.NSE" title="Permalink to this definition">#</a></dt>
+<dd><p>Measure the Nash-Sutcliffe Efficiency (NSE)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>y_gt</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of the ground truth dataset.</p>
+</dd>
+<dt><strong>y_pred</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of your prediction.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>float</dt><dd><p>The Nash-Sutcliffe Efficiency.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.abs_vol_error">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">abs_vol_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_gt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#abs_vol_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.abs_vol_error" title="Permalink to this definition">#</a></dt>
+<dd><p>Measure the absolute volume error (AVE)
+assuming equal weighting (equidistant time steps) for all observations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>y_gt</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of the ground truth dataset.</p>
+</dd>
+<dt><strong>y_pred</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of your prediction.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ave</strong><span class="classifier">float</span></dt><dd><p>The absolute volume error.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gt_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ave</span> <span class="o">=</span> <span class="n">TSCC</span><span class="o">.</span><span class="n">assessment</span><span class="o">.</span><span class="n">abs_vol_error</span><span class="p">(</span><span class="n">gt_series</span><span class="p">,</span> <span class="n">pred_series</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ave</span>
+<span class="go">XY</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.indicator_error_relevance">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">indicator_error_relevance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_gt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset_boundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relevance_function</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">extraArgs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#indicator_error_relevance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.indicator_error_relevance" title="Permalink to this definition">#</a></dt>
+<dd><p>Measure the indicator error and relevance of each value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>y_gt</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of the ground truth dataset.</p>
+</dd>
+<dt><strong>y_pred</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of your prediction.</p>
+</dd>
+<dt><strong>threshold</strong><span class="classifier">int or float</span></dt><dd><p>A threshold for the difference of gt-value and pred-value. If the difference is lower than the
+threshold, then this values become irrelevant for the indicator.</p>
+</dd>
+<dt><strong>relevance_function</strong><span class="classifier">function</span></dt><dd><p>A function you can use to set a threshold, so lower gt-values won’t be included in this measurement.</p>
+</dd>
+<dt><strong>*extraArgs</strong><span class="classifier">int or float</span></dt><dd><p>A threshold for relevance_function.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ind_rel</strong><span class="classifier">int or float</span></dt><dd><p>The indicator error.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gt_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ind_rel</span> <span class="o">=</span> <span class="n">indicator_error_relevance</span><span class="p">(</span><span class="n">gt_series</span><span class="p">,</span> <span class="n">pred_series</span><span class="p">,</span> <span class="n">relevance_fct_indicator</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ind_rel</span>
+<span class="go">1.0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.peak_error">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">peak_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_gt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#peak_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.peak_error" title="Permalink to this definition">#</a></dt>
+<dd><p>Measure the peak error
+assuming equal weighting (equidistant time steps) for all observations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>y_gt</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of the ground truth dataset with datetime index.</p>
+</dd>
+<dt><strong>y_pred</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of your prediction with datetime index.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ape</strong><span class="classifier">float</span></dt><dd><p>Absolute Peak Error (APE), absolute deviation from peak value.</p>
+</dd>
+<dt><strong>rpe</strong><span class="classifier">float</span></dt><dd><p>Relative Peak Error (RPE), relative deviation from peak value.</p>
+</dd>
+<dt><strong>pte</strong><span class="classifier">float</span></dt><dd><p>Peak Time Error (PTE) , time deviation from peak time.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gt_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span><span class="c1"># index must be datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span><span class="c1"># index must be datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ape</span><span class="p">,</span> <span class="n">rpe</span><span class="p">,</span> <span class="n">pte</span> <span class="o">=</span> <span class="n">peak_error</span><span class="p">(</span><span class="n">gt_series</span><span class="p">,</span> <span class="n">pred_series</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rve</span>
+<span class="go">XY</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.rate_error_relevance">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">rate_error_relevance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_gt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relevance_function</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">extraArgs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#rate_error_relevance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.rate_error_relevance" title="Permalink to this definition">#</a></dt>
+<dd><p>Measure the error rate and relevance of each value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>y_gt</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of the ground truth dataset.</p>
+</dd>
+<dt><strong>y_pred</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of your prediction.</p>
+</dd>
+<dt><strong>relevance_function</strong><span class="classifier">function</span></dt><dd><p>A function you can use to set a threshold, so lower gt-values won’t be included in this measurement.</p>
+</dd>
+<dt><strong>*extraArgs</strong><span class="classifier">int or float</span></dt><dd><p>A threshold for relevance_function.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>rate_rel</strong><span class="classifier">int or float</span></dt><dd><p>The error rate.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gt_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rate_rel</span> <span class="o">=</span> <span class="n">rate_error_relevance</span><span class="p">(</span><span class="n">gt_series</span><span class="p">,</span> <span class="n">pred_series</span><span class="p">,</span> <span class="n">relevance_fct_indicator</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rate_rel</span>
+<span class="go">1.5</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.rel_vol_error">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">rel_vol_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_gt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#rel_vol_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.rel_vol_error" title="Permalink to this definition">#</a></dt>
+<dd><p>Measure the relative volume error (RVE)
+assuming equal weighting (equidistant time steps) for all observations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>y_gt</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of the ground truth dataset.</p>
+</dd>
+<dt><strong>y_pred</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of your prediction.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>rve</strong><span class="classifier">float</span></dt><dd><p>The relative volume error.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gt_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ave</span> <span class="o">=</span> <span class="n">rel_vol_error</span><span class="p">(</span><span class="n">gt_series</span><span class="p">,</span> <span class="n">pred_series</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">rve</span>
+<span class="go">XY</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.relevance_fct_indicator">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">relevance_fct_indicator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subset_boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-</span> <span class="pre">inf,</span> <span class="pre">inf)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#relevance_fct_indicator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.relevance_fct_indicator" title="Permalink to this definition">#</a></dt>
+<dd><p>Indicator function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>series</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of which entries are assessed regarding its relevance.</p>
+</dd>
+<dt><strong>subset_boundary</strong><span class="classifier">tuple</span></dt><dd><p>Lower and upper boundary of subset receiving value one, and all other elements to zero</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>series</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of boolean dtype.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.relevance_fct_root">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">relevance_fct_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#relevance_fct_root"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.relevance_fct_root" title="Permalink to this definition">#</a></dt>
+<dd><p>Root function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>series</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of which entries are assessed regarding its relevance.</p>
+</dd>
+<dt><strong>addend</strong><span class="classifier">float</span></dt><dd><p>Addend of root function</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>series</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of boolean dtype.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="TSCC.assessment.model_error_metrics.squared_error_relevance_area">
+<span class="sig-prename descclassname"><span class="pre">TSCC.assessment.model_error_metrics.</span></span><span class="sig-name descname"><span class="pre">squared_error_relevance_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_gt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_relevance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/assessment/model_error_metrics.html#squared_error_relevance_area"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.assessment.model_error_metrics.squared_error_relevance_area" title="Permalink to this definition">#</a></dt>
+<dd><p>Measure the squared error relevance and its area proposed by Ribeiro and Moniz, 2020</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>y_gt</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of the ground truth dataset.</p>
+</dd>
+<dt><strong>y_pred</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of your prediction.</p>
+</dd>
+<dt><strong>y_relevance</strong><span class="classifier">pandas series</span></dt><dd><p>Pandas series of the obervations relevances.</p>
+</dd>
+<dt><strong>interval_size</strong><span class="classifier">float, optional</span></dt><dd><p>An interval size between 0 and 1. The default is 0.001.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>sera</strong><span class="classifier">float</span></dt><dd><p>The squared error relevance area.</p>
+</dd>
+<dt><strong>df_ser</strong><span class="classifier">pandas dataframe</span></dt><dd><p>The squared error relevances for each phi(y).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gt_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pred_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sera</span><span class="p">,</span> <span class="n">ser</span> <span class="o">=</span> <span class="n">squared_error_relevance_area</span><span class="p">(</span><span class="n">gt_series</span><span class="p">,</span> <span class="n">pred_series</span><span class="p">,</span> <span class="n">relevance_fct_root</span><span class="p">(</span><span class="n">gt_series</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sera</span>
+<span class="go">1.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ser</span><span class="p">[</span><span class="s2">&quot;phi&quot;</span><span class="p">],</span> <span class="n">ser</span><span class="p">[</span><span class="s2">&quot;ser_phi&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+Synthetic error generation
+==========================
+
+.. automodule:: TSCC.preprocessing.synthetic_error_generation
+   :members:

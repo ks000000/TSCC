@@ -1,0 +1,821 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSCC.exploration.events &#8212; TSCC 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/TSCC/exploration/events';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 21, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">TSCC.explora...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for TSCC.exploration.events</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<div class="viewcode-block" id="fct_indicator"><a class="viewcode-back" href="../../../events.html#TSCC.exploration.events.fct_indicator">[docs]</a><span class="k">def</span> <span class="nf">fct_indicator</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">threshold_min</span><span class="p">,</span> <span class="n">threshold_max</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    for internal use only</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">threshold_min</span><span class="p">,</span> <span class="n">threshold_max</span><span class="p">,</span> <span class="n">inclusive</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="getEvents"><a class="viewcode-back" href="../../../events.html#TSCC.exploration.events.getEvents">[docs]</a><span class="k">def</span> <span class="nf">getEvents</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">max_time_dist_from_center</span><span class="p">,</span>
+               <span class="n">center_valley</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)),</span>
+               <span class="n">center_peak</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)),</span>
+              <span class="n">event_sum</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)),</span>
+              <span class="n">event_dist</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">)):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finds events that satisfy the following conditions: A minimal intensity,</span>
+<span class="sd">    a minimal and maximal time span of the event of event.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    s : pandas series</span>
+<span class="sd">        Series with numerical entries, index in datetime format</span>
+<span class="sd">        timestep must be equidistant</span>
+<span class="sd">    max_time_dist_from_center : string</span>
+<span class="sd">        Defines the timestep lengths of the maximal distance to the center of the event</span>
+<span class="sd">        Has to be the format number + letter.</span>
+<span class="sd">        Possible for time step units (letter):</span>
+<span class="sd">            seconds, minutes, hours, days, years.</span>
+<span class="sd">        Examples: &quot;2s&quot; for two seconds, &quot;5t&quot; for five minute,</span>
+<span class="sd">                  &quot;5h&quot; for five hours, &quot;4d&quot; for four day or &quot;1y&quot; for one year.</span>
+<span class="sd">    center_valley : optional, numeric duple</span>
+<span class="sd">        The min and max valley intensity that an event must have</span>
+<span class="sd">    center_peak : optional, numeric duple</span>
+<span class="sd">        The min and max peak intensity that an event must have</span>
+<span class="sd">    event_sum : optional, numeric duple</span>
+<span class="sd">        The min and max event sum that an event must have</span>
+<span class="sd">    event_dist : (min, max, rate_included)</span>
+<span class="sd">        The event range by min and max value combined with the</span>
+<span class="sd">        rate range in [0,1], stating the value rate outside the typical event interval</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    list</span>
+<span class="sd">        nested list with a sublist of each event including the</span>
+<span class="sd">        - starting time</span>
+<span class="sd">        - ending time</span>
+<span class="sd">        - minimal intensity</span>
+<span class="sd">        - maximal intensity</span>
+<span class="sd">        - event sum</span>
+<span class="sd">        in that order.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import pandas as pd</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; # Create a date range for the timestamps</span>
+<span class="sd">    &gt;&gt;&gt; date_range = pd.date_range(start=&#39;2000-04-29&#39;, periods=50, freq=&#39;5min&#39;)</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; # Generate random data for &#39;value_plaus&#39;</span>
+<span class="sd">    &gt;&gt;&gt; np.random.seed(0)  # For reproducibility</span>
+<span class="sd">    &gt;&gt;&gt; value_plaus = np.random.poisson(lam=1, size=len(date_range))  # Lambda set to 3</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; # Create the DataFrame</span>
+<span class="sd">    &gt;&gt;&gt; df = pd.DataFrame({</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;timestamp&#39;: date_range,</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;value_plaus&#39;: value_plaus</span>
+<span class="sd">    &gt;&gt;&gt; })</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; event_list = TSCC.exploration.getEvents(df.set_index(&quot;timestamp&quot;)[&quot;value_plaus&quot;],</span>
+<span class="sd">    &gt;&gt;&gt;     max_time_dist_from_center = &quot;45t&quot;,</span>
+<span class="sd">    &gt;&gt;&gt;     #center_valley = (-float(&quot;inf&quot;), float(&quot;inf&quot;)),</span>
+<span class="sd">    &gt;&gt;&gt;     center_peak = (2, float(&quot;inf&quot;)),</span>
+<span class="sd">    &gt;&gt;&gt;     event_sum=(3, 140),</span>
+<span class="sd">    &gt;&gt;&gt;     event_dist = (0.000001, float(&quot;inf&quot;), .3))</span>
+<span class="sd">    &gt;&gt;&gt; print(event_list)</span>
+<span class="sd">    [[Timestamp(&#39;2000-04-29 00:00:00&#39;),</span>
+<span class="sd">      Timestamp(&#39;2000-04-29 00:45:00&#39;),</span>
+<span class="sd">      0,</span>
+<span class="sd">      5,</span>
+<span class="sd">      15],</span>
+<span class="sd">     [Timestamp(&#39;2000-04-29 00:10:00&#39;),</span>
+<span class="sd">      Timestamp(&#39;2000-04-29 01:40:00&#39;),</span>
+<span class="sd">      0,</span>
+<span class="sd">      5,</span>
+<span class="sd">      24],</span>
+<span class="sd">     [Timestamp(&#39;2000-04-29 02:15:00&#39;),</span>
+<span class="sd">      Timestamp(&#39;2000-04-29 03:45:00&#39;),</span>
+<span class="sd">      0,</span>
+<span class="sd">      3,</span>
+<span class="sd">      13],</span>
+<span class="sd">     [Timestamp(&#39;2000-04-29 03:05:00&#39;),</span>
+<span class="sd">      Timestamp(&#39;2000-04-29 04:05:00&#39;), 0, 2, 9]]</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_fct</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">df_fct</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">]</span>
+    <span class="n">df_fct</span> <span class="o">=</span> <span class="n">df_fct</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)</span>
+
+    <span class="c1"># check for intensities (for each observation)</span>
+    <span class="n">df_fct</span><span class="p">[</span><span class="s2">&quot;kept_peak_limits&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_fct</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">center_peak</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">center_peak</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">df_fct</span><span class="p">[</span><span class="s2">&quot;kept_valley_limits&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_fct</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">center_valley</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">center_valley</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="c1"># extract center times of possible events</span>
+    <span class="n">possible_event_center_time</span> <span class="o">=</span> <span class="n">df_fct</span><span class="p">[</span><span class="n">df_fct</span><span class="p">[</span><span class="s2">&quot;kept_peak_limits&quot;</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">df_fct</span><span class="p">[</span><span class="s2">&quot;kept_valley_limits&quot;</span><span class="p">]][</span><span class="s2">&quot;timestamp&quot;</span><span class="p">]</span>
+
+    <span class="n">event_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">cur_timestamp</span> <span class="ow">in</span> <span class="n">possible_event_center_time</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">event_list</span><span class="p">:</span>
+            <span class="c1"># dont overlap events, if at least one event is in list</span>
+            <span class="k">if</span> <span class="n">cur_timestamp</span> <span class="o">&lt;=</span> <span class="n">event_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="k">continue</span>
+        <span class="c1"># extract possible timeframe to left and right</span>
+        <span class="n">df_event</span> <span class="o">=</span> <span class="n">df_fct</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s1">&#39;&quot;</span><span class="si">{</span><span class="n">cur_timestamp</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">max_time_dist_from_center</span><span class="p">)</span><span class="si">}</span><span class="s1">&quot; &lt;= timestamp &lt;= &quot;</span><span class="si">{</span><span class="n">cur_timestamp</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">max_time_dist_from_center</span><span class="p">)</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
+        <span class="n">df_event</span> <span class="o">=</span> <span class="n">df_event</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)</span>
+        <span class="c1"># exclude beginning and end of event with 0 values</span>
+        <span class="c1">#df_event = df_event[df_event[&quot;value&quot;].cumsum() &gt; 0]</span>
+        <span class="c1">#df_event = df_event[df_event.loc[::-1, &quot;value&quot;].cumsum()[::-1] &gt; 0]</span>
+        <span class="c1"># compute key figures for event</span>
+        <span class="n">ev_peak_intensity</span> <span class="o">=</span> <span class="n">df_event</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="n">ev_valley_intensity</span> <span class="o">=</span> <span class="n">df_event</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="n">max_intensity_idx</span> <span class="o">=</span> <span class="n">df_event</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+        <span class="n">ev_event_sum</span> <span class="o">=</span> <span class="n">df_event</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="c1"># check conditions for event</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">event_sum</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">ev_event_sum</span> <span class="o">&lt;=</span> <span class="n">event_sum</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="c1"># skip this possible event due to wrong event sum</span>
+            <span class="k">continue</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="n">fct_indicator</span><span class="p">(</span><span class="n">df_event</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">],</span> <span class="n">event_dist</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">event_dist</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">df_event</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;=</span> <span class="n">event_dist</span><span class="p">[</span><span class="mi">2</span><span class="p">]):</span>
+            <span class="c1"># skip this possible event due to wrong distribution of data</span>
+            <span class="k">continue</span>
+        <span class="n">event_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+            <span class="nb">min</span><span class="p">(</span><span class="n">max_intensity_idx</span><span class="p">,</span> <span class="n">df_event</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">()),</span>
+            <span class="nb">max</span><span class="p">(</span><span class="n">max_intensity_idx</span><span class="p">,</span> <span class="n">df_event</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span>
+            <span class="n">ev_valley_intensity</span><span class="p">,</span>
+            <span class="n">ev_peak_intensity</span><span class="p">,</span>
+            <span class="n">ev_event_sum</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">event_list</span></div>
+
+
+<div class="viewcode-block" id="setDictRect"><a class="viewcode-back" href="../../../events.html#TSCC.exploration.events.setDictRect">[docs]</a><span class="k">def</span> <span class="nf">setDictRect</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    for internal use only</span>
+
+<span class="sd">    The function generates a dictionary with characteristics of a rectangle.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">fillcolor</span><span class="o">=</span><span class="s2">&quot;rgba(200, 0, 0, 0.4)&quot;</span><span class="p">,</span>
+                <span class="n">line</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+                <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;rect&quot;</span><span class="p">,</span>
+                <span class="n">x0</span><span class="o">=</span><span class="n">x0</span><span class="p">,</span>      <span class="n">x1</span><span class="o">=</span><span class="n">x1</span><span class="p">,</span>
+                <span class="n">xref</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span>   <span class="n">yref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span>
+                <span class="n">y0</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>    <span class="n">y1</span><span class="o">=</span><span class="mf">0.99</span><span class="p">,</span>
+                <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="indices2dict"><a class="viewcode-back" href="../../../events.html#TSCC.exploration.events.indices2dict">[docs]</a><span class="k">def</span> <span class="nf">indices2dict</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">J</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    for internal use only</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">return</span> <span class="p">[</span><span class="n">setDictRect</span><span class="p">(</span><span class="n">J</span><span class="p">[</span><span class="n">t0</span><span class="p">],</span> <span class="n">J</span><span class="p">[</span><span class="n">t1</span><span class="p">])</span> <span class="k">for</span> <span class="n">t0</span><span class="p">,</span> <span class="n">t1</span> <span class="ow">in</span> <span class="n">K</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="addShapes"><a class="viewcode-back" href="../../../events.html#TSCC.exploration.events.addShapes">[docs]</a><span class="k">def</span> <span class="nf">addShapes</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">J</span><span class="p">,</span> <span class="n">fig</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    for internal use only</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+        <span class="n">shapes</span><span class="o">=</span><span class="n">indices2dict</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">J</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">fig</span></div>
+
+
+<div class="viewcode-block" id="highlightEventsPlot"><a class="viewcode-back" href="../../../events.html#TSCC.exploration.events.highlightEventsPlot">[docs]</a><span class="k">def</span> <span class="nf">highlightEventsPlot</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">event_list</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Highlights specific events on a time series plot using Plotly.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    s : pandas Series</span>
+<span class="sd">        A series with a datetime index representing a time series.</span>
+<span class="sd">    event_list : nested list</span>
+<span class="sd">        A list containing event intervals, where each event is defined by two</span>
+<span class="sd">        timestamps (start and end). This is typically the output from the</span>
+<span class="sd">        getEvents() function.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    plot : Plotly plot</span>
+<span class="sd">        A time series plot with highlighted event intervals.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    # Assuming the DataFrame &#39;df&#39; has a &#39;timestamp&#39; column and a &#39;value_plaus&#39; column:</span>
+
+<span class="sd">    &gt;&gt;&gt; df_time = &quot;timestamp&quot;</span>
+<span class="sd">    &gt;&gt;&gt; df_value_raw = &quot;value_plaus&quot;</span>
+<span class="sd">    &gt;&gt;&gt; # Get the list of events using the getEvents() function:</span>
+<span class="sd">    &gt;&gt;&gt; event_list = getEvents(df.iloc[:60000].set_index(df_time)[df_value_raw],</span>
+<span class="sd">    &gt;&gt;&gt;                        max_time_dist_from_center=&quot;45t&quot;,</span>
+<span class="sd">    &gt;&gt;&gt;                        center_peak=(2, float(&quot;inf&quot;)),</span>
+<span class="sd">    &gt;&gt;&gt;                        event_sum=(3, 140),</span>
+<span class="sd">    &gt;&gt;&gt;                        event_dist=(0.000001, float(&quot;inf&quot;), .3))</span>
+<span class="sd">    &gt;&gt;&gt; # Plot the time series with highlighted events:</span>
+<span class="sd">    &gt;&gt;&gt; highlightEventsPlot(df.set_index(&quot;timestamp&quot;).iloc[:60000][&quot;value_plaus&quot;],</span>
+<span class="sd">    &gt;&gt;&gt;                     event_list)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+    <span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">names</span> <span class="o">=</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">)</span>
+
+    <span class="n">K</span> <span class="o">=</span> <span class="p">[[</span><span class="n">df</span><span class="o">.</span><span class="n">timestamp</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">==</span> <span class="n">cur_timestamp</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+          <span class="n">df</span><span class="o">.</span><span class="n">timestamp</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">==</span> <span class="n">cur_timestamp</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="k">for</span> <span class="n">cur_timestamp</span> <span class="ow">in</span> <span class="n">event_list</span><span class="p">]</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;timestamp&quot;</span><span class="p">)</span>
+
+    <span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s1">&#39;browser&#39;</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                                   <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">))</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+        <span class="n">shapes</span><span class="o">=</span><span class="n">indices2dict</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="getEventReturnPeriod"><a class="viewcode-back" href="../../../events.html#TSCC.exploration.events.getEventReturnPeriod">[docs]</a><span class="k">def</span> <span class="nf">getEventReturnPeriod</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">KOSTRA_DS</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate heavy rainfall events based on rolling sums over different durations</span>
+<span class="sd">    and thresholds from the KOSTRA_DS dataset.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    series : pandas series</span>
+<span class="sd">        A time series of rainfall data with a datetime index and rainfall amounts as values.</span>
+<span class="sd">    KOSTRA_DS : pandas dataframe</span>
+<span class="sd">        A DataFrame containing threshold values from the KOSTRA-DS dataset.</span>
+<span class="sd">        Columns represent different probabilities (`wdkzeit`), and rows represent</span>
+<span class="sd">        durations (`duration_level`) for heavy rainfall.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas dataframe</span>
+<span class="sd">        A DataFrame where each row corresponds to a timestamp and includes binary</span>
+<span class="sd">        indicators for whether heavy rainfall occurred for each probability (`wdkzeit`).</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt;import pandas as pd</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt;# Define the data</span>
+<span class="sd">    &gt;&gt;&gt;data = {</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;1a&quot;: [9.7, 12.0, 14.5, 16.1, 17.4, 20.8, 23.0, 27.4, 30.4, 32.6, 38.8, 43.0],</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;3a&quot;: [13.0, 16.0, 19.4, 21.6, 23.2, 27.8, 30.8, 36.7, 40.6, 43.6, 51.9, 57.5],</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;5a&quot;: [14.7, 18.0, 21.8, 24.3, 26.2, 31.3, 34.7, 41.3, 45.7, 49.2, 58.5, 64.7],</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;10a&quot;: [17.0, 20.9, 25.3, 28.2, 30.4, 36.3, 40.3, 48.0, 53.1, 57.1, 67.9, 75.2],</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;20a&quot;: [19.5, 24.0, 29.0, 32.3, 34.8, 41.5, 46.1, 54.9, 60.7, 65.3, 77.7, 86.0],</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;25a&quot;: [20.4, 25.0, 30.3, 33.7, 36.3, 43.4, 48.1, 57.3, 63.5, 68.2, 81.2, 89.9],</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;30a&quot;: [21.1, 25.9, 31.4, 34.9, 37.6, 45.0, 49.8, 59.4, 65.7, 70.7, 84.1, 93.1],</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;50a&quot;: [23.2, 28.5, 34.5, 38.4, 41.4, 49.4, 54.8, 65.3, 72.3, 77.7, 92.5, 102.4],</span>
+<span class="sd">    &gt;&gt;&gt;    &quot;100a&quot;: [26.2, 32.2, 39.0, 43.4, 46.7, 55.9, 61.9, 73.7, 81.7, 87.8, 104.5, 115.6]</span>
+<span class="sd">    &gt;&gt;&gt;}</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt;# Define the index (time intervals)</span>
+<span class="sd">    &gt;&gt;&gt;index = [&quot;15 min&quot;, &quot;30 min&quot;, &quot;60 min&quot;, &quot;90 min&quot;, &quot;2 h&quot;, &quot;4 h&quot;, &quot;6 h&quot;, &quot;12 h&quot;, &quot;18 h&quot;, &quot;24 h&quot;, &quot;48 h&quot;, &quot;72 h&quot;]</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt;# Create the DataFrame</span>
+<span class="sd">    &gt;&gt;&gt;df = pd.DataFrame(data, index=index)</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt;# Display the DataFrame</span>
+<span class="sd">    &gt;&gt;&gt;print(df)</span>
+<span class="sd">    &gt;&gt;&gt;</span>
+<span class="sd">    &gt;&gt;&gt; # Get a DataFrame with heavy rainfall event indicators</span>
+<span class="sd">    &gt;&gt;&gt; df_re = TSCC.exploration.getEventReturnPeriod(df.set_index(df_time)[df_value_raw], KOSTRA_MH)</span>
+<span class="sd">    &gt;&gt;&gt;print(df_re.head())</span>
+<span class="sd">                             isHeavyRain_AtLeast1a  isHeavyRain_AtLeast3a  \</span>
+<span class="sd">    timestamp</span>
+<span class="sd">    2000-04-29 00:00:00                  False                  False</span>
+<span class="sd">    2000-04-29 00:05:00                  False                  False</span>
+<span class="sd">    2000-04-29 00:10:00                  False                  False</span>
+<span class="sd">    2000-04-29 00:15:00                  False                  False</span>
+<span class="sd">    2000-04-29 00:20:00                  False                  False</span>
+
+<span class="sd">                         isHeavyRain_AtLeast5a  isHeavyRain_AtLeast10a  \</span>
+<span class="sd">    timestamp</span>
+<span class="sd">    2000-04-29 00:00:00                  False                   False</span>
+<span class="sd">    2000-04-29 00:05:00                  False                   False</span>
+<span class="sd">    2000-04-29 00:10:00                  False                   False</span>
+<span class="sd">    2000-04-29 00:15:00                  False                   False</span>
+<span class="sd">    2000-04-29 00:20:00                  False                   False</span>
+
+<span class="sd">                         isHeavyRain_AtLeast20a  isHeavyRain_AtLeast25a  \</span>
+<span class="sd">    timestamp</span>
+<span class="sd">    2000-04-29 00:00:00                   False                   False</span>
+<span class="sd">    2000-04-29 00:05:00                   False                   False</span>
+<span class="sd">    2000-04-29 00:10:00                   False                   False</span>
+<span class="sd">    2000-04-29 00:15:00                   False                   False</span>
+<span class="sd">    2000-04-29 00:20:00                   False                   False</span>
+
+<span class="sd">                         isHeavyRain_AtLeast30a  isHeavyRain_AtLeast50a  \</span>
+<span class="sd">    timestamp</span>
+<span class="sd">    2000-04-29 00:00:00                   False                   False</span>
+<span class="sd">    2000-04-29 00:05:00                   False                   False</span>
+<span class="sd">    2000-04-29 00:10:00                   False                   False</span>
+<span class="sd">    2000-04-29 00:15:00                   False                   False</span>
+<span class="sd">    2000-04-29 00:20:00                   False                   False</span>
+
+<span class="sd">                         isHeavyRain_AtLeast100a</span>
+<span class="sd">    timestamp</span>
+<span class="sd">    2000-04-29 00:00:00                    False</span>
+<span class="sd">    2000-04-29 00:05:00                    False</span>
+<span class="sd">    2000-04-29 00:10:00                    False</span>
+<span class="sd">    2000-04-29 00:15:00                    False</span>
+<span class="sd">    2000-04-29 00:20:00                    False</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_15 min&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_30 min&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_60 min&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_90 min&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_2 h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_4 h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">48</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_6 h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_12 h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_18 h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="mi">18</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_24 h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="mi">24</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_48 h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="mi">48</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_72 h&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">12</span><span class="o">*</span><span class="mi">72</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">wdkzeit</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">KOSTRA_DS</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">duration_level</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">KOSTRA_DS</span><span class="o">.</span><span class="n">index</span><span class="p">):</span>
+            <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;isHeavyRain_</span><span class="si">{</span><span class="n">duration_level</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_</span><span class="si">{</span><span class="n">duration_level</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">KOSTRA_DS</span><span class="p">[</span><span class="n">wdkzeit</span><span class="p">][</span><span class="n">duration_level</span><span class="p">]</span>
+        <span class="n">duration_level_cols</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;isHeavyRain_</span><span class="si">{</span><span class="n">cur_duration_level</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">cur_duration_level</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">KOSTRA_DS</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+        <span class="n">df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;isHeavyRain_AtLeast</span><span class="si">{</span><span class="n">wdkzeit</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">duration_level_cols</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="c1">#sum(axis = 1)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">duration_level_cols</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;amount_15 min&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_30 min&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_60 min&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_90 min&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_2 h&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_4 h&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_6 h&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_12 h&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_18 h&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_24 h&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_48 h&quot;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s2">&quot;amount_72 h&quot;</span>
+                               <span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">series</span><span class="o">.</span><span class="n">name</span><span class="p">])</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

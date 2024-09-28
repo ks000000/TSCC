@@ -1,0 +1,802 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Machine learning error correction &#8212; TSCC 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'corr_ml';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Baseline error correction" href="corr_baseline.html" />
+    <link rel="prev" title="Statistical error correction" href="corr_statistical.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 28, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="api_reference.html" class="nav-link">API-Reference</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Machine...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-TSCC.correction.ml">
+<span id="machine-learning-error-correction"></span><h1>Machine learning error correction<a class="headerlink" href="#module-TSCC.correction.ml" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byGAIN_DW">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TSCC.correction.ml.</span></span><span class="sig-name descname"><span class="pre">ML_byGAIN_DW</span></span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byGAIN_DW"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byGAIN_DW" title="Permalink to this definition">#</a></dt>
+<dd><p>This class implements a model for data imputation using the GAIN (Generative Adversarial Imputation Nets) framework
+by <a class="github reference external" href="https://github.com/jsyoon0823/GAIN">jsyoon0823/GAIN</a>.
+The model is designed to fill in missing values in datasets by leveraging a deep learning approach.</p>
+<p>Right now only fit_transform part, therefore also newly trained model for test dataset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>gain_parameters: dict, optional</strong></dt><dd><p>A dictionary containing the parameters for the GAIN model, including ‘batch_size’, ‘hint_rate’,
+‘alpha’, and ‘iterations’. Default parameters will be used if not provided.</p>
+</dd>
+<dt><strong>alpha: float, default=1.0</strong></dt><dd><p>The weight for the dense loss function, influencing the training dynamics.</p>
+</dd>
+<dt><strong>exclude_cols: list, optional</strong></dt><dd><p>A list of columns to exclude from the training process. Not implemented in the current version.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byGAIN_DW.load_model" title="TSCC.correction.ml.ML_byGAIN_DW.load_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_model</span></code></a>(path)</p></td>
+<td><p>Load the model from a file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byGAIN_DW.save_model" title="TSCC.correction.ml.ML_byGAIN_DW.save_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_model</span></code></a>(path)</p></td>
+<td><p>Save the model to a file.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>fit</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>predict</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byGAIN_DW.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gain_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byGAIN_DW.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byGAIN_DW.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byGAIN_DW.load_model">
+<span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byGAIN_DW.load_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byGAIN_DW.load_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Load the model from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>The path to the model file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byGAIN_DW.save_model">
+<span class="sig-name descname"><span class="pre">save_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byGAIN_DW.save_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byGAIN_DW.save_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Save the model to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>The path to save the model file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byMissForest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TSCC.correction.ml.</span></span><span class="sig-name descname"><span class="pre">ML_byMissForest</span></span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byMissForest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byMissForest" title="Permalink to this definition">#</a></dt>
+<dd><p>This class implements the MissForest algorithm for imputation of missing values
+using Random Forests. It is designed to handle datasets with missing entries,
+providing a mechanism to fill in these gaps effectively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>max_features</strong><span class="classifier">int, default=100</span></dt><dd><p>The maximum number of features to consider when looking for the best split
+at each node in the forest. This can help in controlling overfitting and
+improving computational efficiency.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byMissForest.fit" title="TSCC.correction.ml.ML_byMissForest.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(df_fea, df_tar, df_flag_erroneous, config)</p></td>
+<td><p>Fits the MissForest model to the training data for imputation of missing values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byMissForest.load_model" title="TSCC.correction.ml.ML_byMissForest.load_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_model</span></code></a>(path)</p></td>
+<td><p>Load the model from a file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byMissForest.predict" title="TSCC.correction.ml.ML_byMissForest.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(df_fea, df_flag_erroneous, config)</p></td>
+<td><p>Imputes missing values in the input feature DataFrame using the fitted MissForest model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byMissForest.save_model" title="TSCC.correction.ml.ML_byMissForest.save_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_model</span></code></a>(path)</p></td>
+<td><p>Save the model to a file.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byMissForest.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byMissForest.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byMissForest.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initializes the ML_byRF class with a RandomForestClassifier model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>- n_estimators: int, default=100</strong></dt><dd><p>The number of trees in the forest.</p>
+</dd>
+<dt><strong>- random_state: int, RandomState instance or None, default=None</strong></dt><dd><p>Controls the randomness of the estimator.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byMissForest.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_fea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_tar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_flag_erroneous</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byMissForest.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byMissForest.fit" title="Permalink to this definition">#</a></dt>
+<dd><p>Fits the MissForest model to the training data for imputation of missing values.</p>
+<p>This method prepares the feature DataFrame for training the MissForest model. It
+replaces missing values based on the specified criteria and fits the model to the
+non-empty feature columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>df_fea</strong><span class="classifier">pandas DataFrame</span></dt><dd><p>The input features with missing values that need to be imputed.</p>
+</dd>
+<dt><strong>df_tar</strong><span class="classifier">pandas DataFrame</span></dt><dd><p>The target values (not used in MissForest but can be included for consistency).</p>
+</dd>
+<dt><strong>df_flag_erroneous</strong><span class="classifier">pandas Series</span></dt><dd><p>A boolean Series indicating which rows contain erroneous or missing values.</p>
+</dd>
+<dt><strong>config</strong><span class="classifier">object</span></dt><dd><p>Configuration object containing information about the dataset, including
+the name of the column to be predicted.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byMissForest.load_model">
+<span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byMissForest.load_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byMissForest.load_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Load the model from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>The path to the model file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byMissForest.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_fea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_flag_erroneous</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byMissForest.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byMissForest.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Imputes missing values in the input feature DataFrame using the fitted MissForest model.</p>
+<p>This method predicts values for the specified column in the DataFrame where the
+original values are missing (indicated by the <cite>df_flag_erroneous</cite>). It retains the
+original values where valid and fills in NaN where the values are flagged as erroneous.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>df_fea</strong><span class="classifier">pandas DataFrame</span></dt><dd><p>The input features with missing values to be imputed.</p>
+</dd>
+<dt><strong>df_flag_erroneous</strong><span class="classifier">String</span></dt><dd><p>A String referring to a column of df_fea with a boolean Series indicating which rows contain erroneous or missing values.</p>
+</dd>
+<dt><strong>config</strong><span class="classifier">object</span></dt><dd><p>Configuration object that contains information about the dataset, including
+the name of the column to be predicted.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>pandas Series</dt><dd><p>A Series containing the predicted values for the specified column, with
+NaN where the original values were not valid.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byMissForest.save_model">
+<span class="sig-name descname"><span class="pre">save_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byMissForest.save_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byMissForest.save_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Save the model to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>The path to save the model file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byRF">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TSCC.correction.ml.</span></span><span class="sig-name descname"><span class="pre">ML_byRF</span></span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byRF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byRF" title="Permalink to this definition">#</a></dt>
+<dd><p>This class implements a Random Forest model for regression tasks using the RandomForestRegressor from
+scikit-learn.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n_estimators</strong><span class="classifier">int, default=100</span></dt><dd><p>The number of trees in the forest, influencing the model’s complexity and performance.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int, RandomState instance or None, default=None</span></dt><dd><p>Controls the randomness of the estimator for reproducibility.</p>
+</dd>
+<dt><strong>max_depth</strong><span class="classifier">int, default=15</span></dt><dd><p>The maximum depth of the trees. It helps prevent overfitting by limiting how deep the trees can grow.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byRF.fit" title="TSCC.correction.ml.ML_byRF.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(df_fea, df_tar, df_flag_erroneous, config)</p></td>
+<td><p>Fits the RandomForestClassifier model to the data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byRF.load_model" title="TSCC.correction.ml.ML_byRF.load_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_model</span></code></a>(path)</p></td>
+<td><p>Load the model from a file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byRF.predict" title="TSCC.correction.ml.ML_byRF.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(df_fea, df_flag_erroneous, config)</p></td>
+<td><p>Predict class for X.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#TSCC.correction.ml.ML_byRF.save_model" title="TSCC.correction.ml.ML_byRF.save_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_model</span></code></a>(path)</p></td>
+<td><p>Save the model to a file.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byRF.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byRF.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byRF.__init__" title="Permalink to this definition">#</a></dt>
+<dd><p>Initializes the ML_byRF class with a RandomForestClassifier model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n_estimators</strong><span class="classifier">int, default=100</span></dt><dd><p>The number of trees in the forest.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int, RandomState instance or None, default=None</span></dt><dd><p>Controls the randomness of the estimator.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byRF.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_fea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_tar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_flag_erroneous</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byRF.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byRF.fit" title="Permalink to this definition">#</a></dt>
+<dd><p>Fits the RandomForestClassifier model to the data. Function does not support NaN values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>df_fea</strong><span class="classifier">pandas dataframe</span></dt><dd><p>The training input samples.</p>
+</dd>
+<dt><strong>df_tar</strong><span class="classifier">pandas dataframe</span></dt><dd><p>The target values (class labels).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>decision_clf</strong><span class="classifier">RandomForestClassifier object</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byRF.load_model">
+<span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byRF.load_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byRF.load_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Load the model from a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>The path to the model file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byRF.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df_fea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_flag_erroneous</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byRF.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byRF.predict" title="Permalink to this definition">#</a></dt>
+<dd><p>Predict class for X. Function does not support NaN values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like or sparse matrix of shape (n_samples, n_features)</span></dt><dd><p>The input samples.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y_pred</strong><span class="classifier">array of shape (n_samples,)</span></dt><dd><p>The predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TSCC.correction.ml.ML_byRF.save_model">
+<span class="sig-name descname"><span class="pre">save_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TSCC/correction/ml.html#ML_byRF.save_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TSCC.correction.ml.ML_byRF.save_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Save the model to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>path</strong><span class="classifier">str</span></dt><dd><p>The path to save the model file.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

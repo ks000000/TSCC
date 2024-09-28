@@ -1,0 +1,89 @@
+.. Kiwasus documentation master file, created by
+   sphinx-quickstart on Mon Aug 21 16:24:26 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to TSCC's documentation!
+===================================
+Welcome to TSCC (Time Series Check and Correct), the package for data quality management. You can determine and improve
+the accuracy of your data quality for right-skewed timeseries. This is a comprehensive guide to using our software.
+
+.. image:: ./_static/Overview.jpg
+   :alt: Overview of TSCC's functionalities
+   :align: center
+
+
+Getting started
+---------------
+The following links guide you through for your first steps in using TSCC, including an installation guide.
+
+.. toctree::
+   :maxdepth: 1
+
+   getting_started
+
+Usage
+-----
+The below sections provide you with basic examples of using the different kinds of functionalities.
+
+.. toctree::
+   :maxdepth: 1
+
+   usage
+
+API-Reference
+-------------
+You can look up the specific parameter options, output and example code within the API-Reference.
+
+.. toctree::
+   :maxdepth: 1
+
+   api_reference
+
+..
+   This is a block comment:
+
+   FAQ
+   ---
+   The following page answers typical questions.
+
+   .. toctree::
+      :maxdepth: 2
+
+      faq
+
+
+Feedback
+--------
+
+We appreciate your feedback! If you have any questions, suggestions or think of a collaboration, please contact us at surname.name@uni-due.de
+(Karen Schulz), Institute of Hydraulic Engineering and Water Resources Management at University Duisburg-Essen.
+
+Acknowledgements
+----------------
+This package was developed with funding from the KIWaSuS research project (https://kiwasus.de/), supported by
+the Federal Ministry of Education and Research Germany, grant nr. 13N15559.
+
+Citation
+----------------
+Please cite the following when using ``TSCC`` in your academic publication.
+
+.. code-block::
+
+    @software{TSCC,
+      author = {Karen Schulz, Jan Erik Kunze, Dominik Martin, Thorsten Mietzel, Andre Niemann},
+      title = {TSCC: Time Series Check and Correct},
+      year = {2024},
+      version = {1.0},
+      organization = {Institute of Hydraulic Engineering and Water Resources Management, University Duisburg-Essen},
+      url = {https://pypi.org/project/TSCC/},
+      note = {Licensed under the MIT License. See https://opensource.org/licenses/MIT for details.}
+   }
+
+
+Indices and Tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

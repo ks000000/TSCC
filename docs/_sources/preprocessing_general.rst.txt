@@ -1,0 +1,5 @@
+General preprocessing methods
+======================================
+
+.. automodule:: TSCC.preprocessing.general
+   :members:

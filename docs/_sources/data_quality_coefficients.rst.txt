@@ -1,0 +1,5 @@
+Data quality coefficients
+=========================
+
+.. automodule:: TSCC.assessment.data_quality_coefficients
+   :members:

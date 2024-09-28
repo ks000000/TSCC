@@ -1,0 +1,5 @@
+Baseline error correction
+=================================
+
+.. automodule:: TSCC.correction.baseline
+   :members:

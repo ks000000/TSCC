@@ -1,0 +1,661 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Evaluation handler &#8212; TSCC 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u_ass_evhandler';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data quality coefficients" href="u_data_quality_coefficients.html" />
+    <link rel="prev" title="Model evaluation error metrics" href="u_model_error_metrics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 28, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="usage.html" class="nav-link">Usage</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Evaluation handler</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="evaluation-handler">
+<h1>Evaluation handler<a class="headerlink" href="#evaluation-handler" title="Permalink to this heading">#</a></h1>
+<img alt="Function overview" class="align-center" src="_images/assessment_evaluationWrapper.jpg" />
+<section id="evaluation-handler-for-error-detection">
+<h2>Evaluation handler for error detection<a class="headerlink" href="#evaluation-handler-for-error-detection" title="Permalink to this heading">#</a></h2>
+<p>The first example showcases the process of generating random sensor data, setting up a DataFrame with specific columns, and
+performing an error detection and evaluation using the TSCC framework. The example data set includes ground truth,
+raw sensor readings, and additional features, with some values randomly altered to simulate errors. A configuration
+object is created to specify the target detection and correction columns, sensor type, and event identification.
+The <code class="docutils literal notranslate"><span class="pre">detection_evaluation_wrapper</span></code> function is then applied with two detection methods —range plausibility and
+step-change maximum — to assess the sensor data, returning detection results including the evalution metrics
+true positives, false negatives, recall, and other relevant statistics for both training and test sets.</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">det_stat_methods</span></code>, a list of quality procedures is given.
+A quality procedure can consist of one or multiple error detection methods. In example one, single methods are used as
+quality procedures. In example two, five methods are used together as one quality procedure.
+Function parameters of error detection methods can be passed by listing the argument values within parentheses after
+the function name, separated by commas. In the provided examples, various detection methods from the <code class="docutils literal notranslate"><span class="pre">TSCC.detection</span></code>
+module are called with their respective parameters, where each inner tuple represents a function call with its specific
+arguments.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;nr_obs = 6</span>
+<span class="go">&gt;&gt;&gt;np.random.seed(0)</span>
+<span class="go">&gt;&gt;&gt;# Generate random data</span>
+<span class="go">&gt;&gt;&gt;data = np.random.randn(nr_obs, 4)</span>
+<span class="go">&gt;&gt;&gt;time_index = pd.date_range(start=&#39;2023-01-01 00:00&#39;, periods=nr_obs, freq=&#39;30T&#39;)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;# Create DataFrame with specified column names</span>
+<span class="go">&gt;&gt;&gt;df = pd.DataFrame(data, columns=[&quot;ground_truth&quot;, &quot;raw&quot;, &#39;fea_1&#39;, &#39;fea_2&#39;], index = time_index)</span>
+<span class="go">&gt;&gt;&gt;df[&quot;raw&quot;] = df[&quot;ground_truth&quot;] + np.random.normal(0, 5, nr_obs)*np.random.randint(0, 2, nr_obs)</span>
+<span class="go">&gt;&gt;&gt;df[&quot;isCorrect_gt&quot;] = df[&quot;ground_truth&quot;] == df[&quot;raw&quot;]</span>
+<span class="go">&gt;&gt;&gt;df[&quot;error_class&quot;] = np.nan</span>
+<span class="go">&gt;&gt;&gt;df[&quot;isEvent&quot;] = np.nan</span>
+<span class="go">&gt;&gt;&gt;print(df)</span>
+<span class="go">                         ground_truth        raw     fea_1     fea_2  \</span>
+<span class="go">2023-01-01 00:00:00      1.764052  13.112825  0.978738  2.240893</span>
+<span class="go">2023-01-01 00:30:00      1.867558   1.867558  0.950088 -0.151357</span>
+<span class="go">2023-01-01 01:00:00     -0.103219   0.125574  0.144044  1.454274</span>
+<span class="go">2023-01-01 01:30:00      0.761038   0.761038  0.443863  0.333674</span>
+<span class="go">2023-01-01 02:00:00      1.494079   1.494079  0.313068 -0.854096</span>
+<span class="go">2023-01-01 02:30:00     -2.552990   4.793804  0.864436 -0.742165</span>
+
+<span class="go">                     isCorrect_gt  error_class  isEvent</span>
+<span class="go">2023-01-01 00:00:00         False          NaN      NaN</span>
+<span class="go">2023-01-01 00:30:00          True          NaN      NaN</span>
+<span class="go">2023-01-01 01:00:00         False          NaN      NaN</span>
+<span class="go">2023-01-01 01:30:00          True          NaN      NaN</span>
+<span class="go">2023-01-01 02:00:00          True          NaN      NaN</span>
+<span class="go">2023-01-01 02:30:00         False          NaN      NaN</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;config = TSCC.assessment.Config(</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">colname_target_det</span><span class="o">=</span><span class="s2">&quot;isCorrect_gt&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">colname_target_corr</span><span class="o">=</span><span class="s2">&quot;ground_truth&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">colname_raw</span><span class="o">=</span><span class="s2">&quot;raw&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">sensortype</span> <span class="o">=</span> <span class="s2">&quot;precipitation&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">colname_isEvent</span> <span class="o">=</span> <span class="s2">&quot;isEvent&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;dataSetHandler = TSCC.preprocessing.DataSetHandler(df, config)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;d, resultClass = TSCC.assessment.detection_evaluation_wrapper(</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">config</span> <span class="o">=</span> <span class="n">config</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">dataSetHandler</span> <span class="o">=</span> <span class="n">dataSetHandler</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">det_stat_methods</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="p">(</span><span class="n">TSCC</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">BASIC_byRange</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">TSCC</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">rangePlausVals</span><span class="o">.</span><span class="n">dict</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">sensortype</span><span class="p">][</span><span class="s2">&quot;lower_boundary&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">TSCC</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">rangePlausVals</span><span class="o">.</span><span class="n">dict</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">sensortype</span><span class="p">][</span><span class="s2">&quot;upper_boundary&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="p">(</span><span class="n">TSCC</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">BASIC_byStepChangeMax</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="go">&gt;&gt;&gt;])</span>
+<span class="go">&gt;&gt;&gt;print(resultClass.det_eval)</span>
+<span class="go">         ID                                              model       data_set  cv  \</span>
+<span class="go">0   raw     &lt;function BASIC_byRange at 0x000001D2C7BFB820&gt;          train   0</span>
+<span class="go">1   raw     &lt;function BASIC_byRange at 0x000001D2C7BFB820&gt;   r-1.25 train   0</span>
+<span class="go">2   raw     &lt;function BASIC_byRange at 0x000001D2C7BFB820&gt;  isEvent train   0</span>
+<span class="go">3   raw     &lt;function BASIC_byRange at 0x000001D2C7BFB820&gt;           test   0</span>
+<span class="go">4   raw     &lt;function BASIC_byRange at 0x000001D2C7BFB820&gt;    r-1.25 test   0</span>
+<span class="go">5   raw     &lt;function BASIC_byRange at 0x000001D2C7BFB820&gt;   isEvent test   0</span>
+<span class="go">6   raw  &lt;function BASIC_byStepChangeMax at 0x000001D2C...          train   0</span>
+<span class="go">7   raw  &lt;function BASIC_byStepChangeMax at 0x000001D2C...   r-1.25 train   0</span>
+<span class="go">8   raw  &lt;function BASIC_byStepChangeMax at 0x000001D2C...  isEvent train   0</span>
+<span class="go">9   raw  &lt;function BASIC_byStepChangeMax at 0x000001D2C...           test   0</span>
+<span class="go">10  raw  &lt;function BASIC_byStepChangeMax at 0x000001D2C...    r-1.25 test   0</span>
+<span class="go">11  raw  &lt;function BASIC_byStepChangeMax at 0x000001D2C...   isEvent test   0</span>
+
+<span class="go">    tn  fp  fn  tp  tpr  tnr  fpr  fnr  recall  n_obs</span>
+<span class="go">0    2   0   2   0  0.0  1.0  0.0  1.0     0.0      4</span>
+<span class="go">1    1   0   1   0  0.0  1.0  0.0  1.0     0.0      2</span>
+<span class="go">2    0   0   0   0  NaN  NaN  NaN  NaN     NaN      0</span>
+<span class="go">3    1   0   1   0  0.0  1.0  0.0  1.0     0.0      2</span>
+<span class="go">4    0   0   1   0  0.0  NaN  NaN  1.0     0.0      1</span>
+<span class="go">5    0   0   0   0  NaN  NaN  NaN  NaN     NaN      0</span>
+<span class="go">6    1   0   1   0  0.0  1.0  0.0  1.0     0.0      2</span>
+<span class="go">7    1   0   0   0  NaN  NaN  NaN  NaN     NaN      1</span>
+<span class="go">8    0   0   0   0  NaN  NaN  NaN  NaN     NaN      0</span>
+<span class="go">9    0   0   1   0  0.0  NaN  NaN  1.0     0.0      1</span>
+<span class="go">10   0   0   1   0  0.0  NaN  NaN  1.0     0.0      1</span>
+<span class="go">11   0   0   0   0  NaN  NaN  NaN  NaN     NaN      0</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;config = TSCC.assessment.Config(</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">colname_target_det</span><span class="o">=</span><span class="s2">&quot;isCorrect_gt&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">colname_target_corr</span><span class="o">=</span><span class="s2">&quot;ground_truth&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">colname_raw</span><span class="o">=</span><span class="s2">&quot;raw&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">sensortype</span> <span class="o">=</span> <span class="s2">&quot;precipitation&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">colname_isEvent</span> <span class="o">=</span> <span class="s2">&quot;isEvent&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;dataSetHandler = TSCC.preprocessing.DataSetHandler(df, config)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;d, resultClass = TSCC.assessment.detection_evaluation_wrapper(</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">config</span> <span class="o">=</span> <span class="n">config</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">dataSetHandler</span> <span class="o">=</span> <span class="n">dataSetHandler</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">det_stat_methods</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">&gt;&gt;&gt; </span>       <span class="p">((</span><span class="n">TSCC</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">BASIC_byExistance</span><span class="p">,</span> <span class="o">-</span><span class="mi">999</span><span class="p">,</span> <span class="nb">float</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="p">(</span><span class="n">TSCC</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">STAT_byDistFromCenter</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="p">(</span><span class="n">TSCC</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">BASIC_byStepChangeMax</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="p">(</span><span class="n">TSCC</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">STAT_byIQR</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="p">(</span><span class="n">TSCC</span><span class="o">.</span><span class="n">detection</span><span class="o">.</span><span class="n">STAT_byZScore</span><span class="p">,)),</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="p">])</span>
+<span class="go">&gt;&gt;&gt;print(resultClass.det_eval)</span>
+<span class="go">    ID                                              model       data_set  cv  \</span>
+<span class="go">0  raw  [&lt;function BASIC_byExistance at 0x0000023E9179...          train   0</span>
+<span class="go">1  raw  [&lt;function BASIC_byExistance at 0x0000023E9179...   r-1.25 train   0</span>
+<span class="go">2  raw  [&lt;function BASIC_byExistance at 0x0000023E9179...  isEvent train   0</span>
+<span class="go">3  raw  [&lt;function BASIC_byExistance at 0x0000023E9179...           test   0</span>
+<span class="go">4  raw  [&lt;function BASIC_byExistance at 0x0000023E9179...    r-1.25 test   0</span>
+<span class="go">5  raw  [&lt;function BASIC_byExistance at 0x0000023E9179...   isEvent test   0</span>
+
+<span class="go">   tn  fp  fn  tp  tpr  tnr  fpr  fnr  recall  n_obs</span>
+<span class="go">0   1   0   1   0  0.0  1.0  0.0  1.0     0.0      2</span>
+<span class="go">1   0   0   0   0  NaN  NaN  NaN  NaN     NaN      0</span>
+<span class="go">2   0   0   0   0  NaN  NaN  NaN  NaN     NaN      0</span>
+<span class="go">3   1   0   1   0  0.0  1.0  0.0  1.0     0.0      2</span>
+<span class="go">4   0   0   1   0  0.0  NaN  NaN  1.0     0.0      1</span>
+<span class="go">5   0   0   0   0  NaN  NaN  NaN  NaN     NaN      0</span>
+<span class="go">&gt;&gt;&gt;resultClass.det_eval.model[0]</span>
+<span class="go">&#39;[&lt;function BASIC_byExistance at 0x0000023E9179B820&gt;,</span>
+<span class="go">&lt;function STAT_byDistFromCenter at 0x0000023E916B1280&gt;,</span>
+<span class="go">&lt;function BASIC_byStepChangeMax at 0x0000023E9179B9D0&gt;,</span>
+<span class="go">&lt;function STAT_byIQR at 0x0000023E9179B160&gt;,</span>
+<span class="go">&lt;function STAT_byZScore at 0x0000023E9179B700&gt;]&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="evaluation-handler-for-error-correction">
+<h2>Evaluation handler for error correction<a class="headerlink" href="#evaluation-handler-for-error-correction" title="Permalink to this heading">#</a></h2>
+<p>This example demonstrates the evaluation process for error correction using the TSCC framework. The
+<code class="docutils literal notranslate"><span class="pre">correction_evaluation_wrapper</span></code> function is called with a configuration and dataset handler, returning results stored
+in dictionary <code class="docutils literal notranslate"><span class="pre">d</span></code> and a classification object <code class="docutils literal notranslate"><span class="pre">resultClass</span></code>. The output table shows various evaluation metrics for
+the correction model, including mean squared error (MSE), root mean squared error (RMSE), mean absolute error (MAE), and
+Nash-Sutcliffe efficiency (NSE) for both training and test sets. These metrics help assess the performance and accuracy
+of the error correction model across different data sets.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;corr_ML_methods = [(TSCC.correction.ML_byRF,), (TSCC.correction.ML_byMissForest,),]</span>
+<span class="go">&gt;&gt;&gt;d, resultClass = TSCC.assessment.\</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="n">correction_evaluation_wrapper</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">dataSetHandler</span><span class="p">,</span> <span class="s2">&quot;isError_pred&quot;</span><span class="p">,</span> <span class="n">corr_ML_methods</span><span class="p">,</span> <span class="p">[])</span>
+<span class="go">&gt;&gt;&gt;resultClass.corr_eval</span>
+<span class="go">    ID       model       data_set  cv       mse  mse-rel-root  mse-rel-ind 1.25  \</span>
+<span class="go">0  3  CORR_ML_RF          train   0  0.000001      0.000002               NaN</span>
+<span class="go">1  3  CORR_ML_RF   r-1.25 train   0       NaN           NaN               NaN</span>
+<span class="go">2  3  CORR_ML_RF  isEvent train   0       NaN           NaN               NaN</span>
+<span class="go">3  3  CORR_ML_RF           test   0  0.000004      0.000008               NaN</span>
+<span class="go">4  3  CORR_ML_RF    r-1.25 test   0       NaN           NaN               NaN</span>
+
+<span class="go">   ind1-rel-ind 1.25  rate-rel-ind 1.25      rmse       mae   nse  n_obs  \</span>
+<span class="go">0                NaN                NaN  0.001111  0.000119  1.00  95635</span>
+<span class="go">1                NaN                NaN       NaN       NaN   NaN      0</span>
+<span class="go">2                NaN                NaN       NaN       NaN   NaN      0</span>
+<span class="go">3                NaN                NaN  0.002041  0.001201  0.99  23908</span>
+<span class="go">4                NaN                NaN       NaN       NaN   NaN      0</span>
+
+<span class="go">       sera</span>
+<span class="go">0  0.025894</span>
+<span class="go">1  0.000000</span>
+<span class="go">2  0.000000</span>
+<span class="go">3  0.019133</span>
+<span class="go">4  0.000000</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-handler-for-error-detection">Evaluation handler for error detection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-handler-for-error-correction">Evaluation handler for error correction</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

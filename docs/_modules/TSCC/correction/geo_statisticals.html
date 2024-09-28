@@ -1,0 +1,816 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSCC.correction.geo_statisticals &#8212; TSCC 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/TSCC/correction/geo_statisticals';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 21, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">TSCC.correct...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for TSCC.correction.geo_statisticals</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">The following functions use a simple dataframe, so you can understand what</span>
+<span class="sd">the variables may look like in your own project.</span>
+
+<span class="sd">Dataframe</span>
+<span class="sd">---------</span>
+
+<span class="sd">&gt;&gt;&gt; d = {&#39;col1&#39;: [1, 9, 3, 6, 20, 8, 3, 1, 30, 5]}</span>
+<span class="sd">&gt;&gt;&gt; df = pd.DataFrame(data=d)</span>
+<span class="sd">	col1</span>
+<span class="sd">0	1</span>
+<span class="sd">1	9</span>
+<span class="sd">2	3</span>
+<span class="sd">3	6</span>
+<span class="sd">4	20</span>
+<span class="sd">5	8</span>
+<span class="sd">6	3</span>
+<span class="sd">7	1</span>
+<span class="sd">8	30</span>
+<span class="sd">9	5</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1">#from geojson import FeatureCollection, Feature, Polygon</span>
+<span class="c1">#from folium import  Map, Choropleth</span>
+<span class="c1">#import wradlib.ipol as ipol</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<div class="viewcode-block" id="getGrid"><a class="viewcode-back" href="../../../geo_statisticals.html#TSCC.correction.geo_statisticals.getGrid">[docs]</a><span class="k">def</span> <span class="nf">getGrid</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">n_steps</span> <span class="o">=</span> <span class="mi">50</span> <span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Receive a grid around your location.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    loc : List of length two</span>
+<span class="sd">        Coordinates to transform.</span>
+<span class="sd">        For input use loc format like this [lat, lon].</span>
+<span class="sd">    r : integer</span>
+<span class="sd">        Radius from your location in [m].</span>
+<span class="sd">    n_steps : number, optional</span>
+<span class="sd">        Number of points you want to get.</span>
+<span class="sd">        The default is 50.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    array</span>
+<span class="sd">        A number of coordinates???</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; loc = [51.516666, 7.100000] # lat, lon of Gelsenkirchen</span>
+<span class="sd">    &gt;&gt;&gt; r = 20000</span>
+<span class="sd">    &gt;&gt;&gt; test = getGrid(loc, r, n_steps=50)</span>
+<span class="sd">    array([[-19948.483334  , -19992.9       ],</span>
+<span class="sd">           [-19132.15680339, -19992.9       ],</span>
+<span class="sd">           [-18315.83027278, -19992.9       ],</span>
+<span class="sd">           ...,</span>
+<span class="sd">           [ 18418.86360478,  20007.1       ],</span>
+<span class="sd">           [ 19235.19013539,  20007.1       ],</span>
+<span class="sd">           [ 20051.516666  ,  20007.1       ]])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+        
+    <span class="n">arr_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">r</span><span class="p">,</span><span class="n">n_steps</span><span class="p">),</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">,</span> <span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">r</span><span class="p">,</span><span class="n">n_steps</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">arr_grid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span>
+                      <span class="n">arr_grid</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ravel</span><span class="p">()))</span><span class="o">.</span><span class="n">T</span></div>
+
+<div class="viewcode-block" id="getValueFromGrid"><a class="viewcode-back" href="../../../geo_statisticals.html#TSCC.correction.geo_statisticals.getValueFromGrid">[docs]</a><span class="k">def</span> <span class="nf">getValueFromGrid</span><span class="p">(</span><span class="n">arr_grid</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">arr_I</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finding nearest station and get the ???</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    arr_grid : array from function getGrid()???</span>
+<span class="sd">    loc : list of length two</span>
+<span class="sd">        Coordinates to transform.</span>
+<span class="sd">        For input use loc format like this [lat, lon].</span>
+<span class="sd">    arr_I : ???    </span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    float???</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; ohne Beispiel?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">arr_I</span><span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">arr_grid</span><span class="o">-</span><span class="n">loc</span><span class="p">])]</span></div>
+
+<div class="viewcode-block" id="getInterpolation"><a class="viewcode-back" href="../../../geo_statisticals.html#TSCC.correction.geo_statisticals.getInterpolation">[docs]</a><span class="k">def</span> <span class="nf">getInterpolation</span><span class="p">(</span><span class="n">arr_stations</span><span class="p">,</span> <span class="n">arr_grid</span><span class="p">,</span> <span class="n">s_method</span><span class="o">=</span><span class="s1">&#39;idw&#39;</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a modell for geostatical interpolation for the stations arr_stations in the grid arr_grid</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    arr_stations : numpy.array</span>
+<span class="sd">        Contains utm coordinates of the stations.</span>
+<span class="sd">    arr_grid : numpy.array</span>
+<span class="sd">        Contains the grid in which the stations are in and to interpolate values for these points.</span>
+<span class="sd">    s_method : str, optional</span>
+<span class="sd">        Method to use for interpolation.</span>
+<span class="sd">        The default is &#39;idw&#39;.</span>
+<span class="sd">    remove_missing : boolean, optional</span>
+<span class="sd">        Remove missing values???</span>
+<span class="sd">        The default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    modell : function</span>
+<span class="sd">        Map the grid points depending on input values at the stations.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; ohne Beispiel?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="n">s_method</span> <span class="o">==</span> <span class="s1">&#39;idw&#39;</span><span class="p">:</span>
+        <span class="n">modell</span> <span class="o">=</span> <span class="n">ipol</span><span class="o">.</span><span class="n">Idw</span><span class="p">(</span><span class="n">arr_stations</span><span class="p">,</span> <span class="n">arr_grid</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="n">remove_missing</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">s_method</span> <span class="o">==</span><span class="s1">&#39;nn&#39;</span><span class="p">:</span>
+        <span class="n">modell</span> <span class="o">=</span> <span class="n">ipol</span><span class="o">.</span><span class="n">Nearest</span><span class="p">(</span><span class="n">arr_stations</span><span class="p">,</span> <span class="n">arr_grid</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="n">remove_missing</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">s_method</span> <span class="o">==</span><span class="s1">&#39;linear&#39;</span><span class="p">:</span>
+        <span class="n">modell</span> <span class="o">=</span> <span class="n">ipol</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">arr_stations</span><span class="p">,</span> <span class="n">arr_grid</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="n">remove_missing</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">s_method</span> <span class="o">==</span><span class="s1">&#39;ok&#39;</span><span class="p">:</span>
+        <span class="n">modell</span> <span class="o">=</span> <span class="n">ipol</span><span class="o">.</span><span class="n">OrdinaryKriging</span><span class="p">(</span><span class="n">arr_stations</span><span class="p">,</span> <span class="n">arr_grid</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="n">remove_missing</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">modell</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="mi">0</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;please use idw, nn, linear or ok&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">modell</span></div>
+
+<div class="viewcode-block" id="getGeoStatValue"><a class="viewcode-back" href="../../../geo_statisticals.html#TSCC.correction.geo_statisticals.getGeoStatValue">[docs]</a><span class="k">def</span> <span class="nf">getGeoStatValue</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">loc_stations</span><span class="p">,</span> <span class="n">vals_at_stations</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;idw&#39;</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Keine Ahnung.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    loc : list of length two</span>
+<span class="sd">        Coordinates to transform.</span>
+<span class="sd">        For input use loc format like this [lat, lon].</span>
+<span class="sd">    loc_stations : list???</span>
+<span class="sd">        Location of some stations.???</span>
+<span class="sd">    vals_at_stations : ???</span>
+<span class="sd">    edges : array from function getGrid()???</span>
+<span class="sd">    method : str, optional</span>
+<span class="sd">        Method to use for interpolation.</span>
+<span class="sd">        The default is &#39;idw&#39;.</span>
+<span class="sd">    remove_missing : boolean, optional</span>
+<span class="sd">        Remove missing values???</span>
+<span class="sd">        The default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; ohne Beispiel?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># e.g. idw = ipol.Idw(loc_stations, edges)#remove_missing = True)</span>
+    <span class="n">idw</span> <span class="o">=</span> <span class="n">getInterpolation</span><span class="p">(</span><span class="n">loc_stations</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">s_method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="n">remove_missing</span><span class="p">)</span>
+
+    <span class="c1"># interpolation of values: idw_vals = idw(vals)</span>
+    <span class="k">return</span> <span class="n">getValueFromGrid</span><span class="p">(</span><span class="n">edges</span><span class="p">,</span> <span class="n">loc</span><span class="p">,</span> <span class="n">idw</span><span class="p">(</span><span class="n">vals_at_stations</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="getPlot"><a class="viewcode-back" href="../../../geo_statisticals.html#TSCC.correction.geo_statisticals.getPlot">[docs]</a><span class="k">def</span> <span class="nf">getPlot</span><span class="p">(</span><span class="n">loc_stations</span><span class="p">,</span> <span class="n">mid_X</span><span class="p">,</span> <span class="n">mid_Y</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">vals_at_stations</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Create a plot of your ???</span>
+
+<span class="sd">    Paramaters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    loc_stations : list???</span>
+<span class="sd">        Location of some stations.???</span>
+<span class="sd">    mid_X : ???</span>
+<span class="sd">    mid_Y : ???</span>
+<span class="sd">    r : integer</span>
+<span class="sd">        Radius from your location in [m].</span>
+<span class="sd">    vals_at_station : ???</span>
+<span class="sd">    remove missing : boolean, optional</span>
+<span class="sd">        Remove missing values???</span>
+<span class="sd">        The default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    plot</span>
+<span class="sd">        A plot of ???</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; ohne Beispiel?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+    <span class="n">edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">getGrid</span><span class="p">([</span><span class="n">mid_X</span><span class="p">,</span> <span class="n">mid_Y</span><span class="p">],</span> <span class="n">r</span><span class="p">,</span> <span class="n">n_steps</span><span class="o">=</span><span class="mi">40</span><span class="p">))</span>
+
+    <span class="c1"># Target coordinates</span>
+    <span class="n">x_boundaries</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mid_X</span> <span class="o">-</span> <span class="n">r</span><span class="p">,</span> <span class="n">mid_X</span> <span class="o">+</span> <span class="n">r</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+    <span class="n">y_boundaries</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">mid_Y</span> <span class="o">-</span> <span class="n">r</span><span class="p">,</span> <span class="n">mid_Y</span> <span class="o">+</span> <span class="n">r</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+
+    <span class="n">idw</span> <span class="o">=</span> <span class="n">ipol</span><span class="o">.</span><span class="n">Idw</span><span class="p">(</span><span class="n">loc_stations</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">remove_missing</span> <span class="o">=</span> <span class="n">remove_missing</span><span class="p">)</span>
+
+    <span class="c1"># interpolation of values</span>
+    <span class="n">idw_vals</span> <span class="o">=</span> <span class="n">idw</span><span class="p">(</span><span class="n">vals_at_stations</span><span class="p">)</span>
+
+    <span class="c1"># Subplot layout</span>
+    <span class="k">def</span> <span class="nf">gridplot</span><span class="p">(</span><span class="n">interpolated</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
+        <span class="n">pm</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">x_boundaries</span><span class="p">,</span> <span class="n">y_boundaries</span><span class="p">,</span>
+                           <span class="n">interpolated</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">x_boundaries</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_boundaries</span><span class="p">))))</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">loc_stations</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">loc_stations</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x coordinate&quot;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y coordinate&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">pm</span><span class="p">,</span> <span class="n">plt</span>
+
+    <span class="c1"># Plot results</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">221</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+    <span class="n">pm</span><span class="p">,</span> <span class="n">plt</span> <span class="o">=</span> <span class="n">gridplot</span><span class="p">(</span><span class="n">idw_vals</span><span class="p">,</span> <span class="s2">&quot;IDW&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">pm</span><span class="p">)</span>
+    <span class="n">pm</span><span class="o">.</span><span class="n">set_clim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">plt</span></div>
+
+<span class="c1">#</span>
+<span class="c1"># ###############################</span>
+<span class="c1"># ## keep only maybe</span>
+<span class="c1"># ##############################</span>
+<span class="c1">#</span>
+<span class="c1"># #own imports</span>
+<span class="c1"># from package_dataquality.TSCC.transform_data.helpful_functions import myProjUTM</span>
+<span class="c1"># from package_dataquality.TSCC.visualisation.maps import addDictPoints2Map</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># def createBoxes(p, r):</span>
+<span class="c1">#     x,y = p</span>
+<span class="c1">#     return [[x-r,y-r],[x+r,y-r],[x+r,y+r],[x-r,y+r],[x-r,y-r]]</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># def getVerticesGrid(p,r_box):</span>
+<span class="c1">#     L = createBoxes(p,r_box)</span>
+<span class="c1">#     return [[y[1],y[0]] for y in [myProjUTM(x[0],x[1]) for x in L]]</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># def doThis(arr_inter_vals, vals, name_method, arr_stations, arr_grid, n_steps, r, loc,</span>
+<span class="c1">#            legend_name=&#39;&#39;, show_stations=True, L_station_names=[]):</span>
+<span class="c1">#     &#39;&#39;&#39;</span>
+<span class="c1">#     create a folium map for optical view of geostatitical interpolation</span>
+<span class="c1">#</span>
+<span class="c1">#     Parameters</span>
+<span class="c1">#     ----------</span>
+<span class="c1">#     V : TYPE</span>
+<span class="c1">#         DESCRIPTION.</span>
+<span class="c1">#     vals: TYPE</span>
+<span class="c1">#         DESCRIPTION.</span>
+<span class="c1">#     name_method : TYPE</span>
+<span class="c1">#         DESCRIPTION.</span>
+<span class="c1">#     arr_stations : TYPE</span>
+<span class="c1">#         DESCRIPTION.</span>
+<span class="c1">#     arr_grid : TYPE</span>
+<span class="c1">#         DESCRIPTION.</span>
+<span class="c1">#     n_steps : TYPE</span>
+<span class="c1">#         DESCRIPTION.</span>
+<span class="c1">#     r : TYPE</span>
+<span class="c1">#         DESCRIPTION.</span>
+<span class="c1">#     loc : TYPE</span>
+<span class="c1">#         DESCRIPTION.</span>
+<span class="c1">#     legend_name : TYPE, optional</span>
+<span class="c1">#         DESCRIPTION. The default is &#39;&#39;.</span>
+<span class="c1">#     show_stations : TYPE, optional</span>
+<span class="c1">#         DESCRIPTION. The default is True.</span>
+<span class="c1">#     L_station_names : TYPE, optional</span>
+<span class="c1">#         DESCRIPTION. The default is [].</span>
+<span class="c1">#</span>
+<span class="c1">#     Returns</span>
+<span class="c1">#     -------</span>
+<span class="c1">#     None.</span>
+<span class="c1">#</span>
+<span class="c1">#     &#39;&#39;&#39;</span>
+<span class="c1">#</span>
+<span class="c1">#     names = [str(x) for x in range(len(arr_inter_vals))]</span>
+<span class="c1">#     r_box = r/(n_steps)*(1+1/(n_steps-1))</span>
+<span class="c1">#</span>
+<span class="c1">#     #create list of features with polygons to view grid on map</span>
+<span class="c1">#     L_feature =[Feature(</span>
+<span class="c1">#                     geometry=Polygon([getVerticesGrid(arr_grid[k],r_box)]),</span>
+<span class="c1">#                     properties={&quot;name&quot;:names[k],</span>
+<span class="c1">#                                 &quot;val&quot;:round(arr_inter_vals[k],2)},</span>
+<span class="c1">#                     id=names[k]</span>
+<span class="c1">#                     ) for k in range(len(arr_grid))]</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#     m = Map(location = myProjUTM(loc[0],loc[1]),</span>
+<span class="c1">#             tiles=&#39;Cartodb positron&#39;,</span>
+<span class="c1">#             zoom_start = 11,)</span>
+<span class="c1">#</span>
+<span class="c1">#     c = Choropleth(</span>
+<span class="c1">#         geo_data=FeatureCollection(L_feature),</span>
+<span class="c1">#         data=pd.DataFrame(list(zip(*[names, arr_inter_vals]))),</span>
+<span class="c1">#         columns=[0, 1],</span>
+<span class="c1">#         key_on=&quot;feature.id&quot;,</span>
+<span class="c1">#         legend_name=legend_name,</span>
+<span class="c1">#         show = True,</span>
+<span class="c1">#         bins=np.linspace( vals.min(),vals.max(),10),</span>
+<span class="c1">#</span>
+<span class="c1">#         #choosable parameters</span>
+<span class="c1">#         fill_color=&quot;PuBu&quot;,</span>
+<span class="c1">#         fill_opacity=0.42,</span>
+<span class="c1">#         line_opacity=0</span>
+<span class="c1">#       )</span>
+<span class="c1">#     c.add_to(m)</span>
+<span class="c1">#</span>
+<span class="c1">#     if show_stations:</span>
+<span class="c1">#         L= [myProjUTM(x[0],x[1]) for x in arr_stations]</span>
+<span class="c1">#         if len(L_station_names)&gt;0 and len(L_station_names)==len(L):</span>
+<span class="c1">#             L = [L[i]+[L_station_names[i]] for i in range(len(L))]</span>
+<span class="c1">#         else:</span>
+<span class="c1">#             L = [L[i]+[str(i)] for i in range(len(L))]</span>
+<span class="c1">#         D = { &#39;own&#39;: {&#39;list&#39;:L,</span>
+<span class="c1">#                       &#39;color&#39;:&#39;blue&#39;,</span>
+<span class="c1">#                       &#39;layer&#39;:0}}</span>
+<span class="c1">#         m=addDictPoints2Map(D,m)</span>
+<span class="c1">#</span>
+<span class="c1">#     #save file</span>
+<span class="c1">#     m.save(name_method+&quot;.html&quot;)</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># &#39;&#39;&#39;</span>
+<span class="c1"># def getInterpolationValues(D_vals, loc, r, n_steps, arr_stations, arr_grid, s_method):</span>
+<span class="c1">#     arr_grid = getGrid(D_vals[list(D_vals.keys())[0]], loc,r, n_steps)</span>
+<span class="c1">#     modell = getInterpolation(arr_stations, arr_grid, s_method)</span>
+<span class="c1">#     return {t:modell(vals) for t, vals in D_vals.items()}</span>
+<span class="c1">#     #there is only one row in the values vals</span>
+<span class="c1">#     #dict als eingabeparamter für vals mit zeitstempel als key</span>
+<span class="c1"># &#39;&#39;&#39;</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

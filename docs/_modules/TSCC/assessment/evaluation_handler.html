@@ -1,0 +1,1278 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSCC.assessment.evaluation_handler &#8212; TSCC 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/TSCC/assessment/evaluation_handler';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 27, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">TSCC.assessm...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for TSCC.assessment.evaluation_handler</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">.model_error_metrics</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..preprocessing.general</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..preprocessing.plausibility_classes</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..detection.baseline</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..detection.basics</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..detection.statistical</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..detection.ml</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..correction.baseline</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..correction.statistical</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..correction.ml</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">sample_weights_denseweight</span><span class="p">(</span><span class="n">df_fea_list</span><span class="p">,</span> <span class="n">df_tar_list</span><span class="p">,</span> <span class="n">detMLConfig</span><span class="p">):</span>
+    <span class="n">dw</span> <span class="o">=</span> <span class="n">DenseWeight</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">data_losses_train</span> <span class="o">=</span> <span class="n">dw</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_part</span><span class="p">[</span><span class="s2">&quot;value_plaus&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">sample_weight_train_list</span>
+
+<span class="k">def</span> <span class="nf">sample_weights_root</span><span class="p">(</span><span class="n">df_fea_list</span><span class="p">,</span> <span class="n">df_tar_list</span><span class="p">,</span> <span class="n">detMLConfig</span><span class="p">):</span>
+    <span class="n">data_losses_train</span> <span class="o">=</span> <span class="n">relevance_fct_root</span><span class="p">(</span><span class="n">train_part</span><span class="p">[</span><span class="s2">&quot;value_plaus&quot;</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">sample_weight_train_list</span>
+
+<span class="k">def</span> <span class="nf">is_none_or_nan</span><span class="p">(</span><span class="n">tp_ind</span><span class="p">):</span>
+    <span class="c1"># Check if tp_ind is None</span>
+    <span class="k">if</span> <span class="n">tp_ind</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="c1"># Check if tp_ind is NaN</span>
+    <span class="c1">#if np.issubdtype(tp_ind, np.number) and np.isnan(tp_ind):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tp_ind</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">tp_ind</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">add_eval_of_model</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">data_set_name</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span> <span class="n">conf_matrx</span><span class="p">,</span> <span class="n">cm_ind</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]):</span>
+
+    <span class="n">tn</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">tp</span> <span class="o">=</span> <span class="n">conf_matrx</span>
+    <span class="n">tn_ind</span><span class="p">,</span> <span class="n">fp_ind</span><span class="p">,</span> <span class="n">fn_ind</span><span class="p">,</span> <span class="n">tp_ind</span> <span class="o">=</span> <span class="n">cm_ind</span>
+    <span class="n">new_row</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ID&quot;</span><span class="p">:</span> <span class="nb">id</span><span class="p">,</span>
+                    <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model_name</span><span class="p">,</span>
+                    <span class="s2">&quot;data_set&quot;</span><span class="p">:</span> <span class="n">data_set_name</span><span class="p">,</span>
+                    <span class="s2">&quot;cv&quot;</span><span class="p">:</span> <span class="n">cv</span><span class="p">,</span>
+                    <span class="s2">&quot;tn&quot;</span><span class="p">:</span> <span class="n">tn</span><span class="p">,</span> <span class="s2">&quot;fp&quot;</span><span class="p">:</span> <span class="n">fp</span><span class="p">,</span> <span class="s2">&quot;fn&quot;</span><span class="p">:</span> <span class="n">fn</span><span class="p">,</span> <span class="s2">&quot;tp&quot;</span><span class="p">:</span> <span class="n">tp</span><span class="p">,</span>
+                    <span class="s2">&quot;tpr&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">))</span> <span class="k">if</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="s2">&quot;tnr&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">tn</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tn</span> <span class="o">+</span> <span class="n">fp</span><span class="p">))</span> <span class="k">if</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="s2">&quot;fpr&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tn</span> <span class="o">+</span> <span class="n">fp</span><span class="p">))</span> <span class="k">if</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="s2">&quot;fnr&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">))</span> <span class="k">if</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="s2">&quot;recall&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">))</span> <span class="k">if</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="s2">&quot;precision&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fp</span><span class="p">))</span> <span class="k">if</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="s2">&quot;f-score&quot;</span><span class="p">:</span> <span class="p">(</span>
+                                    <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fp</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">))</span> <span class="o">/</span>
+                                    <span class="p">(</span>
+                                            <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fp</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">))</span>
+                                    <span class="p">)</span>
+                                <span class="p">)</span> <span class="k">if</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fp</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="n">tp</span> <span class="o">+</span> <span class="n">fn</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+                    <span class="s2">&quot;n_obs&quot;</span><span class="p">:</span> <span class="n">tn</span><span class="o">+</span><span class="n">fp</span><span class="o">+</span><span class="n">fn</span><span class="o">+</span><span class="n">tp</span>
+                <span class="p">}</span>
+
+    <span class="c1"># add row to model_eval_df of detMLConfig class instance</span>
+    <span class="k">return</span> <span class="n">new_row</span>
+
+
+<span class="k">def</span> <span class="nf">add_errclass_eval_of_model</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">target_pred</span><span class="p">,</span> <span class="n">models_name</span><span class="p">,</span> <span class="n">data_set_name</span><span class="p">,</span> <span class="n">detMLConfig</span><span class="p">,</span> <span class="n">evaluationHandler</span><span class="p">):</span>
+
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;TN&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">detMLConfig</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;FP&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">detMLConfig</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;FN&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">detMLConfig</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;TP&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">detMLConfig</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">df_errorclass_gr</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;error_class&#39;</span><span class="p">,</span> <span class="s1">&#39;TN&#39;</span><span class="p">,</span> <span class="s1">&#39;FP&#39;</span><span class="p">,</span> <span class="s1">&#39;FN&#39;</span><span class="p">,</span> <span class="s1">&#39;TP&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;error_class&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">cur_err_class</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;error_class&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+        <span class="n">new_row</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ID&quot;</span><span class="p">:</span> <span class="n">detMLConfig</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">,</span>
+                        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">models_name</span><span class="p">,</span>
+                        <span class="s2">&quot;data_set&quot;</span><span class="p">:</span> <span class="n">data_set_name</span><span class="p">,</span>
+                        <span class="s2">&quot;errorclass&quot;</span><span class="p">:</span> <span class="n">cur_err_class</span><span class="p">,</span>
+                        <span class="s2">&quot;tn&quot;</span><span class="p">:</span> <span class="n">df_errorclass_gr</span><span class="p">[</span><span class="n">df_errorclass_gr</span><span class="p">[</span><span class="s2">&quot;error_class&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">cur_err_class</span><span class="p">][</span><span class="s2">&quot;TN&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+                        <span class="s2">&quot;fp&quot;</span><span class="p">:</span> <span class="n">df_errorclass_gr</span><span class="p">[</span><span class="n">df_errorclass_gr</span><span class="p">[</span><span class="s2">&quot;error_class&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">cur_err_class</span><span class="p">][</span><span class="s2">&quot;FP&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+                        <span class="s2">&quot;fn&quot;</span><span class="p">:</span> <span class="n">df_errorclass_gr</span><span class="p">[</span><span class="n">df_errorclass_gr</span><span class="p">[</span><span class="s2">&quot;error_class&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">cur_err_class</span><span class="p">][</span><span class="s2">&quot;FN&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+                        <span class="s2">&quot;tp&quot;</span><span class="p">:</span> <span class="n">df_errorclass_gr</span><span class="p">[</span><span class="n">df_errorclass_gr</span><span class="p">[</span><span class="s2">&quot;error_class&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">cur_err_class</span><span class="p">][</span><span class="s2">&quot;TP&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+                       <span class="p">}</span>
+        <span class="c1"># add row to model_errorclass_eval of detMLConfig class instance</span>
+        <span class="n">evaluationHandler</span><span class="o">.</span><span class="n">append_row_to_det_errorclass_eval</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_conf_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+    <span class="n">tn</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y_true</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span>
+             <span class="p">(</span><span class="n">y_pred</span> <span class="o">==</span> <span class="kc">False</span><span class="p">))</span>
+    <span class="n">fp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y_true</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span>
+             <span class="p">(</span><span class="n">y_pred</span> <span class="o">==</span> <span class="kc">True</span><span class="p">))</span>
+    <span class="n">fn</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y_true</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span>
+             <span class="p">(</span><span class="n">y_pred</span> <span class="o">==</span> <span class="kc">False</span><span class="p">))</span>
+    <span class="n">tp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">((</span><span class="n">y_true</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span>
+             <span class="p">(</span><span class="n">y_pred</span> <span class="o">==</span> <span class="kc">True</span><span class="p">))</span>
+    <span class="n">conf_matrx</span> <span class="o">=</span> <span class="n">tn</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">tp</span>
+    <span class="k">return</span> <span class="n">conf_matrx</span>
+
+<span class="k">def</span> <span class="nf">getEvaluation</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">target_pred</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">data_set_name</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">evaluationHandler</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span><span class="s2">&quot;_&quot;</span><span class="p">):</span>
+
+    <span class="c1"># compute confusion matrix values</span>
+    <span class="c1">#try:</span>
+    <span class="c1">#    tn, fp, fn, tp = confusion_matrix(</span>
+    <span class="c1">#        df[[detMLConfig.colname_target_det]],</span>
+    <span class="c1">#        df[target_pred]).ravel()</span>
+    <span class="c1">#except:</span>
+
+    <span class="k">if</span> <span class="n">Config</span><span class="o">.</span><span class="n">target_sensor_uncertainty</span><span class="p">:</span>
+        <span class="n">target_det</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">Config</span><span class="o">.</span><span class="n">target_sensor_uncertainty</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">target_det</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">]</span>
+    <span class="n">conf_matrx</span> <span class="o">=</span> <span class="n">get_conf_matrix</span><span class="p">(</span><span class="n">target_det</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">])</span>
+
+    <span class="c1"># compute confusion matrix values for indicator function, value-based</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">Config</span><span class="o">.</span><span class="n">target_sensor_uncertainty</span><span class="p">:</span>
+            <span class="n">target_det</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">Config</span><span class="o">.</span><span class="n">target_sensor_uncertainty</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">target_det</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">]</span>
+        <span class="n">relevance_series</span> <span class="o">=</span> <span class="n">relevance_fct_indicator</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)))</span>
+        <span class="n">tn</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(((</span><span class="n">target_det</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">relevance_series</span><span class="p">)</span>
+        <span class="n">fp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(((</span><span class="n">target_det</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">relevance_series</span><span class="p">)</span>
+        <span class="n">fn</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(((</span><span class="n">target_det</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">relevance_series</span><span class="p">)</span>
+        <span class="n">tp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(((</span><span class="n">target_det</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">relevance_series</span><span class="p">)</span>
+        <span class="n">conf_matrx_ind</span> <span class="o">=</span> <span class="p">[</span><span class="n">tn</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">tp</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">conf_matrx_ind</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+
+    <span class="c1"># compute confusion matrix values event-based</span>
+    <span class="k">if</span> <span class="n">Config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">Config</span><span class="o">.</span><span class="n">target_sensor_uncertainty</span><span class="p">:</span>
+            <span class="n">target_det</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">Config</span><span class="o">.</span><span class="n">target_sensor_uncertainty</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">target_det</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">]</span>
+        <span class="n">relevance_series</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">tn</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(((</span><span class="n">target_det</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">relevance_series</span><span class="p">)</span>
+        <span class="n">fp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(((</span><span class="n">target_det</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">relevance_series</span><span class="p">)</span>
+        <span class="n">fn</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(((</span><span class="n">target_det</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">relevance_series</span><span class="p">)</span>
+        <span class="n">tp</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(((</span><span class="n">target_det</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span> <span class="o">&amp;</span>
+                  <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">target_pred</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">*</span><span class="n">relevance_series</span><span class="p">)</span>
+        <span class="n">conf_matrx_ev</span> <span class="o">=</span> <span class="p">[</span><span class="n">tn</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">fn</span><span class="p">,</span> <span class="n">tp</span><span class="p">]</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    if Config.target_sensor_uncertainty:</span>
+<span class="sd">        gt_unc = (abs(df[Config.colname_raw] - df[Config.colname_target_corr]) &lt; Config.target_sensor_uncertainty)</span>
+<span class="sd">        tn = sum(((gt_unc == False) &amp;</span>
+<span class="sd">                  (df[target_pred] == False)).astype(int).reset_index(drop=True))</span>
+<span class="sd">        fp = sum(((gt_unc == False) &amp;</span>
+<span class="sd">                  (df[target_pred] == True)).astype(int).reset_index(drop=True))</span>
+<span class="sd">        fn = sum(((gt_unc == True) &amp;</span>
+<span class="sd">                  (df[target_pred] == False)).astype(int).reset_index(drop=True))</span>
+<span class="sd">        tp = sum(((gt_unc == True) &amp;</span>
+<span class="sd">                  (df[target_pred] == True)).astype(int).reset_index(drop=True))</span>
+<span class="sd">        conf_matrx_unc = [tn, fp, fn, tp]</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="c1"># add evaluation line to df</span>
+    <span class="n">new_row</span> <span class="o">=</span> <span class="n">add_eval_of_model</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">data_set_name</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span> <span class="n">conf_matrx</span><span class="p">,</span> <span class="n">conf_matrx_ind</span><span class="p">)</span>
+    <span class="n">evaluationHandler</span><span class="o">.</span><span class="n">append_row_to_det_eval</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+    <span class="n">add_errclass_eval_of_model</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">target_pred</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">data_set_name</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">evaluationHandler</span><span class="p">)</span>
+
+    <span class="c1"># compute confusion matrix values for indicator function, value-based</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
+        <span class="n">new_row</span> <span class="o">=</span> <span class="n">add_eval_of_model</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;r-1.25 </span><span class="si">{</span><span class="n">data_set_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span> <span class="n">conf_matrx_ind</span><span class="p">)</span>
+        <span class="n">evaluationHandler</span><span class="o">.</span><span class="n">append_row_to_det_eval</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+
+    <span class="c1"># compute confusion matrix values event-based</span>
+    <span class="k">if</span> <span class="n">Config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">:</span>
+        <span class="n">new_row</span> <span class="o">=</span> <span class="n">add_eval_of_model</span><span class="p">(</span><span class="n">Config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;isEvent </span><span class="si">{</span><span class="n">data_set_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span> <span class="n">conf_matrx_ev</span><span class="p">)</span>
+        <span class="n">evaluationHandler</span><span class="o">.</span><span class="n">append_row_to_det_eval</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    if Config.target_sensor_uncertainty:</span>
+<span class="sd">        new_row = add_eval_of_model(Config.colname_raw, model_name, f&quot;uncertainty {data_set_name}&quot;, cv, conf_matrx_unc)</span>
+<span class="sd">        evaluationHandler.append_row_to_det_eval(new_row)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+
+<div class="viewcode-block" id="EvaluationHandler"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.EvaluationHandler">[docs]</a><span class="k">class</span> <span class="nc">EvaluationHandler</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    The EvaluationHandler class manages the evaluation of machine learning models, specifically handling metrics for</span>
+<span class="sd">    both classification and regression tasks. It includes functionality to append new rows of evaluation data,</span>
+<span class="sd">    and retrieve stored evaluations. It also supports cross-validation and train-test evaluations.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Config : object</span>
+<span class="sd">        Configuration object that defines model settings for evaluation.</span>
+<span class="sd">    dataSetHandler : object</span>
+<span class="sd">        Object responsible for managing the dataset during evaluation.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    COLUMN_LIST_EVAL_CAT : list</span>
+<span class="sd">        List of columns for storing categorical evaluation metrics (e.g., tn, fp, fn, tp, recall, precision).</span>
+<span class="sd">    COLUMN_LIST_ERRCLASS_EVAL_CAT : list</span>
+<span class="sd">        List of columns for storing evaluation results based on error classes (e.g., tnr).</span>
+<span class="sd">    COLUMN_LIST_EVAL_REG : list</span>
+<span class="sd">        List of columns for storing regression evaluation metrics (e.g., mse, rmse, mae, nse).</span>
+<span class="sd">    det_eval : pandas DataFrame</span>
+<span class="sd">        DataFrame that stores categorical evaluation results.</span>
+<span class="sd">    det_errorclass_eval : pandas DataFrame</span>
+<span class="sd">        DataFrame that stores evaluation results based on error classes.</span>
+<span class="sd">    corr_eval : pandas DataFrame</span>
+<span class="sd">        DataFrame that stores regression evaluation results.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    get_det_eval()</span>
+<span class="sd">        Retrieves the current categorical evaluation DataFrame (det_eval).</span>
+<span class="sd">    get_det_errorclass_eval()</span>
+<span class="sd">        Retrieves the current error class evaluation DataFrame (det_errorclass_eval).</span>
+<span class="sd">    append_row_to_det_eval(new_row)</span>
+<span class="sd">        Appends a new row of categorical evaluation data to the det_eval DataFrame.</span>
+<span class="sd">    append_row_to_det_errorclass_eval(new_row)</span>
+<span class="sd">        Appends a new row of error class evaluation data to the det_errorclass_eval DataFrame.</span>
+<span class="sd">    append_row_to_corr_eval(new_row)</span>
+<span class="sd">        Appends a new row of regression evaluation data to the corr_eval DataFrame.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Class constant</span>
+    <span class="n">COLUMN_LIST_EVAL_CAT</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;data_set&quot;</span><span class="p">,</span> <span class="s2">&quot;cv&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tn&quot;</span><span class="p">,</span> <span class="s2">&quot;fp&quot;</span><span class="p">,</span> <span class="s2">&quot;fn&quot;</span><span class="p">,</span> <span class="s2">&quot;tp&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tpr&quot;</span><span class="p">,</span> <span class="s2">&quot;tnr&quot;</span><span class="p">,</span> <span class="s2">&quot;fpr&quot;</span><span class="p">,</span> <span class="s2">&quot;fnr&quot;</span><span class="p">,</span>
+        <span class="c1"># &quot;tpr_ind1.25&quot;,</span>
+        <span class="c1"># &quot;fpr-r-1.25&quot;, &quot;fnr-r-1.25&quot;,</span>
+        <span class="s2">&quot;recall&quot;</span><span class="p">,</span> <span class="s2">&quot;precision&quot;</span><span class="p">,</span> <span class="s2">&quot;f-score&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;n_obs&quot;</span><span class="p">]</span>
+    <span class="n">COLUMN_LIST_ERRCLASS_EVAL_CAT</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;data_set&quot;</span><span class="p">,</span> <span class="s2">&quot;errorclass&quot;</span><span class="p">,</span> <span class="s2">&quot;tnr&quot;</span><span class="p">]</span>
+
+    <span class="n">COLUMN_LIST_EVAL_REG</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">,</span> <span class="s2">&quot;data_set&quot;</span><span class="p">,</span> <span class="s2">&quot;cv&quot;</span><span class="p">,</span> <span class="s2">&quot;mse&quot;</span><span class="p">,</span> <span class="s2">&quot;mse-rel-root&quot;</span><span class="p">,</span> <span class="s2">&quot;mse-rel-ind 1.25&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;ind1-rel-ind 1.25&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;rate-rel-ind 1.25&quot;</span><span class="p">,</span> <span class="s2">&quot;rmse&quot;</span><span class="p">,</span> <span class="s2">&quot;mae&quot;</span><span class="p">,</span> <span class="s2">&quot;nse&quot;</span><span class="p">,</span> <span class="s2">&quot;n_obs&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;sera&quot;</span><span class="p">]</span>
+
+<div class="viewcode-block" id="EvaluationHandler.__init__"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.EvaluationHandler.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">dataSetHandler</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">COLUMN_LIST_EVAL_CAT</span> <span class="o">=</span> <span class="n">EvaluationHandler</span><span class="o">.</span><span class="n">COLUMN_LIST_EVAL_CAT</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">COLUMN_LIST_EVAL_REG</span> <span class="o">=</span> <span class="n">EvaluationHandler</span><span class="o">.</span><span class="n">COLUMN_LIST_EVAL_REG</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">det_eval</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">EvaluationHandler</span><span class="o">.</span><span class="n">COLUMN_LIST_EVAL_CAT</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">det_errorclass_eval</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">EvaluationHandler</span><span class="o">.</span><span class="n">COLUMN_LIST_ERRCLASS_EVAL_CAT</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corr_eval</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">EvaluationHandler</span><span class="o">.</span><span class="n">COLUMN_LIST_EVAL_REG</span><span class="p">)</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">__drop_empty_or_all_na_columns</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+        <span class="c1"># Drop columns where all values are NaN</span>
+        <span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+        <span class="c1"># Optionally, drop columns where there are no non-NA values</span>
+        <span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">df_cleaned</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">df_cleaned</span>
+
+<div class="viewcode-block" id="EvaluationHandler.get_det_eval"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.EvaluationHandler.get_det_eval">[docs]</a>    <span class="k">def</span> <span class="nf">get_det_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the current DataFrame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">det_eval</span></div>
+
+<div class="viewcode-block" id="EvaluationHandler.get_det_errorclass_eval"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.EvaluationHandler.get_det_errorclass_eval">[docs]</a>    <span class="k">def</span> <span class="nf">get_det_errorclass_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the current DataFrame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">det_errorclass_eval</span></div>
+
+<div class="viewcode-block" id="EvaluationHandler.append_row_to_det_eval"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.EvaluationHandler.append_row_to_det_eval">[docs]</a>    <span class="k">def</span> <span class="nf">append_row_to_det_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_row</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Append a new row to the DataFrame.</span>
+<span class="sd">        The new row should be in a format that can be converted to a DataFrame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">new_row_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">new_row</span><span class="p">])</span>
+        <span class="n">new_row_df</span> <span class="o">=</span> <span class="n">EvaluationHandler</span><span class="o">.</span><span class="n">__drop_empty_or_all_na_columns</span><span class="p">(</span><span class="n">new_row_df</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">det_eval</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">det_eval</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">det_eval</span><span class="p">,</span> <span class="n">new_row_df</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">det_eval</span> <span class="o">=</span> <span class="n">new_row_df</span></div>
+
+<div class="viewcode-block" id="EvaluationHandler.append_row_to_det_errorclass_eval"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.EvaluationHandler.append_row_to_det_errorclass_eval">[docs]</a>    <span class="k">def</span> <span class="nf">append_row_to_det_errorclass_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_row</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Append a new row to the DataFrame.</span>
+<span class="sd">        The new row should be in a format that can be converted to a DataFrame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">new_row_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">new_row</span><span class="p">])</span>
+        <span class="n">new_row_df</span> <span class="o">=</span> <span class="n">EvaluationHandler</span><span class="o">.</span><span class="n">__drop_empty_or_all_na_columns</span><span class="p">(</span><span class="n">new_row_df</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">det_errorclass_eval</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">det_errorclass_eval</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">det_errorclass_eval</span><span class="p">,</span> <span class="n">new_row_df</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">det_errorclass_eval</span> <span class="o">=</span> <span class="n">new_row_df</span></div>
+
+<div class="viewcode-block" id="EvaluationHandler.append_row_to_corr_eval"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.EvaluationHandler.append_row_to_corr_eval">[docs]</a>    <span class="k">def</span> <span class="nf">append_row_to_corr_eval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_row</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Append a new row to the DataFrame.</span>
+<span class="sd">        The new row should be in a format that can be converted to a DataFrame.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">new_row_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">new_row</span><span class="p">])</span>
+        <span class="c1">#new_row_df = EvaluationHandler.__drop_empty_or_all_na_columns(new_row_df)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">corr_eval</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">corr_eval</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">corr_eval</span><span class="p">,</span> <span class="n">new_row_df</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">corr_eval</span> <span class="o">=</span> <span class="n">new_row_df</span></div></div>
+
+<span class="k">def</span> <span class="nf">det_evaluate_method</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">dataSetHandler</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">d_part</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">list_len</span><span class="p">):</span>
+        <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">list_len</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s2">&quot;STAT&quot;</span> <span class="ow">in</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span> <span class="ow">or</span> <span class="s2">&quot;BASIC&quot;</span> <span class="ow">in</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="n">i</span><span class="p">][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="c1">#None,</span>
+                <span class="c1">#detMLConfig,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="n">i</span><span class="p">][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="c1">#None,</span>
+                <span class="c1">#detMLConfig,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">&quot;ML&quot;</span> <span class="ow">in</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span>
+            <span class="n">class_instance</span> <span class="o">=</span> <span class="n">func</span><span class="p">()</span>
+            <span class="n">class_instance</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">(</span><span class="n">exclude_columns</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exclude_cols</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">(</span><span class="n">extract_single_target</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span>
+                    <span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">config</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_instance</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">(</span><span class="n">exclude_columns</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exclude_cols</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_instance</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">(</span><span class="n">exclude_columns</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exclude_cols</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+            <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">det_ML_model_savefolder</span><span class="p">:</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;class &#39;[^&#39;]*\.(\w+)&#39;&gt;&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                    <span class="n">short_funcname</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">short_funcname</span> <span class="o">=</span> <span class="s2">&quot;model&quot;</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">det_ML_model_savefolder</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">):</span>
+                    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">det_ML_model_savefolder</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">class_instance</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">det_ML_model_savefolder</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">short_funcname</span><span class="si">}</span><span class="s2">_cv</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.pkl&quot;</span><span class="p">)</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;train_event_absnr&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">train_event_absnr</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>
+                        <span class="s2">&quot;train_event_rel&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">train_eventrates</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>
+                        <span class="s2">&quot;train_timerange&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="w"> </span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+
+                        <span class="p">}</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">det_ML_model_savefolder</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="se">\\</span><span class="s2">additional_info_cv</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">&quot;BASE&quot;</span> <span class="ow">in</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">config</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_targets</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">config</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error in data and function handler regarding </span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+            <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">d_part</span>
+
+<span class="k">def</span> <span class="nf">extract_functions_and_parameters</span><span class="p">(</span><span class="n">methods</span><span class="p">):</span>
+    <span class="n">functions</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">cur_meth</span> <span class="ow">in</span> <span class="n">methods</span><span class="p">:</span>
+        <span class="c1">#if multiple functions and/ or additional parameters are given</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cur_meth</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+            <span class="c1"># multiple functions are given</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cur_meth</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="c1"># Handle nested tuple</span>
+                <span class="n">functions_chain</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">parameters_chain</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">nested_meth</span> <span class="ow">in</span> <span class="n">cur_meth</span><span class="p">:</span>
+                    <span class="n">functions_chain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nested_meth</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="n">parameters_chain</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nested_meth</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+                <span class="n">functions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">functions_chain</span><span class="p">)</span>
+                <span class="n">parameters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parameters_chain</span><span class="p">)</span>
+            <span class="c1"># additional parameters are given</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">functions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cur_meth</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                <span class="n">parameters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cur_meth</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">functions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_meth</span><span class="p">))</span>
+            <span class="n">parameters</span><span class="o">.</span><span class="n">append</span><span class="p">(())</span>
+
+    <span class="k">return</span> <span class="n">functions</span><span class="p">,</span> <span class="n">parameters</span>
+
+
+<div class="viewcode-block" id="detection_evaluation_wrapper"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.detection_evaluation_wrapper">[docs]</a><span class="k">def</span> <span class="nf">detection_evaluation_wrapper</span><span class="p">(</span><span class="n">config</span><span class="p">,</span>
+                                 <span class="n">dataSetHandler</span><span class="p">,</span>
+                                 <span class="n">det_ML_methods</span><span class="o">=</span><span class="p">[],</span>
+                                 <span class="n">det_stat_methods</span><span class="o">=</span><span class="p">[],</span>
+                                 <span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Wraps error detection modeling and evaluation, applying both machine learning and statistical methods</span>
+<span class="sd">    for anomaly detection. This function manages the execution of models, performs cross-validation if configured,</span>
+<span class="sd">    and stores the results in a nested dictionary structure and a class instance of the evaluationHandler.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    config : class instance of Config</span>
+<span class="sd">        A mutable class instance containing the configuration settings for model evaluation, such as</span>
+<span class="sd">        column names, cross-validation settings, and other options.</span>
+<span class="sd">    dataSetHandler : class instance of DataSetHandler</span>
+<span class="sd">        An instance responsible for storing and handling the dataset. It manages both the features</span>
+<span class="sd">        and targets for training and testing data.</span>
+<span class="sd">    det_ML_methods : list, optional</span>
+<span class="sd">        A list of machine learning methods for detection (default is an empty list). These methods</span>
+<span class="sd">        will be applied for error detection modeling.</span>
+<span class="sd">    det_stat_methods : list, optional</span>
+<span class="sd">        A list of statistical methods for detection (default is an empty list). These methods will</span>
+<span class="sd">        be applied for error detection modeling.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    d : dict</span>
+<span class="sd">        A nested dictionary, where each key corresponds to a machine learning or statistical method.</span>
+<span class="sd">        The value is a sub-dictionary that contains the train and test predictions (as pandas Series)</span>
+<span class="sd">        and the generated machine learning models.</span>
+<span class="sd">    evaluationHandler : object</span>
+<span class="sd">        A list containing the generated machine learning models for each method used in the detection.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># initialization of returned parameters</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">evaluationHandler</span> <span class="o">=</span> <span class="n">EvaluationHandler</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">dataSetHandler</span><span class="p">)</span>
+
+    <span class="n">meth_functions</span><span class="p">,</span> <span class="n">meth_parameters</span> <span class="o">=</span> <span class="n">extract_functions_and_parameters</span><span class="p">(</span><span class="n">det_stat_methods</span> <span class="o">+</span> <span class="n">det_ML_methods</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cur_method</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">meth_functions</span><span class="p">):</span>
+        <span class="n">run_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cur_method</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">run_len</span><span class="p">):</span>
+            <span class="c1"># if ground truth is numerical</span>
+            <span class="n">cur_method_unchained</span> <span class="o">=</span> <span class="n">cur_method</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cur_method</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="n">cur_method</span>
+            <span class="n">cur_meth_param_unchained</span> <span class="o">=</span> <span class="n">meth_parameters</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">meth_parameters</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="n">meth_parameters</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">meth_parameters</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)]</span> <span class="o">=</span> <span class="n">det_evaluate_method</span><span class="p">(</span>
+                                    <span class="n">cur_method_unchained</span><span class="p">,</span>
+                                    <span class="n">dataSetHandler</span><span class="p">,</span>
+                                    <span class="n">config</span><span class="p">,</span>
+                                    <span class="o">*</span><span class="n">cur_meth_param_unchained</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)]</span> <span class="o">=</span> <span class="n">det_evaluate_method</span><span class="p">(</span>
+                        <span class="n">cur_method_unchained</span><span class="p">,</span>
+                        <span class="n">dataSetHandler</span><span class="p">,</span>
+                        <span class="n">config</span><span class="p">)</span>
+
+            <span class="c1"># if more than one run is executed</span>
+            <span class="k">if</span> <span class="n">run_len</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">cur_cv_key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">],</span> <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">])</span>
+                        <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">],</span> <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">])</span>
+                        <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">],</span> <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">])</span>
+                        <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">],</span> <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">int_results</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)]</span>
+
+    <span class="c1"># evaluate models</span>
+    <span class="k">for</span> <span class="n">cur_ml_fct</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">cur_cv_set</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="n">cur_ml_fct</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">cur_cv_set</span> <span class="o">==</span> <span class="s1">&#39;ml_model&#39;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">train_data</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">],</span>
+                <span class="c1">#f&quot;hasGoodDQ_{cur_ml_fct}&quot;: dataSetHandler.get_train_targets()[int(cur_cv_set)][detMLConfig.colname_target_det],</span>
+                <span class="sa">f</span><span class="s2">&quot;hasGoodDQ_</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">cur_ml_fct</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="s2">&quot;train&quot;</span><span class="p">]),</span>
+                <span class="s2">&quot;error_class&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="s2">&quot;error_class&quot;</span><span class="p">],</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+            <span class="n">getEvaluation</span><span class="p">(</span>
+                <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">train_data</span><span class="p">),</span>
+                <span class="n">target_pred</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;hasGoodDQ_</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">model_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">data_set_name</span> <span class="o">=</span> <span class="s2">&quot;train&quot;</span><span class="p">,</span>
+                <span class="n">Config</span><span class="o">=</span> <span class="n">config</span><span class="p">,</span>
+                <span class="n">evaluationHandler</span><span class="o">=</span> <span class="n">evaluationHandler</span><span class="p">,</span>
+                <span class="n">cv</span> <span class="o">=</span> <span class="n">cur_cv_set</span><span class="p">)</span>
+
+            <span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_targets</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">],</span>
+                <span class="c1">#f&quot;hasGoodDQ_{cur_ml_fct}&quot;: dataSetHandler.get_test_targets()[int(cur_cv_set)][detMLConfig.colname_target_det],</span>
+                <span class="sa">f</span><span class="s2">&quot;hasGoodDQ_</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">cur_ml_fct</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="s2">&quot;test&quot;</span><span class="p">]),</span>
+                <span class="s2">&quot;error_class&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="s2">&quot;error_class&quot;</span><span class="p">],</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_targets</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+            <span class="n">getEvaluation</span><span class="p">(</span>
+                <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">test_data</span><span class="p">),</span>
+                <span class="n">target_pred</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;hasGoodDQ_</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">model_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">data_set_name</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                <span class="n">Config</span><span class="o">=</span> <span class="n">config</span><span class="p">,</span>
+                <span class="n">evaluationHandler</span><span class="o">=</span> <span class="n">evaluationHandler</span><span class="p">,</span>
+                <span class="n">cv</span> <span class="o">=</span> <span class="n">cur_cv_set</span><span class="p">)</span>
+
+    <span class="n">d</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;isCV&#39;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">cross_validation</span><span class="p">})</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;train_test_IDs&#39;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">train_test_IDs</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">d</span><span class="p">,</span> <span class="n">evaluationHandler</span></div>
+
+<span class="k">def</span> <span class="nf">feature_generation</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1"># Wrapping feature generation</span>
+    <span class="c1"># feature - generaation    function as parameter(usage    of    different    features)?</span>
+
+    <span class="c1">#    df_fea = feature_generation(df)</span>
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="k">def</span> <span class="nf">wrapper_model_application</span><span class="p">(</span><span class="n">ml_fct_list</span><span class="p">,</span> <span class="n">df</span><span class="p">):</span>
+    <span class="c1"># hier: Nutzen von gespeicherten Modellen</span>
+    <span class="c1">#</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">add_eval_of_model_reg</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">data_set_name</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span> <span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+    <span class="c1"># drop na&#39;s</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y_gt&quot;</span><span class="p">,</span> <span class="s2">&quot;y_pred&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">y_gt</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;y_gt&quot;</span><span class="p">]</span>
+    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;y_pred&quot;</span><span class="p">]</span>
+
+    <span class="n">new_row</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;ID&quot;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">,</span>
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span> <span class="n">model_name</span><span class="p">,</span>
+        <span class="s2">&quot;data_set&quot;</span><span class="p">:</span> <span class="n">data_set_name</span><span class="p">,</span>
+        <span class="s2">&quot;cv&quot;</span><span class="p">:</span> <span class="n">cv</span><span class="p">,</span>
+        <span class="s2">&quot;mse&quot;</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">y_gt</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+        <span class="s2">&quot;mse-rel-root&quot;</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">sample_weight</span> <span class="o">=</span> <span class="n">relevance_fct_root</span><span class="p">(</span><span class="n">y_gt</span><span class="p">))</span> <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">relevance_fct_root</span><span class="p">(</span><span class="n">y_gt</span><span class="p">))</span><span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+        <span class="s2">&quot;mse-rel-ind 1.25&quot;</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">sample_weight</span> <span class="o">=</span> <span class="n">relevance_fct_indicator</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">))))</span> <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">relevance_fct_indicator</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">))))</span><span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+        <span class="s2">&quot;ind1-rel-ind 1.25&quot;</span><span class="p">:</span> <span class="n">indicator_error_relevance</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">relevance_fct_indicator</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.25</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">))),</span>
+        <span class="s2">&quot;rate-rel-ind 1.25&quot;</span><span class="p">:</span> <span class="n">rate_error_relevance</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">relevance_fct_indicator</span><span class="p">,</span> <span class="p">(</span><span class="mf">1.25</span><span class="p">,</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">))),</span>
+        <span class="s2">&quot;rmse&quot;</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">squared</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">y_gt</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+        <span class="s2">&quot;mae&quot;</span><span class="p">:</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">y_gt</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
+        <span class="s2">&quot;nse&quot;</span><span class="p">:</span> <span class="n">NSE</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">y_gt</span><span class="p">),</span>
+        <span class="s2">&quot;n_obs&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_gt</span><span class="p">),</span>
+        <span class="c1">#&quot;abs_vol_error&quot;: abs_vol_error(y_pred, y_gt),</span>
+        <span class="c1">#&quot;rel_vol_error&quot;: rel_vol_error(y_pred, y_gt),</span>
+        <span class="s2">&quot;sera&quot;</span><span class="p">:</span> <span class="n">squared_error_relevance_area</span><span class="p">(</span><span class="n">y_gt</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">relevance_fct_root</span><span class="p">(</span><span class="n">y_gt</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+       <span class="p">}</span>
+
+    <span class="c1"># add row to model_errorclass_eval of detMLConfig class instance</span>
+    <span class="k">return</span> <span class="n">new_row</span>
+
+
+<span class="k">def</span> <span class="nf">getEvaluation_reg</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">colname_pred</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">data_set_name</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">evaluationHandler</span><span class="p">,</span> <span class="n">cv</span> <span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">):</span>
+
+    <span class="c1">#all data</span>
+    <span class="n">new_row</span> <span class="o">=</span> <span class="n">add_eval_of_model_reg</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">data_set_name</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="n">colname_pred</span><span class="p">])</span>
+    <span class="n">evaluationHandler</span><span class="o">.</span><span class="n">append_row_to_corr_eval</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+
+    <span class="c1"># compute confusion matrix values for indicator function, value-based</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">issubdtype</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">):</span>
+        <span class="n">relevance_series</span> <span class="o">=</span> <span class="n">relevance_fct_indicator</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">],</span> <span class="p">(</span><span class="mf">1.25</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)))</span>
+        <span class="n">new_row</span> <span class="o">=</span> <span class="n">add_eval_of_model_reg</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;r-1.25 </span><span class="si">{</span><span class="n">data_set_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span>
+                              <span class="n">df</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">][</span><span class="n">relevance_series</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="n">colname_pred</span><span class="p">][</span><span class="n">relevance_series</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">])</span>
+        <span class="n">evaluationHandler</span><span class="o">.</span><span class="n">append_row_to_corr_eval</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+    <span class="c1"># compute event-based</span>
+    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">:</span>
+        <span class="n">relevance_series</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="c1">#.reset_index(drop=True)</span>
+        <span class="n">new_row</span> <span class="o">=</span> <span class="n">add_eval_of_model_reg</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;isEvent </span><span class="si">{</span><span class="n">data_set_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span>
+                              <span class="n">df</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">][</span><span class="n">relevance_series</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="n">colname_pred</span><span class="p">][</span><span class="n">relevance_series</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">])</span>
+        <span class="n">evaluationHandler</span><span class="o">.</span><span class="n">append_row_to_corr_eval</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+
+
+
+<span class="k">def</span> <span class="nf">isIncorrect_evaluate</span><span class="p">(</span><span class="n">series_isCorrect</span><span class="p">,</span> <span class="n">series_raw</span><span class="p">,</span> <span class="n">series_target</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">series_isCorrect</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">series_raw</span> <span class="o">!=</span> <span class="n">series_target</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">corr_evaluate_method</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">dataSetHandler</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">d_part</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">list_len</span><span class="p">):</span>
+        <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">list_len</span><span class="p">):</span>
+        <span class="k">if</span> <span class="s2">&quot;STAT&quot;</span> <span class="ow">in</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span><span class="c1">#[config.colname_raw]</span>
+                <span class="kc">None</span><span class="p">,</span>
+                <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">,</span>
+                <span class="n">config</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="kc">None</span><span class="p">,</span>
+                <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">,</span>
+                <span class="n">config</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">&quot;ML&quot;</span> <span class="ow">in</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span>
+            <span class="n">class_instance</span> <span class="o">=</span> <span class="n">func</span><span class="p">()</span>
+            <span class="n">class_instance</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">(</span><span class="n">exclude_columns</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exclude_cols</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">(</span><span class="n">extract_single_target</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span>
+                    <span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">,</span>
+                <span class="n">config</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_instance</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">(</span><span class="n">exclude_columns</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exclude_cols</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">,</span>
+                <span class="n">config</span><span class="p">)</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_instance</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">(</span><span class="n">exclude_columns</span><span class="o">=</span><span class="n">config</span><span class="o">.</span><span class="n">exclude_cols</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">,</span>
+                <span class="n">config</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">corr_ML_model_savefolder</span><span class="p">:</span>
+                <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;class &#39;[^&#39;]*\.(\w+)&#39;&gt;&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                    <span class="n">short_funcname</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">short_funcname</span> <span class="o">=</span> <span class="s2">&quot;model&quot;</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">corr_ML_model_savefolder</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">):</span>
+                    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">corr_ML_model_savefolder</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">class_instance</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">corr_ML_model_savefolder</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">short_funcname</span><span class="si">}</span><span class="s2">_cv</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.pkl&quot;</span><span class="p">)</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;train_event_absnr&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">train_event_absnr</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>
+                        <span class="s2">&quot;train_event_rel&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">train_eventrates</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span>
+                        <span class="s2">&quot;train_timerange&quot;</span><span class="p">:</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="w"> </span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+
+                        <span class="p">}</span>
+                <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">corr_ML_model_savefolder</span><span class="si">}</span><span class="se">\\</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="se">\\</span><span class="s2">additional_info_cv</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s2">&quot;BASE&quot;</span> <span class="ow">in</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">config</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="n">d_part</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_targets</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">config</span><span class="p">,</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">func</span><span class="si">}</span><span class="s2"> not available.&quot;</span><span class="p">)</span>
+            <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">d_part</span>
+
+<div class="viewcode-block" id="correction_evaluation_wrapper"><a class="viewcode-back" href="../../../evaluation_handler.html#TSCC.assessment.evaluation_handler.correction_evaluation_wrapper">[docs]</a><span class="k">def</span> <span class="nf">correction_evaluation_wrapper</span><span class="p">(</span><span class="n">config</span><span class="p">,</span>
+                                  <span class="n">dataSetHandler</span><span class="p">,</span>
+                                  <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">,</span>
+                                  <span class="n">corr_ML_methods</span><span class="o">=</span><span class="p">[],</span>
+                                  <span class="n">corr_stat_methods</span><span class="o">=</span><span class="p">[],</span>
+                                  <span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Wraps error correction modeling and evaluation, applying machine learning and statistical methods for</span>
+<span class="sd">    correcting detected errors. This function manages the application of correction models, performs cross-validation if</span>
+<span class="sd">    configured, and stores the results for further evaluation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    config : class instance of Config</span>
+<span class="sd">        A mutable class instance that contains configuration settings for correction models, such as column names,</span>
+<span class="sd">        cross-validation flags, and other relevant options.</span>
+<span class="sd">    dataSetHandler : class instance of DataSetHandler</span>
+<span class="sd">        An instance responsible for storing and handling the dataset, managing both the feature and target data</span>
+<span class="sd">        for training and testing.</span>
+<span class="sd">    dataSetHandlerColumn_errorDetection : str</span>
+<span class="sd">        The column in the dataset that marks whether an error has been detected. This column is used to identify</span>
+<span class="sd">        erroneous entries for correction.</span>
+<span class="sd">    corr_ML_methods : list, optional</span>
+<span class="sd">        A list of machine learning methods to be applied for error correction modeling (default is an empty list).</span>
+<span class="sd">    corr_stat_methods : list, optional</span>
+<span class="sd">        A list of statistical methods to be applied for error correction modeling (default is an empty list).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    d : dict</span>
+<span class="sd">        A nested dictionary where each key corresponds to a correction method (either machine learning or statistical).</span>
+<span class="sd">        The value is a sub-dictionary that contains the train and test predictions, the corrected target values,</span>
+<span class="sd">        and other evaluation results.</span>
+<span class="sd">    evaluationHandler : EvaluationHandler</span>
+<span class="sd">        An instance of `EvaluationHandler` that contains the evaluation results for the applied correction models.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    - For each correction method, the results from multiple runs (if applicable) are combined using averaging for</span>
+<span class="sd">      both train and test datasets.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># initialization of returned parameters</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">evaluationHandler</span> <span class="o">=</span> <span class="n">EvaluationHandler</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">dataSetHandler</span><span class="p">)</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    for cur_method in detMLConfig.corr_ML_methods + detMLConfig.corr_stat_methods:</span>
+<span class="sd">        cur_method = cur_method  # f&quot;{cur_method}&quot;.split(&quot; &quot;)[1]</span>
+<span class="sd">        d[cur_method] = {}</span>
+<span class="sd">        for i in range(dataSetHandler.list_len):</span>
+<span class="sd">            d[cur_method][i] = {}</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">d</span><span class="p">[</span><span class="s2">&quot;add_info&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">pred_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">list_len</span><span class="p">):</span>
+        <span class="n">d</span><span class="p">[</span><span class="s2">&quot;add_info&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="c1">#meth_functions = [cur_meth[0] if isinstance(cur_meth, tuple) else str(cur_meth) for cur_meth in</span>
+    <span class="c1">#                  config.corr_stat_methods + config.corr_ML_methods]</span>
+    <span class="c1">#meth_parameters = [cur_meth[1:] if isinstance(cur_meth, tuple) else () for cur_meth in</span>
+    <span class="c1">#                   config.corr_stat_methods + config.corr_ML_methods]</span>
+    <span class="n">meth_functions</span><span class="p">,</span> <span class="n">meth_parameters</span> <span class="o">=</span> <span class="n">extract_functions_and_parameters</span><span class="p">(</span><span class="n">corr_stat_methods</span> <span class="o">+</span> <span class="n">corr_ML_methods</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cur_method</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">meth_functions</span><span class="p">):</span>
+        <span class="n">run_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cur_method</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">run_len</span><span class="p">):</span>
+            <span class="n">cur_method_unchained</span> <span class="o">=</span> <span class="n">cur_method</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cur_method</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="n">cur_method</span>
+            <span class="n">cur_meth_param_unchained</span> <span class="o">=</span> <span class="n">meth_parameters</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">meth_parameters</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> \
+                <span class="n">meth_parameters</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">meth_parameters</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)]</span> <span class="o">=</span> <span class="n">corr_evaluate_method</span><span class="p">(</span>
+                    <span class="n">cur_method_unchained</span><span class="p">,</span>
+                    <span class="n">dataSetHandler</span><span class="p">,</span>
+                    <span class="n">config</span><span class="p">,</span>
+                    <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">,</span>
+                    <span class="o">*</span><span class="n">cur_meth_param_unchained</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)]</span> <span class="o">=</span> <span class="n">corr_evaluate_method</span><span class="p">(</span>
+                    <span class="n">cur_method_unchained</span><span class="p">,</span>
+                    <span class="n">dataSetHandler</span><span class="p">,</span>
+                    <span class="n">config</span><span class="p">,</span>
+                    <span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">)</span>
+
+            <span class="c1"># if more than one run is executed</span>
+            <span class="k">if</span> <span class="n">run_len</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">cur_cv_key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                        <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">],</span> <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+                        <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">],</span> <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;train&quot;</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+                        <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">],</span> <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+                        <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)][</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">],</span> <span class="n">int_results</span><span class="p">[</span><span class="n">cur_cv_key</span><span class="p">][</span><span class="s2">&quot;test&quot;</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">int_results</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">cur_method</span><span class="p">)]</span>
+
+
+    <span class="c1"># evaluate models</span>
+    <span class="k">for</span> <span class="n">cur_ml_fct</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">cur_ml_fct</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;add_info&quot;</span><span class="p">]:</span>
+            <span class="k">continue</span>
+        <span class="k">for</span> <span class="n">cur_cv_set</span> <span class="ow">in</span> <span class="n">d</span><span class="p">[</span><span class="n">cur_ml_fct</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">cur_cv_set</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ml_model&#39;</span><span class="p">]:</span>
+                <span class="k">continue</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">cur_ml_fct</span><span class="p">)</span>
+
+            <span class="n">evaluate_train</span> <span class="o">=</span> <span class="n">isIncorrect_evaluate</span><span class="p">(</span><span class="n">series_isCorrect</span> <span class="o">=</span> <span class="o">~</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">],</span>
+                                                  <span class="n">series_raw</span> <span class="o">=</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span>
+                                                  <span class="n">series_target</span> <span class="o">=</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">])</span>
+            <span class="n">train_data</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_targets</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">evaluate_train</span><span class="p">][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">],</span>
+                    <span class="c1">#f&quot;corr_{cur_ml_fct}&quot;: dataSetHandler.get_train_targets()[int(cur_cv_set)][evaluate_train][config.colname_target_corr],</span>
+                    <span class="sa">f</span><span class="s2">&quot;corr_</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">cur_ml_fct</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="s2">&quot;train&quot;</span><span class="p">][</span><span class="n">evaluate_train</span><span class="p">]),</span>
+                    <span class="s2">&quot;error_class&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">evaluate_train</span><span class="p">][</span><span class="s2">&quot;error_class&quot;</span><span class="p">],</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_train_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">evaluate_train</span><span class="p">][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">],</span>
+                <span class="p">}</span>
+            <span class="n">getEvaluation_reg</span><span class="p">(</span>
+                <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">train_data</span><span class="p">),</span>
+                <span class="n">colname_pred</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;corr_</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">model_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">data_set_name</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">,</span>
+                <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+                <span class="n">evaluationHandler</span><span class="o">=</span><span class="n">evaluationHandler</span><span class="p">,</span>
+                <span class="n">cv</span><span class="o">=</span><span class="n">cur_cv_set</span><span class="p">)</span>
+
+            <span class="n">evaluate_test</span> <span class="o">=</span> <span class="n">isIncorrect_evaluate</span><span class="p">(</span>
+                <span class="n">series_isCorrect</span><span class="o">=~</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">dataSetHandlerColumn_errorDetection</span><span class="p">],</span>
+                <span class="n">series_raw</span><span class="o">=</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span>
+                <span class="n">series_target</span><span class="o">=</span><span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_targets</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">])</span>
+            <span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_targets</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">evaluate_test</span><span class="p">][</span>
+                    <span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">],</span>
+                <span class="c1">#f&quot;corr_{cur_ml_fct}&quot;: dataSetHandler.get_test_targets()[int(cur_cv_set)][evaluate_test][config.colname_target_corr],</span>
+                <span class="sa">f</span><span class="s2">&quot;corr_</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">cur_ml_fct</span><span class="p">][</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="s2">&quot;test&quot;</span><span class="p">][</span><span class="n">evaluate_test</span><span class="p">]),</span>
+                <span class="s2">&quot;error_class&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">evaluate_test</span><span class="p">][</span><span class="s2">&quot;error_class&quot;</span><span class="p">],</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">dataSetHandler</span><span class="o">.</span><span class="n">get_test_features</span><span class="p">()[</span><span class="nb">int</span><span class="p">(</span><span class="n">cur_cv_set</span><span class="p">)][</span><span class="n">evaluate_test</span><span class="p">][</span>
+                    <span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">],</span>
+            <span class="p">}</span>
+            <span class="n">getEvaluation_reg</span><span class="p">(</span>
+                <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">test_data</span><span class="p">),</span>
+                <span class="n">colname_pred</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;corr_</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">model_name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">cur_ml_fct</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">data_set_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+                <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+                <span class="n">evaluationHandler</span><span class="o">=</span><span class="n">evaluationHandler</span><span class="p">,</span>
+                <span class="n">cv</span><span class="o">=</span><span class="n">cur_cv_set</span><span class="p">)</span>
+            
+
+    <span class="n">d</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;isCV&#39;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">cross_validation</span><span class="p">})</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;train_test_IDs&#39;</span><span class="p">:</span> <span class="n">config</span><span class="o">.</span><span class="n">train_test_IDs</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">d</span><span class="p">,</span> <span class="n">evaluationHandler</span></div>
+
+
+
+
+
+
+
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

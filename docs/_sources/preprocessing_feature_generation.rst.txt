@@ -1,0 +1,5 @@
+Feature generation methods
+======================================
+
+.. automodule:: TSCC.preprocessing.feature_generation
+   :members:

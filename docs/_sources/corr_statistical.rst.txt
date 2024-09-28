@@ -1,0 +1,5 @@
+Statistical error correction
+============================
+
+.. automodule:: TSCC.correction.statistical
+   :members:

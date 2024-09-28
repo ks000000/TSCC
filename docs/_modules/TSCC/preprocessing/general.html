@@ -1,0 +1,1107 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSCC.preprocessing.general &#8212; TSCC 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/TSCC/preprocessing/general';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 22, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">TSCC.preproc...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for TSCC.preprocessing.general</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="kn">from</span> <span class="nn">denseweight</span> <span class="kn">import</span> <span class="n">DenseWeight</span>
+<span class="kn">import</span> <span class="nn">resreg</span>
+<span class="kn">import</span> <span class="nn">smogn</span>
+<span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="kn">import</span> <span class="n">SMOTENC</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+
+<div class="viewcode-block" id="Config"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.Config">[docs]</a><span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    colname_target_det : str, optional</span>
+<span class="sd">        The column name of the target variable for detection models.</span>
+<span class="sd">    colname_target_corr : str, optional</span>
+<span class="sd">        The column name of the target variable for correction models.</span>
+<span class="sd">    colname_raw : str, optional</span>
+<span class="sd">        The column name of the raw data to be used as input.</span>
+<span class="sd">    colname_id : str, optional</span>
+<span class="sd">        The column name containing unique identifiers for each data point or entity.</span>
+<span class="sd">    colname_isErroneousPred : str, optional</span>
+<span class="sd">        The column name indicating whether a prediction considers an observation  erroneous.</span>
+<span class="sd">    exclude_cols : list, optional</span>
+<span class="sd">        A list of column names to exclude from processing.</span>
+<span class="sd">    colname_isEvent : str, optional</span>
+<span class="sd">        The column name indicating whether an event occurred (used in event-based modeling).</span>
+<span class="sd">    sensortype : str, optional</span>
+<span class="sd">        Specifies the type of sensor used in data collection.</span>
+<span class="sd">    target_sensor_uncertainty : float, optional</span>
+<span class="sd">        The uncertainty associated with the target sensor measurement strategy.</span>
+<span class="sd">    frequency : str, optional</span>
+<span class="sd">        The frequency of the time series data.</span>
+<span class="sd">    det_ML_methods : list, optional</span>
+<span class="sd">        A list of machine learning methods for detection.</span>
+<span class="sd">    det_stat_methods : list, optional</span>
+<span class="sd">        A list of statistical methods for detection.</span>
+<span class="sd">    corr_ML_methods : list, optional</span>
+<span class="sd">        A list of machine learning methods for correction.</span>
+<span class="sd">    corr_stat_methods : list, optional</span>
+<span class="sd">        A list of statistical methods for correction.</span>
+<span class="sd">    cross_validation : bool, default False</span>
+<span class="sd">        Whether to perform cross-validation during model training.</span>
+<span class="sd">    train_test_IDs : list, optional</span>
+<span class="sd">        A list of IDs used to split the dataset into training and testing sets.</span>
+<span class="sd">    threshold_nrObs : int, default 10000</span>
+<span class="sd">        The threshold number of observations required to perform analysis.</span>
+<span class="sd">    detMethod_for_corr : str, optional</span>
+<span class="sd">        The detection method used for data correction.</span>
+<span class="sd">    random_state : int, default 1</span>
+<span class="sd">        The seed for random number generation to ensure reproducibility.</span>
+<span class="sd">    dataset_size : str, default &quot;small&quot;</span>
+<span class="sd">        The size of the dataset, used to optimize computation resources.</span>
+<span class="sd">    det_ML_model_savefolder : str, optional</span>
+<span class="sd">        The folder path to save detection machine learning models.</span>
+<span class="sd">    corr_ML_model_savefolder : str, optional</span>
+<span class="sd">        The folder path to save correction machine learning models.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Config.__init__"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.Config.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">colname_target_det</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">colname_target_corr</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">colname_raw</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">colname_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">colname_isErroneousPred</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">exclude_cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">colname_isEvent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">sensortype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">target_sensor_uncertainty</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">frequency</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">cross_validation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                 <span class="n">train_test_IDs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">threshold_nrObs</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
+                 <span class="n">detMethod_for_corr</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                 <span class="n">dataset_size</span> <span class="o">=</span> <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+                 <span class="n">det_ML_model_savefolder</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                 <span class="n">corr_ML_model_savefolder</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cross_validation</span> <span class="o">=</span> <span class="n">cross_validation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_test_IDs</span> <span class="o">=</span> <span class="n">train_test_IDs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colname_target_det</span> <span class="o">=</span> <span class="n">colname_target_det</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sensortype</span> <span class="o">=</span> <span class="n">sensortype</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_sensor_uncertainty</span> <span class="o">=</span> <span class="n">target_sensor_uncertainty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frequency</span> <span class="o">=</span> <span class="n">frequency</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threshold_nrObs</span> <span class="o">=</span> <span class="n">threshold_nrObs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exclude_cols</span> <span class="o">=</span> <span class="n">exclude_cols</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colname_target_corr</span> <span class="o">=</span> <span class="n">colname_target_corr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df_id_column</span> <span class="o">=</span> <span class="n">colname_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colname_isErroneousPred</span> <span class="o">=</span> <span class="n">colname_isErroneousPred</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colname_isEvent</span> <span class="o">=</span> <span class="n">colname_isEvent</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">colname_raw</span> <span class="o">=</span> <span class="n">colname_raw</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">detMethod_for_corr</span> <span class="o">=</span> <span class="n">detMethod_for_corr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">random_state</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dataset_size</span> <span class="o">=</span> <span class="n">dataset_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">det_ML_model_savefolder</span> <span class="o">=</span> <span class="n">det_ML_model_savefolder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corr_ML_model_savefolder</span> <span class="o">=</span> <span class="n">corr_ML_model_savefolder</span></div>
+
+    <span class="k">def</span> <span class="nf">update_frequency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frequency</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">frequency</span> <span class="o">=</span> <span class="n">frequency</span></div>
+
+<span class="k">def</span> <span class="nf">get_train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">variation</span> <span class="o">=</span> <span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">cv_parameters</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">variation</span> <span class="o">==</span> <span class="s2">&quot;random&quot;</span><span class="p">:</span>
+        <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">test_size</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">variation</span> <span class="o">==</span> <span class="s2">&quot;time_based&quot;</span><span class="p">:</span>
+        <span class="n">split_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">test_size</span><span class="p">))</span>
+
+        <span class="n">train</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="n">split_index</span><span class="p">]</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">split_index</span><span class="p">:]</span>
+    <span class="k">elif</span> <span class="n">variation</span> <span class="o">==</span> <span class="s2">&quot;cv_time_based&quot;</span><span class="p">:</span>
+        <span class="n">cv_folds</span> <span class="o">=</span> <span class="n">cv_parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">nrObsPerFold</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">cv_folds</span>
+        <span class="n">padding</span> <span class="o">=</span> <span class="n">cv_parameters</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1">#df = df.reset_index(drop = True)</span>
+        <span class="n">train</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">cv_folds</span><span class="p">):</span>
+            <span class="n">min_idx_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nrObsPerFold</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+            <span class="n">max_idx_test</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nrObsPerFold</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+            <span class="n">cur_test</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">min_idx_test</span><span class="p">:</span><span class="n">max_idx_test</span><span class="p">]</span>
+            <span class="n">test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cur_test</span><span class="p">)</span>
+            <span class="n">train</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">cur_test</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span>
+
+<div class="viewcode-block" id="train_test_fea_tar_split"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.train_test_fea_tar_split">[docs]</a><span class="k">def</span> <span class="nf">train_test_fea_tar_split</span><span class="p">(</span><span class="n">df_model</span><span class="p">,</span>
+                             <span class="n">config</span><span class="p">,</span>
+                             <span class="n">tar_columns</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate list of train and test datasets.</span>
+<span class="sd">    results in one entry per list if cross_validation is False</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_model : pandas dataframe</span>
+<span class="sd">        including all features, target, and supplementary columns</span>
+<span class="sd">    cross_validation : boolean</span>
+<span class="sd">        ...</span>
+<span class="sd">    train_test_IDs : ...</span>
+<span class="sd">        only possible when ``cross_validation`` is False</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    train_list : list</span>
+<span class="sd">        list of train datasets</span>
+<span class="sd">    df_list : list</span>
+<span class="sd">        list of test datasets</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># perform train test split</span>
+    <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">cross_validation</span><span class="p">:</span>
+        <span class="n">train_list</span><span class="p">,</span> <span class="n">test_list</span> <span class="o">=</span> <span class="n">get_train_test_split</span><span class="p">(</span><span class="n">df_model</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">777</span><span class="p">),</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span><span class="c1">#.reset_index(drop=True),</span>
+                                                     <span class="n">variation</span><span class="o">=</span><span class="s2">&quot;cv_time_based&quot;</span><span class="p">)</span>
+        <span class="c1">#for i, cur_df in enumerate(train_list):</span>
+        <span class="c1">#    train_list[i] = cur_df#.reset_index(drop=True)</span>
+        <span class="c1">#for i, cur_df in enumerate(test_list):</span>
+        <span class="c1">#    test_list[i] = cur_df#.reset_index(drop=True)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">train_test_IDs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">train</span> <span class="o">=</span> <span class="n">df_model</span><span class="p">[</span><span class="n">df_model</span><span class="p">[</span><span class="n">df_id_column</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">train_test_IDs</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">777</span><span class="p">)</span>
+        <span class="n">train_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">train</span><span class="p">]</span><span class="c1">#.reset_index(drop=True)]</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df_model</span><span class="p">[</span><span class="n">df_model</span><span class="p">[</span><span class="n">df_id_column</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">train_test_IDs</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">777</span><span class="p">)</span>
+        <span class="n">test_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">]</span><span class="c1">#.reset_index(drop=True)]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">train</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">get_train_test_split</span><span class="p">(</span><span class="n">df_model</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">777</span><span class="p">),</span><span class="c1">#.reset_index(drop=True),</span>
+                                         <span class="n">variation</span><span class="o">=</span><span class="s2">&quot;time_based&quot;</span><span class="p">)</span>
+        <span class="n">train_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">train</span><span class="p">]</span><span class="c1">#.reset_index(drop=True)]</span>
+        <span class="n">test_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">]</span><span class="c1">#.reset_index(drop=True)]</span>
+
+    <span class="c1"># perform fea tar exclude split</span>
+    <span class="n">train_list_fea</span> <span class="o">=</span> <span class="p">[</span><span class="n">df_train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">tar_columns</span><span class="p">,</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">df_train</span> <span class="ow">in</span> <span class="n">train_list</span><span class="p">]</span>
+    <span class="n">train_list_tar</span> <span class="o">=</span> <span class="p">[</span><span class="n">df_train</span><span class="p">[</span><span class="n">tar_columns</span><span class="p">]</span> <span class="k">for</span> <span class="n">df_train</span> <span class="ow">in</span> <span class="n">train_list</span><span class="p">]</span>
+    <span class="n">test_list_fea</span> <span class="o">=</span> <span class="p">[</span><span class="n">df_train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="n">tar_columns</span><span class="p">,</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">df_train</span> <span class="ow">in</span> <span class="n">test_list</span><span class="p">]</span>
+    <span class="n">test_list_tar</span> <span class="o">=</span> <span class="p">[</span><span class="n">df_train</span><span class="p">[</span><span class="n">tar_columns</span><span class="p">]</span> <span class="k">for</span> <span class="n">df_train</span> <span class="ow">in</span> <span class="n">test_list</span><span class="p">]</span><span class="c1">#[detMLConfig.df_id_column] +</span>
+
+
+    <span class="k">return</span> <span class="n">train_list_fea</span><span class="p">,</span> <span class="n">train_list_tar</span><span class="p">,</span> <span class="n">test_list_fea</span><span class="p">,</span> <span class="n">test_list_tar</span></div>
+
+
+<div class="viewcode-block" id="undersampling_valrange"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.undersampling_valrange">[docs]</a><span class="k">def</span> <span class="nf">undersampling_valrange</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">colname</span><span class="p">,</span> <span class="n">undersampling_rate</span><span class="p">,</span> <span class="n">val_range</span><span class="p">,</span> <span class="n">inclusive_range</span> <span class="o">=</span> <span class="s2">&quot;both&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    Imbalanced data method</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df : pandas data frame</span>
+<span class="sd">        Data frame to be undersampled</span>
+<span class="sd">    undersampling_rate : float</span>
+<span class="sd">        Ranges in [0, 1]</span>
+<span class="sd">    colname : string</span>
+<span class="sd">        Column name to be undersampled</span>
+<span class="sd">    val_range : list</span>
+<span class="sd">        List of min, max value range</span>
+<span class="sd">    inclusive_range : string</span>
+<span class="sd">        inclusive_range &quot;both&quot; means [val_range[0], val_range[1]]</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    u_df_fea: pandas data frame</span>
+<span class="sd">        The undersampled target dataframe.</span>
+<span class="sd">    u_df_tar: pandas data frame</span>
+<span class="sd">        The undersampled target dataframe.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">df_help</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">colname</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">val_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">val_range</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">inclusive</span> <span class="o">=</span> <span class="n">inclusive_range</span><span class="p">)]</span>
+    <span class="n">undersampling_nr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">df_help</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">undersampling_rate</span><span class="p">)</span><span class="c1">#(df.shape[0] - df_help.shape[0])</span>
+    <span class="n">df_help</span> <span class="o">=</span> <span class="n">df_help</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">undersampling_nr</span><span class="p">))</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="n">colname</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="n">val_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">val_range</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">inclusive</span> <span class="o">=</span> <span class="n">inclusive_range</span><span class="p">)],</span> <span class="n">df_help</span><span class="p">])</span><span class="o">.</span>\
+        <span class="n">sort_index</span><span class="p">()</span>
+
+    <span class="n">u_df_fea</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="p">[[]],</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;right&quot;</span><span class="p">)</span>
+    <span class="n">u_df_tar</span> <span class="o">=</span> <span class="n">df_tar</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="p">[[]],</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;right&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">u_df_fea</span><span class="p">,</span> <span class="n">u_df_tar</span></div>
+
+<span class="k">def</span> <span class="nf">timstamp_remove_duplicates</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">colname_id</span><span class="p">):</span>
+    <span class="c1"># Find duplicates in the &#39;timestamp&#39; column</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="n">colname_id</span><span class="p">)</span>
+    <span class="n">dups</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">colname_id</span><span class="p">],</span> <span class="n">keep</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># Initialize a counter for each group of duplicates</span>
+    <span class="n">dup_counter</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># Function to add seconds to duplicates</span>
+    <span class="k">def</span> <span class="nf">add_seconds_to_duplicates</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+        <span class="n">ts</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">colname_id</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">ts</span> <span class="ow">in</span> <span class="n">dup_counter</span><span class="p">:</span>
+            <span class="n">dup_counter</span><span class="p">[</span><span class="n">ts</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dup_counter</span><span class="p">[</span><span class="n">ts</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">return</span> <span class="n">ts</span> <span class="o">+</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">milliseconds</span><span class="o">=</span><span class="n">dup_counter</span><span class="p">[</span><span class="n">ts</span><span class="p">])</span><span class="c1">#datetime.timedelta</span>
+
+
+    <span class="c1"># Apply the function to duplicates</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">dups</span><span class="p">,</span> <span class="n">colname_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">dups</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">add_seconds_to_duplicates</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<div class="viewcode-block" id="SMOTE"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.SMOTE">[docs]</a><span class="k">def</span> <span class="nf">SMOTE</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">colname_target</span><span class="p">,</span> <span class="n">colname_id</span><span class="p">,</span> <span class="n">exclude_columns</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply the SMOTE (Synthetic Minority Over-sampling Technique) to handle imbalanced datasets.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas DataFrame</span>
+<span class="sd">        The input feature dataframe containing independent variables.</span>
+<span class="sd">    df_tar : pandas DataFrame</span>
+<span class="sd">        The target dataframe containing the dependent variable(s).</span>
+<span class="sd">    colname_target : str</span>
+<span class="sd">        The column name of the target variable that requires oversampling.</span>
+<span class="sd">    colname_id : str</span>
+<span class="sd">        The column name used as the unique identifier for each instance in the data.</span>
+<span class="sd">    exclude_columns : list</span>
+<span class="sd">        A list of column names to be excluded from the SMOTE process.</span>
+<span class="sd">    random_state : int, optional</span>
+<span class="sd">        The seed used by SMOTE for random number generation, default is 42.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    smote_fea : pandas DataFrame</span>
+<span class="sd">        The oversampled feature dataframe with the same structure as the original `df_fea`, indexed by `colname_id`.</span>
+<span class="sd">    smote_tar : pandas DataFrame</span>
+<span class="sd">        The oversampled target dataframe with the same structure as the original `df_tar`, indexed by `colname_id`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="kn">from</span> <span class="nn">imblearn.over_sampling</span> <span class="kn">import</span> <span class="n">SMOTE</span>
+    <span class="n">smote_preproc</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+    <span class="n">smote_fea</span><span class="p">,</span> <span class="n">smote_tar</span> <span class="o">=</span> <span class="n">smote_preproc</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">df_fea</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">exclude_columns</span><span class="p">,</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span><span class="p">)</span><span class="o">.</span>\
+                                                      <span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span>
+                                                      <span class="n">df_tar</span><span class="p">[[</span><span class="n">colname_target</span><span class="p">]])</span>
+
+    <span class="n">smote_tar</span> <span class="o">=</span> <span class="n">df_tar</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">smote_fea</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)[[]])</span>
+    <span class="n">smote_tar</span> <span class="o">=</span>  <span class="n">timstamp_remove_duplicates</span><span class="p">(</span><span class="n">smote_tar</span><span class="p">,</span> <span class="n">colname_id</span><span class="p">)</span><span class="o">.</span> \
+        <span class="n">set_index</span><span class="p">(</span><span class="n">colname_id</span><span class="p">)</span>
+
+    <span class="n">smote_fea</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">smote_fea</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)[[]])</span>
+    <span class="n">smote_fea</span> <span class="o">=</span> <span class="n">timstamp_remove_duplicates</span><span class="p">(</span><span class="n">smote_fea</span><span class="p">,</span> <span class="n">colname_id</span><span class="p">)</span><span class="o">.</span> \
+        <span class="n">set_index</span><span class="p">(</span><span class="n">colname_id</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">smote_fea</span><span class="p">,</span> <span class="n">smote_tar</span></div>
+
+<div class="viewcode-block" id="SMOTEwithCat"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.SMOTEwithCat">[docs]</a><span class="k">def</span> <span class="nf">SMOTEwithCat</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">colname</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply the SMOTE-NC (Synthetic Minority Over-sampling Technique for Nominal and Continuous features)</span>
+<span class="sd">    to handle imbalanced datasets that include both categorical and continuous features.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas DataFrame</span>
+<span class="sd">        The input feature dataframe containing both categorical and continuous independent variables.</span>
+<span class="sd">    df_tar : pandas DataFrame</span>
+<span class="sd">        The target dataframe containing the dependent variable(s).</span>
+<span class="sd">    colname : str</span>
+<span class="sd">        The column name of the target variable that requires oversampling.</span>
+<span class="sd">    random_state : int, optional</span>
+<span class="sd">        The seed used by SMOTE-NC for random number generation, default is 42.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    smote_fea : pandas DataFrame</span>
+<span class="sd">        The oversampled feature dataframe with categorical and continuous features.</span>
+<span class="sd">    smote_tar : pandas DataFrame</span>
+<span class="sd">        The oversampled target dataframe.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">smote_nc</span> <span class="o">=</span> <span class="n">SMOTENC</span><span class="p">(</span><span class="n">categorical_features</span> <span class="o">=</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">)</span>
+    <span class="n">smote_fea</span><span class="p">,</span> <span class="n">smote_tar</span> <span class="o">=</span> <span class="n">smote_nc</span><span class="o">.</span><span class="n">fit_resample</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span>
+                                                   <span class="n">df_tar</span><span class="p">[[</span><span class="n">colname</span><span class="p">]])</span>
+
+    <span class="k">return</span> <span class="n">smote_fea</span><span class="p">,</span> <span class="n">smote_tar</span></div>
+
+<div class="viewcode-block" id="SMOGN"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.SMOGN">[docs]</a><span class="k">def</span> <span class="nf">SMOGN</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">colname</span><span class="p">,</span> <span class="n">colname_idx</span><span class="p">,</span> <span class="n">rel_thres</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply the SMOGN (Synthetic Minority Over-sampling Technique for Regression with Gaussian Noise)</span>
+<span class="sd">    to handle imbalanced regression datasets by oversampling both rare and extreme values.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas DataFrame</span>
+<span class="sd">        The input feature dataframe containing the independent variables.</span>
+<span class="sd">    df_tar : pandas DataFrame</span>
+<span class="sd">        The target dataframe containing the dependent variable(s).</span>
+<span class="sd">    colname : str</span>
+<span class="sd">        The column name of the target variable that requires oversampling.</span>
+<span class="sd">    colname_idx : str</span>
+<span class="sd">        The column name that serves as the unique identifier for each instance in the data.</span>
+<span class="sd">    rel_thres : float, optional</span>
+<span class="sd">        The relevance threshold for identifying rare and extreme values, default is 0.8.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    smogn_fea : pandas DataFrame</span>
+<span class="sd">        The oversampled feature dataframe with rare and extreme values oversampled, indexed by `colname_idx`.</span>
+<span class="sd">    smogn_tar : pandas DataFrame</span>
+<span class="sd">        The oversampled target dataframe with rare and extreme values oversampled, indexed by `colname_idx`.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">cur_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">])</span>
+    <span class="c1"># smogn fails seemingly-randomly</span>
+    <span class="n">n_tries</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">done</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">smogn_fea</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    <span class="n">smogn_tar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">train_part_smogn</span> <span class="o">=</span> <span class="n">smogn</span><span class="o">.</span><span class="n">smoter</span><span class="p">(</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">cur_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span> <span class="o">=</span> <span class="p">[</span><span class="n">colname</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">colname</span><span class="p">,</span>
+                <span class="n">rel_thres</span><span class="o">=</span><span class="n">rel_thres</span><span class="p">,</span>
+                <span class="c1"># rel_coef = 2.25</span>
+            <span class="p">)</span>
+            <span class="n">smogn_fea</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_part_smogn</span><span class="p">[[</span><span class="n">colname_idx</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">colname_idx</span><span class="p">),</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+            <span class="n">smogn_tar</span> <span class="o">=</span> <span class="n">df_tar</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">train_part_smogn</span><span class="p">[[</span><span class="n">colname_idx</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">colname_idx</span><span class="p">),</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+
+            <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rf SMOGN try </span><span class="si">{</span><span class="n">n_tries</span><span class="si">}</span><span class="s2"> cannot be executed&quot;</span><span class="p">)</span>
+            <span class="n">done</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">return</span> <span class="n">smogn_fea</span><span class="p">,</span> <span class="n">smogn_tar</span></div>
+
+<div class="viewcode-block" id="check_equidistant_minute_timestamps"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.check_equidistant_minute_timestamps">[docs]</a><span class="k">def</span> <span class="nf">check_equidistant_minute_timestamps</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if the datetime index of a DataFrame has equidistant time stamps each minute.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (pd.DataFrame): DataFrame with a datetime index.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    bool: True if time stamps are equidistant each minute, False otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Example:</span>
+<span class="sd">    # Sample data</span>
+<span class="sd">    data = {&#39;value&#39;: [1, 2, 3, 4, 5]}</span>
+<span class="sd">    index = pd.to_datetime([&#39;2024-07-23 10:00&#39;, &#39;2024-07-23 10:01&#39;, &#39;2024-07-23 10:02&#39;, &#39;2024-07-23 10:03&#39;, &#39;2024-07-23 10:04&#39;])</span>
+<span class="sd">    df = pd.DataFrame(data, index=index)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># Calculate the difference between consecutive time stamps</span>
+    <span class="n">time_diffs</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+
+    <span class="c1"># Check if all differences are equal to one minute</span>
+    <span class="n">is_equidistant</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_diffs</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">==</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">is_equidistant</span></div>
+
+<div class="viewcode-block" id="check_equidistant_problems"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.check_equidistant_problems">[docs]</a><span class="k">def</span> <span class="nf">check_equidistant_problems</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="s1">&#39;T&#39;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check problems in a DataFrame regarding equidistant datetime index values.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (pd.DataFrame): DataFrame with a datetime index.</span>
+<span class="sd">    frequency (str): Frequency string (e.g., &#39;T&#39; for minute, &#39;H&#39; for hour).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    dict: Dictionary with the problems found in the dataset.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; </span>
+<span class="sd">    # Sample data</span>
+<span class="sd">    data = {&#39;value&#39;: [1, 2, 3, 4, 5]}</span>
+<span class="sd">    index = pd.to_datetime([&#39;2024-07-23 10:00&#39;, &#39;2024-07-23 10:01&#39;, &#39;2024-07-23 10:02&#39;, &#39;2024-07-23 10:04&#39;, &#39;2024-07-23 10:04&#39;])</span>
+<span class="sd">    df = pd.DataFrame(data, index=index)</span>
+<span class="sd">    </span>
+<span class="sd">    # Check for problems</span>
+<span class="sd">    problems = check_equidistant_problems(dataSetHandler.df)</span>
+<span class="sd">    </span>
+<span class="sd">    # Print the result</span>
+<span class="sd">    print(&quot;Missing timestamps:&quot;, problems[&#39;missing_timestamps&#39;])</span>
+<span class="sd">    print(&quot;Duplicate timestamps:&quot;, problems[&#39;duplicate_timestamps&#39;])</span>
+<span class="sd">    print(&quot;Non-equidistant timestamps:&quot;, problems[&#39;non_equidistant_timestamps&#39;])</span>
+<span class="sd">    </span>
+<span class="sd">    duplicates not entirely correct, timestamp only at beinning of day, prob. wrong dataSetHandler.df[isDup].index.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">problems</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;missing_timestamps&#39;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s1">&#39;duplicate_timestamps&#39;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s1">&#39;non_equidistant_timestamps&#39;</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Ensure the index is sorted</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+    <span class="c1"># Full range of timestamps</span>
+    <span class="n">full_range</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">end</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">freq</span><span class="o">=</span><span class="n">frequency</span><span class="p">)</span>
+
+    <span class="c1"># Find missing timestamps</span>
+    <span class="n">missing_timestamps</span> <span class="o">=</span> <span class="n">full_range</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">missing_timestamps</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="n">problems</span><span class="p">[</span><span class="s1">&#39;missing_timestamps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">missing_timestamps</span>
+
+    <span class="c1"># Find duplicate timestamps</span>
+    <span class="n">duplicate_timestamps</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s2">&quot;first&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">duplicate_timestamps</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+        <span class="n">problems</span><span class="p">[</span><span class="s1">&#39;duplicate_timestamps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">duplicate_timestamps</span>
+
+    <span class="c1"># Check for non-equidistant timestamps</span>
+    <span class="n">time_diffs</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">expected_diff</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_timedelta</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;1</span><span class="si">{</span><span class="n">frequency</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">time_diffs</span> <span class="o">==</span> <span class="n">expected_diff</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+        <span class="n">problems</span><span class="p">[</span><span class="s1">&#39;non_equidistant_timestamps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">return</span> <span class="n">problems</span></div>
+
+
+<div class="viewcode-block" id="DataSetHandler"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler">[docs]</a><span class="k">class</span> <span class="nc">DataSetHandler</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    DataSetHandler class for handling data split into train and test as</span>
+<span class="sd">    well as resampling operations.</span>
+
+<span class="sd">    Relies on</span>
+<span class="sd">    ----------</span>
+<span class="sd">    cross_validation : boolean</span>
+<span class="sd">        ...</span>
+<span class="sd">    train_test_IDs : ...</span>
+<span class="sd">        only possible when ``cross_validation`` is False</span>
+<span class="sd">    exclude_cols : list columns not to regard in model</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">        - data (pd.DataFrame): The input DataFrame.</span>
+<span class="sd">        - test_size (float): The proportion of the dataset to include in the test split.</span>
+<span class="sd">        - random_state (int): Random seed for reproducibility.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_train_list_fea : list of pandas DataFrame</span>
+<span class="sd">        List of training feature DataFrames.</span>
+<span class="sd">    df_train_list_tar : list of pandas DataFrame</span>
+<span class="sd">        List of training target DataFrames.</span>
+<span class="sd">    df_train_list_excl : list of pandas DataFrame</span>
+<span class="sd">        List of excluded columns in training DataFrames.</span>
+<span class="sd">    df_test_list_fea : list of pandas DataFrame</span>
+<span class="sd">        List of testing feature DataFrames.</span>
+<span class="sd">    df_test_list_tar : list of pandas DataFrame</span>
+<span class="sd">        List of testing target DataFrames.</span>
+<span class="sd">    df_test_list_excl : list of pandas DataFrame</span>
+<span class="sd">        List of excluded columns in testing DataFrames.</span>
+<span class="sd">    list_len : int</span>
+<span class="sd">        Length of the training feature DataFrame list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="DataSetHandler.__init__"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">check_equidistant_minute_timestamps</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">config</span><span class="o">.</span><span class="n">frequency</span><span class="p">:</span>
+                <span class="n">frequency</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">config</span><span class="o">.</span><span class="n">update_frequency</span><span class="p">(</span><span class="n">frequency</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">frequency</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">frequency</span>
+            <span class="n">problems</span> <span class="o">=</span> <span class="n">check_equidistant_problems</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">frequency</span><span class="o">=</span><span class="n">frequency</span><span class="p">)</span>
+            <span class="c1">#full_range = pd.date_range(start=df.index.min(), end=df.index.max(), freq=detMLConfig.frequency)</span>
+            <span class="c1">#df = pd.DataFrame([np.nan] * len(full_range), index=full_range, columns=[&quot;placeholder&quot;]).join(df).drop(</span>
+            <span class="c1">#    columns=[&quot;placeholder&quot;])</span>
+            <span class="c1">#print(&quot;Added missing timestamps:&quot;, problems[&#39;missing_timestamps&#39;])</span>
+            <span class="n">isDup</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s2">&quot;first&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">isDup</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Removed duplicate timestamps:&quot;</span><span class="p">,</span> <span class="n">problems</span><span class="p">[</span><span class="s1">&#39;duplicate_timestamps&#39;</span><span class="p">])</span>
+
+        <span class="c1"># self.test_size = detMLConfig.test_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">random_state</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">random_state</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tar_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_target_det</span><span class="p">,</span> <span class="n">config</span><span class="o">.</span><span class="n">colname_target_corr</span><span class="p">]</span>
+        <span class="c1"># self._split_data()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_list_tar</span><span class="p">,</span> \
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_list_fea</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list_tar</span> <span class="o">=</span> <span class="n">train_test_fea_tar_split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span>
+                                                                              <span class="bp">self</span><span class="o">.</span><span class="n">tar_columns</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">df_results</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">[[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">list_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_event_absnr</span> <span class="o">=</span> <span class="p">[</span><span class="n">cur_df</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">colname_isEvent</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="k">for</span> <span class="n">cur_df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span> <span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_eventrates</span> <span class="o">=</span> <span class="p">[(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_event_absnr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">cur_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cur_df</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span><span class="p">)]</span></div>
+
+    <span class="k">def</span> <span class="nf">getCharacteristics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detMLConfig</span><span class="p">):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">d</span><span class="p">[</span><span class="s2">&quot;train_eventrate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">detMLConfig</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">df_train_list_excl</span><span class="p">]</span>
+        <span class="n">d</span><span class="p">[</span><span class="s2">&quot;train_event_absnr&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">detMLConfig</span><span class="o">.</span><span class="n">colname_isEvent</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">df_train_list_excl</span><span class="p">]</span>
+        <span class="n">d</span><span class="p">[</span><span class="s2">&quot;Detection_method&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="k">return</span> <span class="n">d</span>
+
+    <span class="k">def</span> <span class="nf">preprocess_training_ds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preproc_fct</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+        <span class="n">cur_train_list_fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span>
+        <span class="c1">#if exclude_columns:</span>
+        <span class="c1">#    cur_train_list_fea = [df.drop(columns=exclude_columns, errors = &quot;ignore&quot;) for df in self.train_list_fea]</span>
+
+        <span class="n">preproc_fea_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">preproc_tar_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cur_train_list_fea</span><span class="p">)):</span>
+            <span class="n">preproc_fea</span><span class="p">,</span> <span class="n">preproc_tar</span> <span class="o">=</span> <span class="n">preproc_fct</span><span class="p">(</span><span class="n">cur_train_list_fea</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">train_list_tar</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+                                                   <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="n">preproc_fea_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">preproc_fea</span><span class="p">)</span>
+            <span class="n">preproc_tar_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">preproc_tar</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span> <span class="o">=</span> <span class="n">preproc_fea_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">train_list_tar</span> <span class="o">=</span> <span class="n">preproc_tar_list</span>
+
+<div class="viewcode-block" id="DataSetHandler.get_train_features"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler.get_train_features">[docs]</a>    <span class="k">def</span> <span class="nf">get_train_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclude_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># get_df_train_list_fea</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the list of training DataFrames for features.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list of pandas DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">cur_train_list_fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span>
+
+        <span class="k">if</span> <span class="n">exclude_columns</span><span class="p">:</span>
+            <span class="n">cur_train_list_fea</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">exclude_columns</span><span class="p">,</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">cur_train_list_fea</span></div>
+
+<div class="viewcode-block" id="DataSetHandler.get_train_targets"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler.get_train_targets">[docs]</a>    <span class="k">def</span> <span class="nf">get_train_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extract_single_target</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the list of training DataFrames for targets.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list of pandas DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">extract_single_target</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">extract_single_target</span><span class="p">]</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_list_tar</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_list_tar</span></div>
+
+<div class="viewcode-block" id="DataSetHandler.get_test_features"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler.get_test_features">[docs]</a>    <span class="k">def</span> <span class="nf">get_test_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclude_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the list of testing DataFrames for features.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list of pandas DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">exclude_columns</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">exclude_columns</span><span class="p">,</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list_fea</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list_fea</span></div>
+
+<div class="viewcode-block" id="DataSetHandler.get_test_targets"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler.get_test_targets">[docs]</a>    <span class="k">def</span> <span class="nf">get_test_targets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extract_single_target</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the list of testing DataFrames for targets.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list of pandas DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">extract_single_target</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">extract_single_target</span><span class="p">]</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list_tar</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list_tar</span></div>
+
+<div class="viewcode-block" id="DataSetHandler.get_complete_dataset"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler.get_complete_dataset">[docs]</a>    <span class="k">def</span> <span class="nf">get_complete_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exclude_columns</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the original data, optionally excluding specific columns.</span>
+
+<span class="sd">        Parameters :</span>
+<span class="sd">        exclude_columns (list) : List of columns to exclude from the original data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">exclude_columns</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">exclude_columns</span><span class="p">,</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span></div>
+
+<div class="viewcode-block" id="DataSetHandler.append_col_to_df_train_test"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler.append_col_to_df_train_test">[docs]</a>    <span class="k">def</span> <span class="nf">append_col_to_df_train_test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">series</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the list of training DataFrames for features with an additional column.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        series : pandas.Series</span>
+<span class="sd">            The series to be appended as a new column to the DataFrame.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        list of pandas DataFrame</span>
+<span class="sd">            A list of DataFrames for training with the additional column appended.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">list_len</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_list_fea</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">validate</span> <span class="o">=</span> <span class="s2">&quot;one_to_one&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">test_list_fea</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_list_fea</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">validate</span> <span class="o">=</span> <span class="s2">&quot;one_to_one&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DataSetHandler.append_col_to_df_results"><a class="viewcode-back" href="../../../preprocessing_general.html#TSCC.preprocessing.general.DataSetHandler.append_col_to_df_results">[docs]</a>    <span class="k">def</span> <span class="nf">append_col_to_df_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">series</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Append a new column to the DataFrame.</span>
+<span class="sd">        The new column should have a name.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df_results</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df_results</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">series</span><span class="p">)</span><span class="c1">#data_observations</span></div></div>
+
+
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

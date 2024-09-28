@@ -1,0 +1,60 @@
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+API-Reference
+==============
+
+The individual package modules are listed below.
+You find a description of individual functionalities, parameter options as well as the output together with small examples.
+
+Preprocessing
+-------------
+
+.. toctree::
+   :maxdepth: 1
+
+   preprocessing_general
+   preprocessing_feature_generation
+   synthetic_error_generation
+
+Exploration
+-----------
+
+.. toctree::
+   :maxdepth: 1
+
+   events
+   exploration_general
+
+Detection
+---------
+
+.. toctree::
+   :maxdepth: 1
+
+   det_basics
+   det_statistical
+   det_ml
+   det_baseline
+
+Correction
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   corr_statistical
+   corr_ml
+   corr_baseline
+
+Assessment
+-----------
+
+.. toctree::
+   :maxdepth: 1
+
+   data_quality_coefficients
+   model_error_metrics
+   evaluation_handler
+

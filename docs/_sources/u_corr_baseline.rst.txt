@@ -1,0 +1,58 @@
+Baseline error correction
+=================================
+
+.. image:: _static/correction_baseline.jpg
+   :alt: Function overview
+   :align: center
+
+NA by mode
+----------
+With this function you can replace the missing values in your dataframe with the most common number (mode) in it.
+Here's an example of the 'BASE_NA_byMode' function:
+
+.. code-block:: python
+    :caption: Replacing with mode
+
+    >>> d = {'col1': [1, 9, None, 9, 20, None]}
+    >>> df = pd.DataFrame(data=d)
+    >>> config = TSCC.preprocessing.Config(colname_raw = 'col1')
+    >>> test = TSCC.correction.BASE_NA_byMode(df, 10,config)
+    >>> test
+    0     1.0
+    1     9.0
+    2     9.0
+    3     9.0
+    4    20.0
+    5     9.0
+    Name: col1, dtype: float64
+
+As expected the missing values are being filled with 9, because it is the most common mode with two times.
+
+
+NA in space
+-----------
+With this function you can impute the missing values with the mean of other columns in your dataframe.
+Here's an example of how to use the 'BASE_NA_inSpace' function:
+
+.. code-block:: python
+    :caption: Replacing with mean
+
+    >>> data = {
+    >>>     "val_raw": [1, None, np.nan, 1, None],
+    >>>     "isError": [False, True, True, False, True],
+    >>>     'N': [2, 2, 2, 2, 2],
+    >>>     'E': [3, 3, None, 3, 3],
+    >>> }
+    >>> df_fea = pd.DataFrame(data)
+    >>> config = TSCC.preprocessing.Config(colname_raw = 'val_raw')
+    >>> BASE_NA_inSpace(df_fea, None, config)
+    0    1.000000
+    1    2.500000
+    2    2.000000
+    3    1.000000
+    4    2.500000
+    Name: val_raw, dtype: float64
+
+As expected the missing values of 'val_raw' are being imputed with the mean of 'N' and 'E'.
+
+

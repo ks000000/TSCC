@@ -1,0 +1,626 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Events &#8212; TSCC 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u_events';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="General exploration methods" href="u_general.html" />
+    <link rel="prev" title="Synthetic error generation methods" href="u_synthetic_error_generation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 28, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="usage.html" class="nav-link">Usage</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Events</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="events">
+<h1>Events<a class="headerlink" href="#events" title="Permalink to this heading">#</a></h1>
+<img alt="Function overview" class="align-center" src="_images/exploration_events.jpg" />
+<section id="get-events-from-time-series">
+<h2>Get events from time series<a class="headerlink" href="#get-events-from-time-series" title="Permalink to this heading">#</a></h2>
+<p>In the following example, a DataFrame is created containing timestamps and values generated from a Poisson distribution,
+simulating plausible sensor readings over a 4-hour period starting from April 29, 2000. The <code class="docutils literal notranslate"><span class="pre">value_plaus</span></code> column is
+populated with values drawn from a Poisson distribution with a lambda of 1, resulting in a random yet statistically
+consistent dataset. After setting the timestamp as the index, the <code class="docutils literal notranslate"><span class="pre">TSCC.exploration.getEvents</span></code> function is called to
+identify events based on specific criteria, such as peak values and event sums. The resulting event_list captures
+significant time intervals where the conditions are met, providing insights into the data’s temporal dynamics.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create a date range for the timestamps</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">date_range</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2000-04-29&#39;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;5min&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Generate random data for &#39;value_plaus&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># For reproducibility</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">value_plaus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">poisson</span><span class="p">(</span><span class="n">lam</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">date_range</span><span class="p">))</span>  <span class="c1"># Lambda set to 3</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Create the DataFrame</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="n">date_range</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="s1">&#39;value_plaus&#39;</span><span class="p">:</span> <span class="n">value_plaus</span>
+<span class="go">&gt;&gt;&gt;})</span>
+<span class="go">&gt;&gt;&gt;# Display the first few rows of the DataFrame</span>
+<span class="go">&gt;&gt;&gt;print(df.head())</span>
+<span class="go">                timestamp  value_plaus</span>
+<span class="go">0 2000-04-29 00:00:00            2</span>
+<span class="go">1 2000-04-29 00:05:00            1</span>
+<span class="go">2 2000-04-29 00:10:00            1</span>
+<span class="go">3 2000-04-29 00:15:00            2</span>
+<span class="go">4 2000-04-29 00:20:00            2</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df_time</span> <span class="o">=</span> <span class="s2">&quot;timestamp&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df_value_raw</span> <span class="o">=</span> <span class="s2">&quot;value_plaus&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">event_list</span> <span class="o">=</span> <span class="n">TSCC</span><span class="o">.</span><span class="n">exploration</span><span class="o">.</span><span class="n">getEvents</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">df_time</span><span class="p">)[</span><span class="n">df_value_raw</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">max_time_dist_from_center</span> <span class="o">=</span> <span class="s2">&quot;45t&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="c1">#center_valley = (-float(&quot;inf&quot;), float(&quot;inf&quot;)),</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">center_peak</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)),</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">event_sum</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">140</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">event_dist</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.000001</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">),</span> <span class="mf">.3</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">event_list</span>
+<span class="go">[[Timestamp(&#39;2000-04-29 00:00:00&#39;),</span>
+<span class="go">  Timestamp(&#39;2000-04-29 00:45:00&#39;),</span>
+<span class="go">  0,</span>
+<span class="go">  5,</span>
+<span class="go">  15],</span>
+<span class="go"> [Timestamp(&#39;2000-04-29 00:10:00&#39;),</span>
+<span class="go">  Timestamp(&#39;2000-04-29 01:40:00&#39;),</span>
+<span class="go">  0,</span>
+<span class="go">  5,</span>
+<span class="go">  24],</span>
+<span class="go"> [Timestamp(&#39;2000-04-29 02:15:00&#39;),</span>
+<span class="go">  Timestamp(&#39;2000-04-29 03:45:00&#39;),</span>
+<span class="go">  0,</span>
+<span class="go">  3,</span>
+<span class="go">  13],</span>
+<span class="go"> [Timestamp(&#39;2000-04-29 03:05:00&#39;), Timestamp(&#39;2000-04-29 04:05:00&#39;), 0, 2, 9]]</span>
+</pre></div>
+</div>
+</section>
+<section id="get-precipitation-event-return-periods">
+<h2>Get (precipitation) event return periods<a class="headerlink" href="#get-precipitation-event-return-periods" title="Permalink to this heading">#</a></h2>
+<p>This example demonstrates the creation of a DataFrame in Python using the pandas library to represent rainfall data
+over various time intervals, ranging from 15 minutes to 72 hours first. Each column corresponds to different accumulation
+thresholds (1a, 3a, 5a, etc.), with values indicating rainfall amounts. Following the DataFrame creation, the function
+<code class="docutils literal notranslate"><span class="pre">getEventReturnPeriod</span></code> is invoked to analyze the rainfall data, generating indicators for heavy rainfall events across
+specified durations. The resulting DataFrame displays boolean values indicating whether heavy rain was detected for
+each time interval.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;import pandas as pd</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;# Define the data</span>
+<span class="go">&gt;&gt;&gt;data = {</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;1a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">9.7</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">14.5</span><span class="p">,</span> <span class="mf">16.1</span><span class="p">,</span> <span class="mf">17.4</span><span class="p">,</span> <span class="mf">20.8</span><span class="p">,</span> <span class="mf">23.0</span><span class="p">,</span> <span class="mf">27.4</span><span class="p">,</span> <span class="mf">30.4</span><span class="p">,</span> <span class="mf">32.6</span><span class="p">,</span> <span class="mf">38.8</span><span class="p">,</span> <span class="mf">43.0</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;3a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">13.0</span><span class="p">,</span> <span class="mf">16.0</span><span class="p">,</span> <span class="mf">19.4</span><span class="p">,</span> <span class="mf">21.6</span><span class="p">,</span> <span class="mf">23.2</span><span class="p">,</span> <span class="mf">27.8</span><span class="p">,</span> <span class="mf">30.8</span><span class="p">,</span> <span class="mf">36.7</span><span class="p">,</span> <span class="mf">40.6</span><span class="p">,</span> <span class="mf">43.6</span><span class="p">,</span> <span class="mf">51.9</span><span class="p">,</span> <span class="mf">57.5</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;5a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">14.7</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">21.8</span><span class="p">,</span> <span class="mf">24.3</span><span class="p">,</span> <span class="mf">26.2</span><span class="p">,</span> <span class="mf">31.3</span><span class="p">,</span> <span class="mf">34.7</span><span class="p">,</span> <span class="mf">41.3</span><span class="p">,</span> <span class="mf">45.7</span><span class="p">,</span> <span class="mf">49.2</span><span class="p">,</span> <span class="mf">58.5</span><span class="p">,</span> <span class="mf">64.7</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;10a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">17.0</span><span class="p">,</span> <span class="mf">20.9</span><span class="p">,</span> <span class="mf">25.3</span><span class="p">,</span> <span class="mf">28.2</span><span class="p">,</span> <span class="mf">30.4</span><span class="p">,</span> <span class="mf">36.3</span><span class="p">,</span> <span class="mf">40.3</span><span class="p">,</span> <span class="mf">48.0</span><span class="p">,</span> <span class="mf">53.1</span><span class="p">,</span> <span class="mf">57.1</span><span class="p">,</span> <span class="mf">67.9</span><span class="p">,</span> <span class="mf">75.2</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;20a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">19.5</span><span class="p">,</span> <span class="mf">24.0</span><span class="p">,</span> <span class="mf">29.0</span><span class="p">,</span> <span class="mf">32.3</span><span class="p">,</span> <span class="mf">34.8</span><span class="p">,</span> <span class="mf">41.5</span><span class="p">,</span> <span class="mf">46.1</span><span class="p">,</span> <span class="mf">54.9</span><span class="p">,</span> <span class="mf">60.7</span><span class="p">,</span> <span class="mf">65.3</span><span class="p">,</span> <span class="mf">77.7</span><span class="p">,</span> <span class="mf">86.0</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;25a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">20.4</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">30.3</span><span class="p">,</span> <span class="mf">33.7</span><span class="p">,</span> <span class="mf">36.3</span><span class="p">,</span> <span class="mf">43.4</span><span class="p">,</span> <span class="mf">48.1</span><span class="p">,</span> <span class="mf">57.3</span><span class="p">,</span> <span class="mf">63.5</span><span class="p">,</span> <span class="mf">68.2</span><span class="p">,</span> <span class="mf">81.2</span><span class="p">,</span> <span class="mf">89.9</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;30a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">21.1</span><span class="p">,</span> <span class="mf">25.9</span><span class="p">,</span> <span class="mf">31.4</span><span class="p">,</span> <span class="mf">34.9</span><span class="p">,</span> <span class="mf">37.6</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">,</span> <span class="mf">49.8</span><span class="p">,</span> <span class="mf">59.4</span><span class="p">,</span> <span class="mf">65.7</span><span class="p">,</span> <span class="mf">70.7</span><span class="p">,</span> <span class="mf">84.1</span><span class="p">,</span> <span class="mf">93.1</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;50a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">23.2</span><span class="p">,</span> <span class="mf">28.5</span><span class="p">,</span> <span class="mf">34.5</span><span class="p">,</span> <span class="mf">38.4</span><span class="p">,</span> <span class="mf">41.4</span><span class="p">,</span> <span class="mf">49.4</span><span class="p">,</span> <span class="mf">54.8</span><span class="p">,</span> <span class="mf">65.3</span><span class="p">,</span> <span class="mf">72.3</span><span class="p">,</span> <span class="mf">77.7</span><span class="p">,</span> <span class="mf">92.5</span><span class="p">,</span> <span class="mf">102.4</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="s2">&quot;100a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">26.2</span><span class="p">,</span> <span class="mf">32.2</span><span class="p">,</span> <span class="mf">39.0</span><span class="p">,</span> <span class="mf">43.4</span><span class="p">,</span> <span class="mf">46.7</span><span class="p">,</span> <span class="mf">55.9</span><span class="p">,</span> <span class="mf">61.9</span><span class="p">,</span> <span class="mf">73.7</span><span class="p">,</span> <span class="mf">81.7</span><span class="p">,</span> <span class="mf">87.8</span><span class="p">,</span> <span class="mf">104.5</span><span class="p">,</span> <span class="mf">115.6</span><span class="p">]</span>
+<span class="go">&gt;&gt;&gt;}</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;# Define the index (time intervals)</span>
+<span class="go">&gt;&gt;&gt;index = [&quot;15 min&quot;, &quot;30 min&quot;, &quot;60 min&quot;, &quot;90 min&quot;, &quot;2 h&quot;, &quot;4 h&quot;, &quot;6 h&quot;, &quot;12 h&quot;, &quot;18 h&quot;, &quot;24 h&quot;, &quot;48 h&quot;, &quot;72 h&quot;]</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;# Create the DataFrame</span>
+<span class="go">&gt;&gt;&gt;df = pd.DataFrame(data, index=index)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;# Display the DataFrame</span>
+<span class="go">&gt;&gt;&gt;print(df)</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Get a DataFrame with heavy rainfall event indicators</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df_re</span> <span class="o">=</span> <span class="n">TSCC</span><span class="o">.</span><span class="n">exploration</span><span class="o">.</span><span class="n">getEventReturnPeriod</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">df_time</span><span class="p">)[</span><span class="n">df_value_raw</span><span class="p">],</span> <span class="n">KOSTRA_MH</span><span class="p">)</span>
+<span class="go">&gt;&gt;&gt;print(df_re.head())</span>
+<span class="go">                         isHeavyRain_AtLeast1a  isHeavyRain_AtLeast3a  \</span>
+<span class="go">timestamp</span>
+<span class="go">2000-04-29 00:00:00                  False                  False</span>
+<span class="go">2000-04-29 00:05:00                  False                  False</span>
+<span class="go">2000-04-29 00:10:00                  False                  False</span>
+<span class="go">2000-04-29 00:15:00                  False                  False</span>
+<span class="go">2000-04-29 00:20:00                  False                  False</span>
+
+<span class="go">                     isHeavyRain_AtLeast5a  isHeavyRain_AtLeast10a  \</span>
+<span class="go">timestamp</span>
+<span class="go">2000-04-29 00:00:00                  False                   False</span>
+<span class="go">2000-04-29 00:05:00                  False                   False</span>
+<span class="go">2000-04-29 00:10:00                  False                   False</span>
+<span class="go">2000-04-29 00:15:00                  False                   False</span>
+<span class="go">2000-04-29 00:20:00                  False                   False</span>
+
+<span class="go">                     isHeavyRain_AtLeast20a  isHeavyRain_AtLeast25a  \</span>
+<span class="go">timestamp</span>
+<span class="go">2000-04-29 00:00:00                   False                   False</span>
+<span class="go">2000-04-29 00:05:00                   False                   False</span>
+<span class="go">2000-04-29 00:10:00                   False                   False</span>
+<span class="go">2000-04-29 00:15:00                   False                   False</span>
+<span class="go">2000-04-29 00:20:00                   False                   False</span>
+
+<span class="go">                     isHeavyRain_AtLeast30a  isHeavyRain_AtLeast50a  \</span>
+<span class="go">timestamp</span>
+<span class="go">2000-04-29 00:00:00                   False                   False</span>
+<span class="go">2000-04-29 00:05:00                   False                   False</span>
+<span class="go">2000-04-29 00:10:00                   False                   False</span>
+<span class="go">2000-04-29 00:15:00                   False                   False</span>
+<span class="go">2000-04-29 00:20:00                   False                   False</span>
+
+<span class="go">                     isHeavyRain_AtLeast100a</span>
+<span class="go">timestamp</span>
+<span class="go">2000-04-29 00:00:00                    False</span>
+<span class="go">2000-04-29 00:05:00                    False</span>
+<span class="go">2000-04-29 00:10:00                    False</span>
+<span class="go">2000-04-29 00:15:00                    False</span>
+<span class="go">2000-04-29 00:20:00                    False</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-events-from-time-series">Get events from time series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-precipitation-event-return-periods">Get (precipitation) event return periods</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

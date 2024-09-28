@@ -1,0 +1,66 @@
+General exploration methods
+===========================
+
+.. image:: _static/exploration_general.jpg
+   :alt: Function overview
+   :align: center
+
+Aggregate sums
+--------------
+This function is designed to compute the sum of values for each column in a dataframe, aggregated by a specified time
+frequency (yearly, quarterly, or monthly). This is useful for summarizing time-series data by different time intervals.
+Here's an example of how to use the 'aggregate_sums' function:
+
+.. code-block:: python
+    :caption: Aggregate sums of a dataframe
+
+    >>> # Step 1: Generate a date range for three consecutive years
+    >>> date_range = pd.date_range(start='2021-01-01', end='2021-12-31', freq='D')
+    >>> # Step 2: Create random data for the three columns
+    >>> np.random.seed(42)  # For reproducibility
+    >>> data = np.random.randint(0, 18, size=(len(date_range), 1))
+    >>> # Step 3: Combine the date range and the data into a DataFrame
+    >>> df = pd.DataFrame(data, index=date_range, columns=['Column1'])
+    >>> TSCC.exploration.aggregate_sums(df, freq = "Q")
+            Column1
+    2021-03-31	753
+    2021-06-30	667
+    2021-09-30	713
+    2021-12-31	754
+
+As expected the new dataframe has now four rows with sums of each quarter.
+
+
+Credible by neighbours
+----------------------
+The purpose of this function is to assess the credibility of a sensor's data by comparing it with the data
+from neighboring sensors on a yearly basis. The function determines whether the values from the sensor in question
+deviate significantly from the mean values of its neighbors, using a specified deviation threshold.
+
+.. code-block:: python
+    :caption: Comparing with neighbour sensors
+
+    >>> # Step 1: Generate a date range for three consecutive years
+    >>> date_range = pd.date_range(start='2021-01-01', end='2026-12-31', freq='D')
+    >>> # Step 2: Create random data for the three columns
+    >>> np.random.seed(42)  # For reproducibility
+    >>> data = np.random.randint(0, 18, size=(len(date_range), 2))
+    >>> # Step 3: Combine the date range and the data into a DataFrame
+    >>> df = pd.DataFrame(data, index=date_range, columns=['Column1','Column2'])
+    >>> TSCC.exploration.isCredible_ByNeighbors_yearly(series = df["Column1"], df_neighbors = df[["Column2"]], threshold=0.04)
+    2021    False
+    2022     True
+    2023     True
+    2024    False
+    2025     True
+    2026     True
+    dtype: bool
+
+In this case only for four years the observations of the node are in credible range, because of the reduction
+of the threshold value to 4%.
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+Evaluation wrapper
+===============================
+
+.. automodule:: TSCC.assessment.evaluation_handler
+   :members:

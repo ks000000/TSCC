@@ -1,0 +1,5 @@
+Geo statisticals
+================
+
+In this section you will find functions, wich provide geological informations about your station.
+Bleiben diese Funktionen?

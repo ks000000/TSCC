@@ -1,0 +1,857 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSCC.detection.basics &#8212; TSCC 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/TSCC/detection/basics';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 21, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">TSCC.detecti...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for TSCC.detection.basics</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">PercentFormatter</span>
+
+
+<div class="viewcode-block" id="BASIC_byExistance"><a class="viewcode-back" href="../../../det_basics.html#TSCC.detection.basics.BASIC_byExistance">[docs]</a><span class="k">def</span> <span class="nf">BASIC_byExistance</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">no_data_char</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">obs_type</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if observation values exist and have the correct data type.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    series : pandas series</span>
+<span class="sd">        The input series to check for validity.</span>
+<span class="sd">    no_data_char : optional</span>
+<span class="sd">        A placeholder value for missing data.</span>
+<span class="sd">    obs_type : data type, e.g. int, float, str</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A series where 1.0 indicates an error (i.e., invalid observation) and 0.0 indicates no error.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; s = pd.Series([np.nan, 1, 2.0, &quot;string&quot;, 5.4, -999,  None])</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.detection.BASIC_byExistance(s, -999, float)</span>
+<span class="sd">    0    1.0</span>
+<span class="sd">    1    1.0</span>
+<span class="sd">    2    0.0</span>
+<span class="sd">    3    1.0</span>
+<span class="sd">    4    0.0</span>
+<span class="sd">    5    1.0</span>
+<span class="sd">    6    1.0</span>
+<span class="sd">    dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">is_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="kc">True</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="p">),</span> <span class="n">index</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">no_data_char</span><span class="p">:</span>
+        <span class="n">is_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">series</span> <span class="o">!=</span> <span class="n">no_data_char</span><span class="p">)</span>
+    <span class="n">is_correct_dtype</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="kc">True</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">series</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">obs_type</span><span class="p">:</span>
+        <span class="n">is_correct_dtype</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">obs_type</span><span class="p">))</span>
+
+    <span class="n">isValid_bool</span> <span class="o">=</span> <span class="p">(</span><span class="o">~</span><span class="n">series</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">is_data</span> <span class="o">&amp;</span> <span class="n">is_correct_dtype</span><span class="p">)</span>
+    <span class="n">isError</span> <span class="o">=</span> <span class="o">~</span><span class="n">isValid_bool</span>
+    <span class="k">return</span> <span class="n">isError</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BASIC_byRange"><a class="viewcode-back" href="../../../det_basics.html#TSCC.detection.basics.BASIC_byRange">[docs]</a><span class="k">def</span> <span class="nf">BASIC_byRange</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if values are within plausible limits.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas dataframe</span>
+<span class="sd">        series of detMLConfig.colname_raw is used only</span>
+<span class="sd">    df_tar : pandas dataframe</span>
+<span class="sd">        only serves as placeholder, no usage of it</span>
+<span class="sd">    upper : number, optional</span>
+<span class="sd">        Upper boundary of the series. The default is None.</span>
+<span class="sd">    lower : number, optional</span>
+<span class="sd">        Lower boundary of the series. The default is None.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    s : pandas series</span>
+<span class="sd">        cleaned series.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    The first example returns False for every value out of boundary.</span>
+
+<span class="sd">    &gt;&gt;&gt; test_boolean = STAT_byBoundary(df[&#39;col1&#39;], upper=9, lower=1, setValueTo = &quot;Boolean&quot;)</span>
+<span class="sd">    0     True</span>
+<span class="sd">    1     True</span>
+<span class="sd">    2     True</span>
+<span class="sd">    3     True</span>
+<span class="sd">    4    False</span>
+<span class="sd">    5     True</span>
+<span class="sd">    6     True</span>
+<span class="sd">    7     True</span>
+<span class="sd">    8    False</span>
+<span class="sd">    9     True</span>
+<span class="sd">    Name: col1, dtype: bool</span>
+
+
+<span class="sd">    The second example returns numpy.NaN for every value out of boundary, else the initial value.</span>
+
+<span class="sd">    &gt;&gt;&gt; BASIC_isValid_byRange(df[&#39;col1&#39;], upper=9, lower=1, setValueTo = &quot;OutOfBoundary_toNaN&quot;)</span>
+<span class="sd">    0    1.0</span>
+<span class="sd">    1    9.0</span>
+<span class="sd">    2    3.0</span>
+<span class="sd">    3    6.0</span>
+<span class="sd">    4    NaN</span>
+<span class="sd">    5    8.0</span>
+<span class="sd">    6    3.0</span>
+<span class="sd">    7    1.0</span>
+<span class="sd">    8    NaN</span>
+<span class="sd">    9    5.0</span>
+<span class="sd">    Name: col1, dtype: float64</span>
+
+
+<span class="sd">    The third example deletes every value which is out of boundary.</span>
+
+<span class="sd">    &gt;&gt;&gt; BASIC_isValid_byRange(df[&#39;col1&#39;], upper=9, lower=1, setValueTo = &quot;OutOfBoundary_Delete&quot;)</span>
+<span class="sd">    0    1</span>
+<span class="sd">    1    9</span>
+<span class="sd">    2    3</span>
+<span class="sd">    3    6</span>
+<span class="sd">    5    8</span>
+<span class="sd">    6    3</span>
+<span class="sd">    7    1</span>
+<span class="sd">    9    5</span>
+<span class="sd">    Name: col1, dtype: int64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Convert non-numeric values to NaN</span>
+    <span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">upper</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">lower</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">upper</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">lower</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">df</span><span class="p">[</span><span class="s2">&quot;exceedsRange&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">series</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">series</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">upper</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">df</span><span class="p">[</span><span class="s2">&quot;exceedsRange&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">series</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">df</span><span class="p">[</span><span class="s2">&quot;exceedsRange&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">series</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;exceedsRange&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No upper and lower boundary as input parameter - no changes made.&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;exceedsRange&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BASIC_byBoundaryVariance_60min"><a class="viewcode-back" href="../../../det_basics.html#TSCC.detection.basics.BASIC_byBoundaryVariance_60min">[docs]</a><span class="k">def</span> <span class="nf">BASIC_byBoundaryVariance_60min</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">min_var</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if variance is too low.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    series : panda series</span>
+<span class="sd">        timestamp index</span>
+<span class="sd">    min_var : string or integer or float</span>
+<span class="sd">        minimal variability</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    boolean</span>
+<span class="sd">            A series where `0.5` indicates that the variance is below the minimum threshold</span>
+<span class="sd">            (i.e., uncertain), and `1.0` indicates no issue.</span>
+
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; time_index = pd.date_range(start=&#39;2023-01-01 00:00&#39;, periods=5, freq=&#39;30T&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; s = pd.Series([0.05, 0.0, 0.1, 0.3, 0.25], index=time_index)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.detection.BASIC_byBoundaryVariance_60min(s, 0.005)</span>
+<span class="sd">    2023-01-01 00:00:00    0.5</span>
+<span class="sd">    2023-01-01 00:30:00    0.5</span>
+<span class="sd">    2023-01-01 01:00:00    0.0</span>
+<span class="sd">    2023-01-01 01:30:00    0.0</span>
+<span class="sd">    2023-01-01 02:00:00    0.0</span>
+<span class="sd">    Freq: 30T, Name: belowMinVar, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Convert non-numeric values to NaN</span>
+    <span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+    <span class="n">series</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;value&#39;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;datehour&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1"> %H&#39;</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;belowMinVar&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;datehour&#39;</span><span class="p">)[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="s1">&#39;var&#39;</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">min_var</span>
+
+    <span class="c1"># no error, but observations doubtful leady to change from probability 1.0 to 0.5</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;belowMinVar&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BASIC_byStepChangeMax"><a class="viewcode-back" href="../../../det_basics.html#TSCC.detection.basics.BASIC_byStepChangeMax">[docs]</a><span class="k">def</span> <span class="nf">BASIC_byStepChangeMax</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">max_diff</span><span class="p">,</span> <span class="n">timestep</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">30</span><span class="p">)):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if variance is too high.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    series : panda series</span>
+<span class="sd">        A series of numeric values with a timestamp index.</span>
+<span class="sd">    max_diff : float</span>
+<span class="sd">        The maximum allowable difference between consecutive values.</span>
+<span class="sd">    timestep: timedelta variable, optional</span>
+<span class="sd">        The maximum time interval between consecutive values. Default is 30 minutes.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A series where 0.5 indicates that the step change exceeds the maximum difference and 1.0 indicates no issue.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; time_index = pd.date_range(start=&#39;2023-01-01 00:00&#39;, periods=5, freq=&#39;30T&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; s = pd.Series([0.05, 0.0, 3, 0.3, 0.25], index=time_index)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.detection.BASIC_byStepChangeMax(s, 2, pd.Timedelta(minutes = 30))</span>
+<span class="sd">    2023-01-01 00:00:00    0.0</span>
+<span class="sd">    2023-01-01 00:30:00    0.0</span>
+<span class="sd">    2023-01-01 01:00:00    0.5</span>
+<span class="sd">    2023-01-01 01:30:00    0.5</span>
+<span class="sd">    2023-01-01 02:00:00    0.0</span>
+<span class="sd">    Freq: 30T, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Convert non-numeric values to NaN</span>
+    <span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+    <span class="n">exceedsBoundary</span> <span class="o">=</span> <span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">max_diff</span><span class="p">)</span>
+    <span class="n">isMeaningful</span> <span class="o">=</span> <span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">timestep</span><span class="p">)</span>
+    <span class="n">isDoubtful</span> <span class="o">=</span> <span class="p">(</span><span class="n">exceedsBoundary</span> <span class="o">&amp;</span> <span class="n">isMeaningful</span><span class="p">)</span>
+    <span class="n">isDoubtful</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># no error, but observations doubtful</span>
+    <span class="k">return</span> <span class="n">isDoubtful</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="BASIC_byNeighbors"><a class="viewcode-back" href="../../../det_basics.html#TSCC.detection.basics.BASIC_byNeighbors">[docs]</a><span class="k">def</span> <span class="nf">BASIC_byNeighbors</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">neighbors_df</span><span class="p">,</span> <span class="n">max_diff</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compare rainfall data from a given station with neighboring stations to detect outliers.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    series : pandas dataframe</span>
+<span class="sd">        A dataframe of rainfall data from a single station.</span>
+<span class="sd">    neighbors_df : pandas.DataFrame</span>
+<span class="sd">        A DataFrame containing rainfall data from neighboring stations.</span>
+<span class="sd">    max_diff : float, optional</span>
+<span class="sd">        The maximum allowable difference between the station&#39;s rainfall value and the average of neighboring stations.</span>
+<span class="sd">        Default is 100.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A series where 0.5 indicates that the difference between the station and its neighbors exceeds</span>
+<span class="sd">        the maximum allowable difference, and 1.0 indicates no issue.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; nr_obs = 6</span>
+<span class="sd">    &gt;&gt;&gt; np.random.seed(0)</span>
+<span class="sd">    &gt;&gt;&gt; # Generate random data</span>
+<span class="sd">    &gt;&gt;&gt; data = np.random.randn(nr_obs, 4)</span>
+<span class="sd">    &gt;&gt;&gt; time_index = pd.date_range(start=&#39;2023-01-01 00:00&#39;, periods=nr_obs, freq=&#39;30T&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; # Create DataFrame with specified column names</span>
+<span class="sd">    &gt;&gt;&gt; df = pd.DataFrame(data, columns=[&quot;ground_truth&quot;, &quot;raw&quot;, &#39;fea_1&#39;, &#39;fea_2&#39;], index = time_index)</span>
+<span class="sd">    &gt;&gt;&gt; df[&quot;raw&quot;] = df[&quot;ground_truth&quot;] + np.random.normal(0, 5, nr_obs)*np.random.randint(0, 2, nr_obs)</span>
+<span class="sd">    &gt;&gt;&gt; df[&quot;isCorrect_gt&quot;] = df[&quot;ground_truth&quot;] == df[&quot;raw&quot;]</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.detection.BASIC_byNeighbors(df[&quot;raw&quot;], df[[&quot;fea_1&quot;, &quot;fea_2&quot;]], max_diff=1)</span>
+<span class="sd">    2023-01-01 00:00:00    0.5</span>
+<span class="sd">    2023-01-01 00:30:00    0.5</span>
+<span class="sd">    2023-01-01 01:00:00    0.0</span>
+<span class="sd">    2023-01-01 01:30:00    0.0</span>
+<span class="sd">    2023-01-01 02:00:00    0.5</span>
+<span class="sd">    2023-01-01 02:30:00    0.5</span>
+<span class="sd">    Freq: 30T, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">neighbor_mean</span> <span class="o">=</span> <span class="n">neighbors_df</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">isDoubtful_byNeighbors</span> <span class="o">=</span> <span class="p">(</span><span class="n">series</span> <span class="o">-</span> <span class="n">neighbor_mean</span><span class="p">)</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">max_diff</span>
+
+    <span class="c1"># no error, but observations doubtful</span>
+    <span class="k">return</span> <span class="n">isDoubtful_byNeighbors</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BASIC_byClimaAverage"><a class="viewcode-back" href="../../../det_basics.html#TSCC.detection.basics.BASIC_byClimaAverage">[docs]</a><span class="k">def</span> <span class="nf">BASIC_byClimaAverage</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="s1">&#39;monthly&#39;</span><span class="p">,</span> <span class="n">deviation_threshold</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Perform a temporal consistency check against climatological averages (weekly, monthly, or seasonally)</span>
+<span class="sd">    of the own time series.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    series : pandas series</span>
+<span class="sd">        A series of the target variable with a datetime index.</span>
+<span class="sd">    period : str, optional</span>
+<span class="sd">        The period for climatological comparison. Options are &#39;weekly&#39;, &#39;monthly&#39;, or &#39;seasonal&#39;. Default is &#39;monthly&#39;.</span>
+<span class="sd">    deviation_threshold : float, optional</span>
+<span class="sd">        The number of standard deviations from the climatological mean to flag as an error. Default is 2.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A series where 0.5 indicates that the value deviates significantly from the climatological average,</span>
+<span class="sd">        and 1.0 indicates no significant deviation.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; time_index = pd.date_range(start=&#39;2023-01-01 00:00&#39;, periods=5, freq=&#39;30T&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; s = pd.Series([0.05, 0.0, 0.1, 0.3, 0.25], index=time_index)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.detection.BASIC_byClimaAverage(s)</span>
+<span class="sd">    index</span>
+<span class="sd">    2023-01-01 00:00:00    0.0</span>
+<span class="sd">    2023-01-01 00:30:00    0.0</span>
+<span class="sd">    2023-01-01 01:00:00    0.0</span>
+<span class="sd">    2023-01-01 01:30:00    0.0</span>
+<span class="sd">    2023-01-01 02:00:00    0.0</span>
+<span class="sd">    2023-01-01 02:30:00    0.0</span>
+<span class="sd">    2023-01-01 03:00:00    0.0</span>
+<span class="sd">    Name: clima_avg_err, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+    <span class="c1"># Convert non-numeric values to NaN</span>
+    <span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+
+    <span class="c1"># Add period columns for grouping by week, month, or season</span>
+    <span class="k">if</span> <span class="n">period</span> <span class="o">==</span> <span class="s1">&#39;weekly&#39;</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isocalendar</span><span class="p">()</span><span class="o">.</span><span class="n">week</span>
+    <span class="k">elif</span> <span class="n">period</span> <span class="o">==</span> <span class="s1">&#39;monthly&#39;</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
+    <span class="k">elif</span> <span class="n">period</span> <span class="o">==</span> <span class="s1">&#39;seasonal&#39;</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span> <span class="o">%</span> <span class="mi">12</span> <span class="o">//</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c1"># 1=Winter, 2=Spring, 3=Summer, 4=Fall</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid period type. Choose from &#39;weekly&#39;, &#39;monthly&#39;, or &#39;seasonal&#39;.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Calculate climatological means and standard deviations for each period</span>
+    <span class="n">climatology</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;period&#39;</span><span class="p">)[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">climatology</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">,</span> <span class="s1">&#39;climatology_mean&#39;</span><span class="p">,</span> <span class="s1">&#39;climatology_std&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Merge climatological values back to the original dataframe</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">climatology</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;period&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Calculate the deviation from the climatological mean</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;deviation&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;climatology_mean&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span>
+
+    <span class="c1"># Flag as an error if the deviation exceeds the specified number of standard deviations</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;clima_avg_err&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;deviation&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">deviation_threshold</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;climatology_std&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Drop the intermediate columns (optional)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;period&#39;</span><span class="p">,</span> <span class="s1">&#39;climatology_mean&#39;</span><span class="p">,</span> <span class="s1">&#39;climatology_std&#39;</span><span class="p">,</span> <span class="s1">&#39;deviation&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;clima_avg_err&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BASIC_byPersistence"><a class="viewcode-back" href="../../../det_basics.html#TSCC.detection.basics.BASIC_byPersistence">[docs]</a><span class="k">def</span> <span class="nf">BASIC_byPersistence</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">persistence_window</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Perform a persistence check to identify unrealistically constant values over consecutive time steps.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    series : pandas series</span>
+<span class="sd">        A series of the target variable with a datetime index.</span>
+<span class="sd">    persistence_window : int, optional</span>
+<span class="sd">        The number of consecutive time steps with the same value required to trigger an error flag. Default is 3.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A series where 0.5 indicates that the value has been constant over the specified persistence window,</span>
+<span class="sd">        and `1.0` indicates no issue.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; time_index = pd.date_range(start=&#39;2023-01-01 00:00&#39;, periods=5, freq=&#39;30T&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; s = pd.Series([0.05, 0.0, 3, 0.3, 0.25], index=time_index)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.detection.BASIC_byPersistence(s)</span>
+<span class="sd">    2023-01-01 00:00:00    0.0</span>
+<span class="sd">    2023-01-01 00:30:00    0.0</span>
+<span class="sd">    2023-01-01 01:00:00    0.0</span>
+<span class="sd">    2023-01-01 01:30:00    0.0</span>
+<span class="sd">    2023-01-01 02:00:00    0.0</span>
+<span class="sd">    Freq: 30T, Name: persistence_error, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Convert non-numeric values to NaN</span>
+    <span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+
+    <span class="c1"># Sort the data by time to ensure correct chronological order</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+    <span class="c1"># Shift the target variable by one time step to compare consecutive values</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;previous_value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Identify consecutive time steps where the value remains the same</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;same_value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;previous_value&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Rolling sum to count how many consecutive steps have the same value</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;persistence_count&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;same_value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="n">persistence_window</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+    <span class="c1"># Flag as error if the count of consecutive steps with the same value exceeds the window threshold</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;persistence_error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;persistence_count&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">persistence_window</span>
+
+    <span class="c1"># Drop intermediate columns (optional)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;previous_value&#39;</span><span class="p">,</span> <span class="s1">&#39;same_value&#39;</span><span class="p">,</span> <span class="s1">&#39;persistence_count&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;persistence_error&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

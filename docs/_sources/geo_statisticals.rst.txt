@@ -1,0 +1,5 @@
+Geo statisticals
+=================
+
+.. automodule:: TSCC.correction.geo_statisticals
+   :members:

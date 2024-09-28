@@ -1,0 +1,5 @@
+Statistical error detection
+===========================
+
+.. automodule:: TSCC.detection.statistical
+   :members:

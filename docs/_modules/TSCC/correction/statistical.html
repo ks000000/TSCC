@@ -1,0 +1,896 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSCC.correction.statistical &#8212; TSCC 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/TSCC/correction/statistical';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 21, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">TSCC.correct...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for TSCC.correction.statistical</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.statespace.sarimax</span> <span class="kn">import</span> <span class="n">SARIMAX</span>
+<span class="kn">from</span> <span class="nn">pykalman</span> <span class="kn">import</span> <span class="n">KalmanFilter</span>
+
+<div class="viewcode-block" id="STAT_byFeature"><a class="viewcode-back" href="../../../corr_statistical.html#TSCC.correction.statistical.STAT_byFeature">[docs]</a><span class="k">def</span> <span class="nf">STAT_byFeature</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">feature</span><span class="p">):</span>
+    <span class="c1"># retain the value from config.colname_raw if df_flag_erroneous is FALSE, or set it to np.nan if isValid_pred is False</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Processes and fills values in the dataframe based on a flag indicating erroneous data and a specified feature column.</span>
+<span class="sd">    It retains the values from the `config.colname_raw` column if the data is not erroneous</span>
+<span class="sd">    and fills missing values from a feature column if necessary.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas dataframe</span>
+<span class="sd">        The DataFrame containing feature data.</span>
+<span class="sd">    df_tar : None</span>
+<span class="sd">        Not used for now.</span>
+<span class="sd">    df_flag_erroneous : pandas series or dataframe</span>
+<span class="sd">        A boolean series or DataFrame indicating whether each value is erroneous (`True`) or valid (`False`).</span>
+<span class="sd">    config : object</span>
+<span class="sd">        A configuration object that contains the column name `colname_raw` to process.</span>
+<span class="sd">    feature : str</span>
+<span class="sd">        The name of the column to use for filling missing values if `NaN` values exist in `config.colname_raw`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A Series where missing values from `config.colname_raw` are first filled with values from the `feature` column,</span>
+<span class="sd">        and then any remaining `NaN` values are filled with 0. If the `feature` column does not exist,</span>
+<span class="sd">        a series of `NaN` values is returned.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; data = {</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;val_raw&quot;: [1, None, np.nan, 1, None],</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;isError&quot;: [False, True, True, False, True],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;N&#39;: [2, 2, 2, 2, 2],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;E&#39;: [3, 3, None, 3, 3],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;S&#39;: [4, None, 4, 4, 4],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;W&#39;: [None, 5, 5, 5, 5]</span>
+<span class="sd">    &gt;&gt;&gt; }</span>
+<span class="sd">    &gt;&gt;&gt; df_fea = pd.DataFrame(data)</span>
+<span class="sd">    &gt;&gt;&gt; config = TSCC.preprocessing.Config(colname_raw = &#39;val_raw&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.correction.STAT_byFeature(df_fea, None, &quot;isError&quot;, config, &quot;N&quot;)</span>
+<span class="sd">    0    1.0</span>
+<span class="sd">    1    2.0</span>
+<span class="sd">    2    2.0</span>
+<span class="sd">    3    1.0</span>
+<span class="sd">    4    2.0</span>
+<span class="sd">    Name: val_raw_pred, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df_fea</span><span class="p">[</span><span class="n">feature</span><span class="p">])</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#placeholder</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span><span class="o">*</span><span class="n">df_fea</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">index</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">index</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="STAT_byFilling"><a class="viewcode-back" href="../../../corr_statistical.html#TSCC.correction.statistical.STAT_byFilling">[docs]</a><span class="k">def</span> <span class="nf">STAT_byFilling</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">filler</span> <span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Imputes missing values in the dataframe using a specified filling method.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas dataframe</span>
+<span class="sd">        The DataFrame containing feature data.</span>
+<span class="sd">    df_tar : None</span>
+<span class="sd">        Not used yet.</span>
+<span class="sd">    df_flag_erroneous : pandas series or pandas dataframe</span>
+<span class="sd">        A boolean series or DataFrame indicating whether each value is erroneous (`True`) or valid (`False`).</span>
+<span class="sd">    config : object</span>
+<span class="sd">        A configuration object containing the name of the column `colname_raw` to be processed.</span>
+<span class="sd">    filler : str or float or int</span>
+<span class="sd">        Specifies how to fill the missing values. Three options:</span>
+<span class="sd">        - &#39;ffill&#39;: Propagates the last valid observation forward to the next valid.</span>
+<span class="sd">        - &#39;backfill&#39; or &#39;bfill&#39;: Uses the next valid observation to fill the gap.</span>
+<span class="sd">        - &lt;float or int&gt;: Uses a custom numeric value to fill missing values.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A Series corresponding to the `{config.colname_raw}_pred` column with missing values filled based on the `filler` method.</span>
+<span class="sd">        If `filler` is numeric, fills NaNs with that number. If `filler` is a method like &#39;ffill&#39; or &#39;bfill&#39;, applies the method.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; data = {</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;val_raw&quot;: [1, None, np.nan, 8, None],</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;isError&quot;: [False, True, True, False, True],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;N&#39;: [2, 2, 2, 2, 2],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;E&#39;: [3, 3, None, 3, 3],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;S&#39;: [4, None, 4, 4, 4],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;W&#39;: [None, 5, 5, 5, 5]</span>
+<span class="sd">    &gt;&gt;&gt; }</span>
+<span class="sd">    &gt;&gt;&gt; df_fea = pd.DataFrame(data)</span>
+<span class="sd">    &gt;&gt;&gt; config = TSCC.preprocessing.Config(colname_raw = &#39;val_raw&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.correction.STAT_byFilling(df_fea, None, &quot;isError&quot;, config, filler = &quot;ffill&quot;)</span>
+<span class="sd">    0    1.0</span>
+<span class="sd">    1    1.0</span>
+<span class="sd">    2    1.0</span>
+<span class="sd">    3    8.0</span>
+<span class="sd">    4    8.0</span>
+<span class="sd">    Name: val_raw_pred, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="k">return</span>  <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span> <span class="n">filler</span> <span class="p">)</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">filler</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="k">else</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span> <span class="n">method</span> <span class="o">=</span> <span class="n">filler</span> <span class="p">)[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="STAT_byMode"><a class="viewcode-back" href="../../../corr_statistical.html#TSCC.correction.statistical.STAT_byMode">[docs]</a><span class="k">def</span> <span class="nf">STAT_byMode</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+    <span class="c1"># retain the value from config.colname_raw if isValid_pred is True, or set it to np.nan if isValid_pred is False</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Imputes missing values in the dataframe using the mode of the specified column.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas dataframe</span>
+<span class="sd">        The DataFrame containing feature data.</span>
+<span class="sd">    df_tar : None</span>
+<span class="sd">        Not used yet.</span>
+<span class="sd">    df_flag_erroneous : pandas series or pandas dataframe</span>
+<span class="sd">        A boolean series or DataFrame indicating whether each value is erroneous (`True`) or valid (`False`).</span>
+<span class="sd">    config : object</span>
+<span class="sd">        A configuration object containing the name of the column `colname_raw` to be processed.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A Series corresponding to the `{config.colname_raw}_pred` column with missing values filled based</span>
+<span class="sd">        on the mode of `config.colname_raw`. If the mode is not available, remaining missing values are filled with 0.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; data = {</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;val_raw&quot;: [1, None, np.nan, 8, None],</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;isError&quot;: [False, True, True, False, True],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;N&#39;: [2, 2, 2, 2, 2],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;E&#39;: [3, 3, None, 3, 3],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;S&#39;: [4, None, 4, 4, 4],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;W&#39;: [None, 5, 5, 5, 5]</span>
+<span class="sd">    &gt;&gt;&gt; }</span>
+<span class="sd">    &gt;&gt;&gt; df_fea = pd.DataFrame(data)</span>
+<span class="sd">    &gt;&gt;&gt; config = TSCC.preprocessing.Config(colname_raw = &#39;val_raw&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.correction.STAT_byMode(df_fea, None, &quot;isError&quot;, config)</span>
+<span class="sd">    0    1.0</span>
+<span class="sd">    1    1.0</span>
+<span class="sd">    2    1.0</span>
+<span class="sd">    3    8.0</span>
+<span class="sd">    4    1.0</span>
+<span class="sd">    Name: val_raw_pred, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">dropna</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="STAT_inSpace"><a class="viewcode-back" href="../../../corr_statistical.html#TSCC.correction.statistical.STAT_inSpace">[docs]</a><span class="k">def</span> <span class="nf">STAT_inSpace</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">cols_in_space</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;W&quot;</span><span class="p">]):</span>
+    <span class="c1"># retain the value from config.colname_raw if isValid_pred is True, or set it to np.nan if isValid_pred is False</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Imputes missing values in the dataframe using the mean of specified spatial columns.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas dataframe</span>
+<span class="sd">        The DataFrame containing feature data.</span>
+<span class="sd">    df_tar : None</span>
+<span class="sd">        Not used for now.</span>
+<span class="sd">    df_flag_erroneous : pandas series or pandas dataframe</span>
+<span class="sd">        A boolean series or DataFrame indicating whether each value is erroneous (`True`) or valid (`False`).</span>
+<span class="sd">    config : object</span>
+<span class="sd">        A configuration object containing the name of the column `colname_raw` to be processed.</span>
+<span class="sd">    cols_in_space : list of str, optional</span>
+<span class="sd">        A list of column names representing spatial data (e.g., [&quot;N&quot;, &quot;E&quot;, &quot;S&quot;, &quot;W&quot;]). Default is [&quot;N&quot;, &quot;E&quot;, &quot;S&quot;, &quot;W&quot;].</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pd.Series</span>
+<span class="sd">        A Series corresponding to the `{config.colname_raw}_pred` column with missing values filled based on the mean</span>
+<span class="sd">        of the specified spatial columns.If spatial columns are missing, the function returns a Series of `NaN` values.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; data = {</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;val_raw&quot;: [1, None, np.nan, 8, None],</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;isError&quot;: [False, True, True, False, True],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;N&#39;: [2, 2, 2, 2, 2],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;E&#39;: [3, 3, None, 3, 3],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;S&#39;: [4, None, 4, 4, 4],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;W&#39;: [None, 5, 5, 5, 5]</span>
+<span class="sd">    &gt;&gt;&gt; }</span>
+<span class="sd">    &gt;&gt;&gt; df_fea = pd.DataFrame(data)</span>
+<span class="sd">    &gt;&gt;&gt; config = TSCC.preprocessing.Config(colname_raw = &#39;val_raw&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.correction.STAT_inSpace(df_fea, None, &quot;isError&quot;, config)</span>
+<span class="sd">    0    1.000000</span>
+<span class="sd">    1    3.333333</span>
+<span class="sd">    2    3.666667</span>
+<span class="sd">    3    8.000000</span>
+<span class="sd">    4    3.500000</span>
+<span class="sd">    Name: val_raw_pred, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">),</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">col</span> <span class="ow">in</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">columns</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols_in_space</span><span class="p">):</span>
+        <span class="n">mean_space</span> <span class="o">=</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">cols_in_space</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">mean_space</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#placeholder</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span><span class="o">*</span><span class="n">df_fea</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">index</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">index</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="STAT_byRollingMean"><a class="viewcode-back" href="../../../corr_statistical.html#TSCC.correction.statistical.STAT_byRollingMean">[docs]</a><span class="k">def</span> <span class="nf">STAT_byRollingMean</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Imputes missing values using the rolling mean of the specified window size from previous values.</span>
+<span class="sd">    The returned series may still have missing values if there is no data available in the window.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas dataframe</span>
+<span class="sd">        The DataFrame containing feature data.</span>
+<span class="sd">    df_tar : None</span>
+<span class="sd">        Not used for now.</span>
+<span class="sd">    df_flag_erroneous : pandas series or pandas dataframe</span>
+<span class="sd">        A boolean series or DataFrame indicating whether each value is erroneous (`True`) or valid (`False`).</span>
+<span class="sd">    config : object</span>
+<span class="sd">        A configuration object containing the name of the column `colname_raw` to be processed.</span>
+<span class="sd">    window_size : int, optional</span>
+<span class="sd">        The size of the rolling window used to compute the mean. Default is 10.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A Series corresponding to the `{config.colname_raw}_pred` column with missing values filled using the rolling mean.</span>
+<span class="sd">        The Series may still contain missing values if there is insufficient data within the window.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; data = {</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;val_raw&quot;: [1, None, np.nan, 8, None],</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;isError&quot;: [False, True, True, False, True],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;N&#39;: [2, 2, 2, 2, 2],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;E&#39;: [3, 3, None, 3, 3],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;S&#39;: [4, None, 4, 4, 4],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;W&#39;: [None, 5, 5, 5, 5]</span>
+<span class="sd">    &gt;&gt;&gt; }</span>
+<span class="sd">    &gt;&gt;&gt; df_fea = pd.DataFrame(data)</span>
+<span class="sd">    &gt;&gt;&gt; config = TSCC.preprocessing.Config(colname_raw = &#39;val_raw&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.correction.STAT_byRollingMean(df_fea, None, &quot;isError&quot;, config)</span>
+<span class="sd">    0    1.0</span>
+<span class="sd">    1    1.0</span>
+<span class="sd">    2    1.0</span>
+<span class="sd">    3    8.0</span>
+<span class="sd">    4    4.5</span>
+<span class="sd">    Name: val_raw_pred, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+    <span class="n">series</span> <span class="o">=</span> <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span>
+
+    <span class="n">help_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    <span class="n">help_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;series&quot;</span><span class="p">]</span>
+    <span class="c1"># min_periods=1 needed to compute mean if at least one value exists</span>
+    <span class="n">help_df</span><span class="p">[</span><span class="s2">&quot;rollingMean&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window_size</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">help_df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">help_df</span><span class="p">[</span><span class="s2">&quot;series&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">help_df</span><span class="p">[</span><span class="s2">&quot;rollingMean&quot;</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">help_df</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="STAT_byInterpolation"><a class="viewcode-back" href="../../../corr_statistical.html#TSCC.correction.statistical.STAT_byInterpolation">[docs]</a><span class="k">def</span> <span class="nf">STAT_byInterpolation</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Imputes missing values in the dataframe using interpolation.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas dataframe</span>
+<span class="sd">        The DataFrame containing feature data.</span>
+<span class="sd">    df_tar : None</span>
+<span class="sd">        Not used for now.</span>
+<span class="sd">    df_flag_erroneous : pandas series or pandas dataframe</span>
+<span class="sd">        A boolean series or DataFrame indicating whether each value is erroneous (`True`) or valid (`False`).</span>
+<span class="sd">    config : object</span>
+<span class="sd">        A configuration object containing the name of the column `colname_raw` to be processed.</span>
+<span class="sd">    method : str, optional</span>
+<span class="sd">        The interpolation method to use.</span>
+<span class="sd">        Default is &#39;linear&#39;.</span>
+
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A Series corresponding to the `{config.colname_raw}_pred` column with missing values imputed</span>
+<span class="sd">        using the specified interpolation method.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; data = {</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;val_raw&quot;: [1, None, np.nan, 8, None],</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;isError&quot;: [False, True, True, False, True],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;N&#39;: [2, 2, 2, 2, 2],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;E&#39;: [3, 3, None, 3, 3],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;S&#39;: [4, None, 4, 4, 4],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;W&#39;: [None, 5, 5, 5, 5]</span>
+<span class="sd">    &gt;&gt;&gt; }</span>
+<span class="sd">    &gt;&gt;&gt; df_fea = pd.DataFrame(data)</span>
+<span class="sd">    &gt;&gt;&gt; config = TSCC.preprocessing.Config(colname_raw = &#39;val_raw&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.correction.STAT_byInterpolation(df_fea, None, &quot;isError&quot;, config)</span>
+<span class="sd">    0    1.000000</span>
+<span class="sd">    1    3.333333</span>
+<span class="sd">    2    5.666667</span>
+<span class="sd">    3    8.000000</span>
+<span class="sd">    4    4.500000</span>
+<span class="sd">    Name: val_raw_pred, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+    <span class="n">series</span> <span class="o">=</span> <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span>
+
+    <span class="n">median</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+    <span class="c1"># if the first or last value is missing interpolate can not calculate the following respectively  privious values</span>
+    <span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">median</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">else</span> <span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">median</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="k">else</span> <span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">series</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span> <span class="n">method</span> <span class="o">=</span> <span class="n">method</span><span class="p">)</span></div>
+
+<span class="k">class</span> <span class="nc">KalmanFilter</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">process_variance</span><span class="p">,</span> <span class="n">measurement_variance</span><span class="p">,</span> <span class="n">estimation_error</span><span class="p">,</span> <span class="n">initial_estimate</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the Kalman filter.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            process_variance: Variance in the process (how much the process changes over time).</span>
+<span class="sd">            measurement_variance: Variance in the measurement (measurement noise).</span>
+<span class="sd">            estimation_error: Initial estimation error (uncertainty in the initial estimate).</span>
+<span class="sd">            initial_estimate: Initial guess of the state.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process_variance</span> <span class="o">=</span> <span class="n">process_variance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">measurement_variance</span> <span class="o">=</span> <span class="n">measurement_variance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estimation_error</span> <span class="o">=</span> <span class="n">estimation_error</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estimate</span> <span class="o">=</span> <span class="n">initial_estimate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kalman_gain</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Updates the estimate with a new measurement.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            measurement: New measurement value.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Prediction step: Update the estimation error based on the process variance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estimation_error</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_variance</span>
+
+        <span class="c1"># Kalman Gain calculation: How much to adjust based on measurement uncertainty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kalman_gain</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimation_error</span> <span class="o">/</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">estimation_error</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">measurement_variance</span><span class="p">)</span>
+
+        <span class="c1"># Correction step: Update the estimate with the measurement</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estimate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">kalman_gain</span> <span class="o">*</span> <span class="p">(</span><span class="n">measurement</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate</span><span class="p">)</span>
+
+        <span class="c1"># Update the estimation error after the measurement update</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">estimation_error</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">kalman_gain</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimation_error</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate</span>
+
+
+<div class="viewcode-block" id="STAT_byKalman"><a class="viewcode-back" href="../../../corr_statistical.html#TSCC.correction.statistical.STAT_byKalman">[docs]</a><span class="k">def</span> <span class="nf">STAT_byKalman</span><span class="p">(</span><span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">process_variance</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">measurement_variance</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies a Kalman Filter to noisy data to correct errors and smooth the series.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    df_fea : pandas dataframe</span>
+<span class="sd">        The DataFrame containing the feature data.</span>
+<span class="sd">    df_tar : None</span>
+<span class="sd">        Not used for now.</span>
+<span class="sd">    df_flag_erroneous : pandas series or pandas dataframe</span>
+<span class="sd">        A boolean series or DataFrame indicating whether each value is erroneous (`True`) or valid (`False`).</span>
+<span class="sd">    config : object</span>
+<span class="sd">        A configuration object that contains the name of the column to be processed (colname_raw).</span>
+<span class="sd">    process_variance : float, optional</span>
+<span class="sd">        The variance of the process noise. It controls how much the system dynamics are expected to change over time.</span>
+<span class="sd">        Default is 1e-5.</span>
+<span class="sd">    measurement_variance : float, optional</span>
+<span class="sd">        The variance of the measurement noise. It indicates how noisy the measurements are.</span>
+<span class="sd">        Default is 0.1.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    pandas series</span>
+<span class="sd">        A Series with missing or erroneous values replaced by Kalman Filtered values.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; data = {</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;val_raw&quot;: [1, 3, 4, 8, None],</span>
+<span class="sd">    &gt;&gt;&gt;     &quot;isError&quot;: [False, True, True, False, True],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;N&#39;: [2, 2, 2, 2, 2],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;E&#39;: [3, 3, None, 3, 3],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;S&#39;: [4, None, 4, 4, 4],</span>
+<span class="sd">    &gt;&gt;&gt;     &#39;W&#39;: [None, 5, 5, 5, 5]</span>
+<span class="sd">    &gt;&gt;&gt; }</span>
+<span class="sd">    &gt;&gt;&gt; df_fea = pd.DataFrame(data)</span>
+<span class="sd">    &gt;&gt;&gt; config = TSCC.preprocessing.Config(colname_raw = &#39;val_raw&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; TSCC.correction.STAT_byKalman(df_fea, None, &quot;isError&quot;, config)</span>
+<span class="sd">    0    1.000000</span>
+<span class="sd">    1    1.952436</span>
+<span class="sd">    2    2.613061</span>
+<span class="sd">    3    8.000000</span>
+<span class="sd">    4         NaN</span>
+<span class="sd">    Name: val_raw_pred, dtype: float64</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">noisy_data</span> <span class="o">=</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]</span>
+
+    <span class="c1"># Initial guesses</span>
+    <span class="n">initial_estimate</span> <span class="o">=</span> <span class="n">noisy_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Start with the first data point</span>
+    <span class="n">estimation_error</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># Initial estimation error</span>
+
+    <span class="c1"># Create Kalman Filter object</span>
+    <span class="n">kf</span> <span class="o">=</span> <span class="n">KalmanFilter</span><span class="p">(</span><span class="n">process_variance</span><span class="p">,</span> <span class="n">measurement_variance</span><span class="p">,</span> <span class="n">estimation_error</span><span class="p">,</span> <span class="n">initial_estimate</span><span class="p">)</span>
+
+    <span class="c1"># Apply the filter to each measurement</span>
+    <span class="n">df_fea</span><span class="p">[</span><span class="s2">&quot;kalman_filtered&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">kf</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">measurement</span><span class="p">)</span> <span class="k">for</span> <span class="n">measurement</span> <span class="ow">in</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]]</span>
+
+    <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df_fea</span><span class="p">[</span><span class="s2">&quot;kalman_filtered&quot;</span><span class="p">])</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

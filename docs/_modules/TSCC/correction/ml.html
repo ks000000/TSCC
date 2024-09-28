@@ -1,0 +1,862 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSCC.correction.ml &#8212; TSCC 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/TSCC/correction/ml';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="Sep 28, 2024"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">TSCC 0.1.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../getting_started.html">
+                        Getting Started
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api_reference.html">
+                        API-Reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/TSCC/" title="TSCC" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class=" fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">TSCC</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">TSCC.correction.ml</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for TSCC.correction.ml</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">denseweight</span> <span class="kn">import</span> <span class="n">DenseWeight</span>
+<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">import</span> <span class="nn">joblib</span>
+
+<span class="kn">from</span> <span class="nn">..additional_imports.missingpy</span> <span class="kn">import</span> <span class="n">missforest</span>
+<span class="kn">from</span> <span class="nn">..additional_imports.gain</span> <span class="kn">import</span> <span class="n">gain</span>
+
+
+<div class="viewcode-block" id="ML_byGAIN_DW"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byGAIN_DW">[docs]</a><span class="k">class</span> <span class="nc">ML_byGAIN_DW</span><span class="p">:</span>
+    <span class="c1"># TODO: extra fit and transform methods missing. Right now only fit_transform part</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class implements a model for data imputation using the GAIN (Generative Adversarial Imputation Nets) framework</span>
+<span class="sd">    by https://github.com/jsyoon0823/GAIN.</span>
+<span class="sd">    The model is designed to fill in missing values in datasets by leveraging a deep learning approach.</span>
+
+<span class="sd">    Right now only fit_transform part, therefore also newly trained model for test dataset.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    gain_parameters: dict, optional</span>
+<span class="sd">        A dictionary containing the parameters for the GAIN model, including &#39;batch_size&#39;, &#39;hint_rate&#39;,</span>
+<span class="sd">        &#39;alpha&#39;, and &#39;iterations&#39;. Default parameters will be used if not provided.</span>
+<span class="sd">    alpha: float, default=1.0</span>
+<span class="sd">        The weight for the dense loss function, influencing the training dynamics.</span>
+<span class="sd">    exclude_cols: list, optional</span>
+<span class="sd">        A list of columns to exclude from the training process. Not implemented in the current version.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ML_byGAIN_DW.__init__"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byGAIN_DW.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gain_parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">exclude_cols</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">gain_parameters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">gain_parameters</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;batch_size&#39;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
+                <span class="s1">&#39;hint_rate&#39;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
+                <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+                <span class="s1">&#39;iterations&#39;</span><span class="p">:</span> <span class="mi">10</span>
+            <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gain_parameters</span> <span class="o">=</span> <span class="n">gain_parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dw</span> <span class="o">=</span> <span class="n">DenseWeight</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">dataset_size</span> <span class="o">==</span> <span class="s2">&quot;large&quot;</span><span class="p">:</span>
+            <span class="c1"># do not run this method, takes very long to compute</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model ML_byGAIN_DW cannot be computed.&quot;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data_losses_fit</span> <span class="o">=</span> <span class="mi">1</span>
+
+            <span class="c1"># Train Data Imputation</span>
+            <span class="n">train_help_df</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">7777</span><span class="p">)</span>
+            <span class="n">train_array</span> <span class="o">=</span> <span class="n">train_help_df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+            <span class="n">train_imputed_data</span> <span class="o">=</span> <span class="n">gain</span><span class="p">(</span><span class="n">train_array</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_parameters</span><span class="p">,</span> <span class="n">data_losses_fit</span><span class="p">)</span>
+            <span class="n">df_help</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">train_imputed_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">train_help_df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">train_help_df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">cur_dq_ml</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;train&quot;</span><span class="p">:</span> <span class="n">df_help</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]}}</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">gain</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exception encountered: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">d</span><span class="p">[</span><span class="n">cur_dq_ml</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">i</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;train&quot;</span><span class="p">:</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span>
+                    <span class="s2">&quot;test&quot;</span><span class="p">:</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_fea</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+        <span class="n">data_losses</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="c1"># Test Data Imputation</span>
+        <span class="n">test_help_df</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">7777</span><span class="p">)</span>
+        <span class="n">test_array</span> <span class="o">=</span> <span class="n">test_help_df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+        <span class="n">test_imputed_data</span> <span class="o">=</span> <span class="n">gain</span><span class="p">(</span><span class="n">test_array</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gain_parameters</span><span class="p">,</span> <span class="n">data_losses</span><span class="p">)</span>
+        <span class="n">df_help</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">test_imputed_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">test_help_df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">test_help_df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df_help</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span>
+
+<div class="viewcode-block" id="ML_byGAIN_DW.save_model"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byGAIN_DW.save_model">[docs]</a>    <span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save the model to a file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : str</span>
+<span class="sd">          The path to save the model file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ML_byGAIN_DW.load_model"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byGAIN_DW.load_model">[docs]</a>    <span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load the model from a file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : str</span>
+<span class="sd">          The path to the model file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    try:</span>
+
+<span class="sd">    # GAIN+dense loss</span>
+<span class="sd">    # before putting into own package check with licenses!!!</span>
+<span class="sd">    # https://github.com/jsyoon0823/GAIN</span>
+<span class="sd">    # TODO: extra fit and transform methods missing. Right now only fit_transform part</span>
+<span class="sd">    # therefore also newly trained model for test dataset!! :(</span>
+<span class="sd">    gain_parameters = {&#39;batch_size&#39;: 128,  # default param from author of GAIN</span>
+<span class="sd">                       &#39;hint_rate&#39;: 0.9,  # default param from author of GAIN</span>
+<span class="sd">                       &#39;alpha&#39;: 100,  # default param from author of GAIN</span>
+<span class="sd">                       &#39;iterations&#39;: 10  # default param from author of GAIN</span>
+<span class="sd">                       }</span>
+<span class="sd">    dw = DenseWeight(alpha=1.0)</span>
+<span class="sd">    data_losses_train = 1  # dw.fit(train_[&quot;value_plaus&quot;].to_numpy(dtype=&quot;float&quot;))</span>
+<span class="sd">    data_losses_test = 1  # dw.fit(test_[&quot;value_plaus&quot;].to_numpy(dtype=&quot;float&quot;))</span>
+
+<span class="sd">    train_help_df = pd.concat([dataSetHandler.get_train_features(detMLConfig.exclude_cols)[i].fillna(-7777), dataSetHandler.get_train_features()[i][[&quot;value_plaus_pred&quot;]]], axis = 1)</span>
+<span class="sd">    train_array = train_help_df.to_numpy(dtype=&quot;float&quot;)</span>
+<span class="sd">    train_imputed_data = gain.gain(train_array, gain_parameters, data_losses_train)</span>
+<span class="sd">    df_help = pd.DataFrame(train_imputed_data)</span>
+<span class="sd">    df_help.columns = train_help_df.columns</span>
+<span class="sd">    df_help.index = train_help_df.index</span>
+<span class="sd">    d[cur_dq_ml][i][&quot;train&quot;] = df_help[&quot;value_plaus_pred&quot;]</span>
+
+<span class="sd">    test_help_df = pd.concat([dataSetHandler.get_test_features(detMLConfig.exclude_cols)[i].fillna(-7777), dataSetHandler.get_test_features()[i][[&quot;value_plaus_pred&quot;]]], axis = 1)</span>
+<span class="sd">    test_array = test_help_df.to_numpy(dtype=&quot;float&quot;)</span>
+<span class="sd">    test_imputed_data = gain.gain(test_array, gain_parameters, data_losses_test)</span>
+<span class="sd">    df_help = pd.DataFrame(test_imputed_data)</span>
+<span class="sd">    df_help.columns = test_help_df.columns</span>
+<span class="sd">    df_help.index = test_help_df.index</span>
+<span class="sd">    d[cur_dq_ml][i][&quot;test&quot;] = df_help[&quot;value_plaus_pred&quot;]</span>
+
+<span class="sd">except:</span>
+<span class="sd">    d[cur_dq_ml][i][&quot;train&quot;] = dataSetHandler.get_train_features(detMLConfig.exclude_cols)[i][detMLConfig.colname_raw]</span>
+<span class="sd">    d[cur_dq_ml][i][&quot;test&quot;] = dataSetHandler.get_test_features(detMLConfig.exclude_cols)[i][detMLConfig.colname_raw]</span>
+
+<span class="sd">    pass</span>
+<span class="sd">    &#39;&#39;&#39;</span></div>
+
+<div class="viewcode-block" id="ML_byRF"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byRF">[docs]</a><span class="k">class</span> <span class="nc">ML_byRF</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class implements a Random Forest model for regression tasks using the RandomForestRegressor from</span>
+<span class="sd">    scikit-learn.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n_estimators : int, default=100</span>
+<span class="sd">        The number of trees in the forest, influencing the model&#39;s complexity and performance.</span>
+<span class="sd">    random_state : int, RandomState instance or None, default=None</span>
+<span class="sd">        Controls the randomness of the estimator for reproducibility.</span>
+<span class="sd">    max_depth : int, default=15</span>
+<span class="sd">        The maximum depth of the trees. It helps prevent overfitting by limiting how deep the trees can grow.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ML_byRF.__init__"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byRF.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_depth</span> <span class="o">=</span> <span class="mi">15</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the ML_byRF class with a RandomForestClassifier model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        n_estimators : int, default=100</span>
+<span class="sd">            The number of trees in the forest.</span>
+<span class="sd">        random_state : int, RandomState instance or None, default=None</span>
+<span class="sd">            Controls the randomness of the estimator.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="n">n_estimators</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">random_state</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="n">max_depth</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ML_byRF.fit"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byRF.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fits the RandomForestClassifier model to the data. Function does not support NaN values.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_fea : pandas dataframe</span>
+<span class="sd">            The training input samples.</span>
+<span class="sd">        df_tar : pandas dataframe</span>
+<span class="sd">            The target values (class labels).</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        decision_clf : RandomForestClassifier object</span>
+
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">train_</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">777</span><span class="p">)</span>
+        <span class="n">train_part</span> <span class="o">=</span> <span class="n">train_</span><span class="p">[</span><span class="n">train_</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">test_</span> <span class="o">=</span> <span class="n">df_tar</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">777</span><span class="p">)</span>
+        <span class="n">test_part</span> <span class="o">=</span> <span class="n">test_</span><span class="p">[</span><span class="n">train_</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_part</span><span class="p">,</span> <span class="n">test_part</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ML_byRF.predict"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byRF.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_fea</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span><span class="c1">#, model):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Predict class for X. Function does not support NaN values.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        X : array-like or sparse matrix of shape (n_samples, n_features)</span>
+<span class="sd">            The input samples.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        y_pred : array of shape (n_samples,)</span>
+<span class="sd">          The predicted classes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Function does not support NaN values.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df : pandas dataframe</span>
+<span class="sd">        exclude_cols : list columns not to regard in model</span>
+<span class="sd">        decision_clf : RandomForestClassifier object</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        hasGoodDQ : pandas series</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; ML_byRF_fromModel(df[[&quot;col1&quot;]], [], decision_clf)</span>
+<span class="sd">        0     True</span>
+<span class="sd">        1     True</span>
+<span class="sd">        2     True</span>
+<span class="sd">        3     True</span>
+<span class="sd">        4     True</span>
+<span class="sd">        5     True</span>
+<span class="sd">        6     True</span>
+<span class="sd">        7     True</span>
+<span class="sd">        8     True</span>
+<span class="sd">        9    False</span>
+<span class="sd">        dtype: bool</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+
+        <span class="n">train_</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="o">-</span><span class="mi">777</span><span class="p">)</span>
+        <span class="n">train_part</span> <span class="o">=</span> <span class="n">train_</span><span class="p">[</span><span class="n">train_</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">train_part</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="n">train_part</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">train_part</span><span class="p">)</span>
+        <span class="c1"># retain the value from config.colname_raw if df_flag_erroneous is False, otherwise set it to np.nan</span>
+        <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">train_part</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="ML_byRF.save_model"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byRF.save_model">[docs]</a>    <span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save the model to a file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : str</span>
+<span class="sd">          The path to save the model file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ML_byRF.load_model"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byRF.load_model">[docs]</a>    <span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load the model from a file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : str</span>
+<span class="sd">          The path to the model file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ML_byMissForest"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byMissForest">[docs]</a><span class="k">class</span> <span class="nc">ML_byMissForest</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class implements the MissForest algorithm for imputation of missing values</span>
+<span class="sd">    using Random Forests. It is designed to handle datasets with missing entries,</span>
+<span class="sd">    providing a mechanism to fill in these gaps effectively.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    max_features : int, default=100</span>
+<span class="sd">        The maximum number of features to consider when looking for the best split</span>
+<span class="sd">        at each node in the forest. This can help in controlling overfitting and</span>
+<span class="sd">        improving computational efficiency.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ML_byMissForest.__init__"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byMissForest.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the ML_byRF class with a RandomForestClassifier model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        - n_estimators: int, default=100</span>
+<span class="sd">          The number of trees in the forest.</span>
+<span class="sd">        - random_state: int, RandomState instance or None, default=None</span>
+<span class="sd">          Controls the randomness of the estimator.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">MissForest</span><span class="o">.</span><span class="n">MissForest</span><span class="p">(</span><span class="n">criterion</span><span class="o">=</span><span class="s2">&quot;squared_error&quot;</span><span class="p">,</span> <span class="n">max_features</span><span class="o">=</span><span class="n">max_features</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ML_byMissForest.fit"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byMissForest.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_fea</span><span class="p">,</span> <span class="n">df_tar</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fits the MissForest model to the training data for imputation of missing values.</span>
+
+<span class="sd">        This method prepares the feature DataFrame for training the MissForest model. It</span>
+<span class="sd">        replaces missing values based on the specified criteria and fits the model to the</span>
+<span class="sd">        non-empty feature columns.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_fea : pandas DataFrame</span>
+<span class="sd">            The input features with missing values that need to be imputed.</span>
+<span class="sd">        df_tar : pandas DataFrame</span>
+<span class="sd">            The target values (not used in MissForest but can be included for consistency).</span>
+<span class="sd">        df_flag_erroneous : pandas Series</span>
+<span class="sd">            A boolean Series indicating which rows contain erroneous or missing values.</span>
+<span class="sd">        config : object</span>
+<span class="sd">            Configuration object containing information about the dataset, including</span>
+<span class="sd">            the name of the column to be predicted.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">dataset_size</span> <span class="o">==</span> <span class="s2">&quot;large&quot;</span><span class="p">:</span>
+            <span class="c1"># do not run this method, takes very long to compute</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model ML_byGAIN_DW cannot be computed.&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># retain the value from config.colname_raw if isValid_pred is True, or set it to np.nan if isValid_pred is False</span>
+            <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+            <span class="n">train_</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">            def intersection(lst1, lst2):</span>
+<span class="sd">                lst3 = [value for value in lst1 if value in lst2]</span>
+<span class="sd">                return lst3</span>
+
+<span class="sd">            used_cols = intersection(train_.columns, test_.columns)</span>
+<span class="sd">            train_ = train_[used_cols]</span>
+<span class="sd">            test_ = test_[used_cols]</span>
+<span class="sd">            &#39;&#39;&#39;</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">train_</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MissForest not working properly.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ML_byMissForest.predict"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byMissForest.predict">[docs]</a>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df_fea</span><span class="p">,</span> <span class="n">df_flag_erroneous</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>  <span class="c1"># , model):</span>
+<span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Imputes missing values in the input feature DataFrame using the fitted MissForest model.</span>
+
+<span class="sd">        This method predicts values for the specified column in the DataFrame where the</span>
+<span class="sd">        original values are missing (indicated by the `df_flag_erroneous`). It retains the</span>
+<span class="sd">        original values where valid and fills in NaN where the values are flagged as erroneous.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        df_fea : pandas DataFrame</span>
+<span class="sd">            The input features with missing values to be imputed.</span>
+<span class="sd">        df_flag_erroneous : String</span>
+<span class="sd">            A String referring to a column of df_fea with a boolean Series indicating which rows contain erroneous or missing values.</span>
+<span class="sd">        config : object</span>
+<span class="sd">            Configuration object that contains information about the dataset, including</span>
+<span class="sd">            the name of the column to be predicted.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        pandas Series</span>
+<span class="sd">            A Series containing the predicted values for the specified column, with</span>
+<span class="sd">            NaN where the original values were not valid.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># retain the value from config.colname_raw if isValid_pred is True, or set it to np.nan if isValid_pred is False</span>
+            <span class="n">df_fea</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">df_fea</span><span class="p">[</span><span class="n">df_flag_erroneous</span><span class="p">],</span> <span class="n">df_fea</span><span class="p">[</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+            <span class="n">test_</span> <span class="o">=</span> <span class="n">df_fea</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+            <span class="n">X_test_filled</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">test_</span><span class="p">)</span>
+            <span class="n">df_help</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_test_filled</span><span class="p">)</span>
+            <span class="n">df_help</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">test_</span><span class="o">.</span><span class="n">columns</span>
+            <span class="n">df_help</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">test_</span><span class="o">.</span><span class="n">index</span>
+            <span class="k">return</span> <span class="n">df_help</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">colname_raw</span><span class="si">}</span><span class="s2">_pred&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MissForest not working properly.&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ML_byMissForest.save_model"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byMissForest.save_model">[docs]</a>    <span class="k">def</span> <span class="nf">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Save the model to a file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : str</span>
+<span class="sd">          The path to save the model file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">joblib</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ML_byMissForest.load_model"><a class="viewcode-back" href="../../../corr_ml.html#TSCC.correction.ml.ML_byMissForest.load_model">[docs]</a>    <span class="k">def</span> <span class="nf">load_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load the model from a file.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        path : str</span>
+<span class="sd">          The path to the model file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span></div></div>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, default.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

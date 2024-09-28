@@ -1,0 +1,198 @@
+Data quality coefficients
+=========================
+
+..
+    This is a block comment:
+
+    Test automatic compilation playground
+    --------------------------------------
+    installed: pip install sphinxcontrib-programoutput
+
+    Data volume:
+    .. code-block:: python
+
+        >>> from package_dataquality.TSCC.assessment.model_error_metrics import relevance_fct_indicator
+        >>> import pandas as pd
+        >>> relevance_fct_indicator(pd.Series(2), 1.0)
+
+    .. code-block:: python
+
+        >>> 1
+
+    .. testcode:: python
+
+        >>> from package_dataquality.TSCC.assessment.model_error_metrics import relevance_fct_indicator
+        >>> import pandas as pd
+        >>> print(relevance_fct_indicator(pd.Series(2), 1.0))
+
+    .. testoutput:: python
+
+
+    .. command-output:: python -V
+
+    .. command-output:: python -c "from package_dataquality.TSCC.assessment.model_error_metrics import relevance_fct_indicator
+        import pandas as pd
+        relevance_fct_indicator(pd.Series(2), 1.0)"
+
+    .. doctest::
+
+        >>> from package_dataquality.TSCC.assessment.model_error_metrics import relevance_fct_indicator
+        >>> import pandas as pd
+        >>> print(relevance_fct_indicator(pd.Series([2]), 1.0))
+
+    .. command-output:: python -c "import os;
+            print(os.getcwd())"
+
+    .. command-output:: pip list
+
+    .. command-output:: python -c "import TSCC"
+
+    .. command-output:: python -c "from TSCC.assessment.model_error_metrics import relevance_fct_indicator"
+
+    .. command-output:: python -c "import os;
+            print(os.getcwd())"
+
+    Kurzzus.fassung:
+    Entweder: unsere Teststrategie überdenken, ggf testcode, testoutput, doctests nutzen anstelle oder als Ergänzung zu unit tests??
+
+    oder im Zweifelsfall einfach wie gehabt.
+
+
+
+In order to know how good the data quality of a parameter is, it can be examined by several data quality dimensions and
+metrics. This package focuses on data volume and observation accuracy as criteria for data quality.
+Paper https://jwcn-eurasipjournals.springeropen.com/articles/10.1186/s13638-018-1069-6 is largely followed.
+
+.. image:: _static/assessment_qualityMetrics.jpg
+   :alt: Function overview
+   :align: center
+
+Data volume
+-----------
+The data volume refers to the size of a dataset, which can indicate the operational status of a given sensor node.
+If a node has less data compared to other nodes, it is considered that some data has been lost.
+The data volume thus reflects the dataset's availability and the reliability of the associated logical outcomes.
+For instance, when performing a mean operation on two datasets of different sizes for a particular observation object,
+the dataset with the smaller volume is assumed to be less reliable.
+Here's an example of how to use the ``calculate_data_volume_indicator`` function:
+
+.. code-block:: python
+    :caption: Data volume indicator
+
+    >>> import pandas as pd
+    >>> n_nodes = 5
+    >>> monitoring_duration = 100  # in arbitrary units
+    >>> time_interval = 10  # in arbitrary units
+    >>> node_sampling_data = [
+    >>>       [1, 2, 3, None, 5],  # Example data for node 1
+    >>>       [1, 2, 3, 4, 5],     # Example data for node 2
+    >>> ]
+    >>> test = TSCC.assessment.calculate_data_volume_indicator(n_nodes, monitoring_duration, time_interval, node_sampling_data)
+    >>> print(f'Data Volume Indicator (qv): {test}')
+    Data Volume Indicator (qv): 0.18000000000000002
+
+Our expected result of qv=0.2 is a little underachieved due to one lost data point in the first node.
+The exact calculation for this indicator is: (10 x 9) / (5 x 100) = 0.18. Final result is that data is missing.
+
+..
+    This is a block comment:
+    Completeness
+    ------------
+    Completeness describes the severity of data loss issues within a dataset. The completeness indicator is typically
+    measured by comparing the proportion of the actual data volume to the required data volume. A high level of completeness
+    indicates that most of the necessary data is present, whereas a low level of completeness
+    signifies significant data loss or missing information, which can impact the reliability and accuracy
+    of data analysis and decision-making. Ensuring data completeness is crucial for maintaining the integrity
+    and usefulness of a dataset.
+
+    #.. code-block:: python
+    #    :caption: Completeness indicator
+
+    # >>> from package_dataquality.TSCC.assessment.data_quality_coefficients import calculate_completeness_indicator
+    # >>> n_nodes = 2
+    # >>> monitoring_duration = 100  # in arbitrary units
+    # >>> time_interval = 10  # in arbitrary units
+    # >>> node_data_sequence = [
+    # >>>     [1, 2, 3, None, 5],  # Example data for node 1
+    # >>>     [1, 2, 3, 4, 5],     # Example data for node 2
+    # >>> ]
+    # >>> test = calculate_completeness_indicator(n_nodes, monitoring_duration, time_interval, node_data_sequence)
+    # >>> print(f'Completeness Indicator (qc): {test}')
+    Completeness Indicator (qc): 0.25
+
+    In this case our result is as expected not correct and deviates a lot from the correct outcome. The reason for this is
+    the defective first node and its fourth value. Therefore the whole node will be seen as incorrect(??could be changed??).
+    The calculation for this indicator reads as follows: (10 x 5) / (100 x 2) = 0.25.
+
+
+Data correctness
+----------------
+The correctness indicator measures how closely the monitored value aligns with a reference value.
+For data obtained from a single sampling of a specific physical quantity, the data is considered
+correct if the difference between the monitored and the rference value is up to a specified threshold.
+Here's an example of how to use the ``calculate_correctness_indicator`` function:
+
+.. code-block:: python
+    :caption: Correctness indicator
+
+    >>> n_nodes = 2
+    >>> error_threshold = 1.0  # Error threshold for correctness
+    >>> # Example data for each node (value_real, value_observed)
+    >>> node_data_sequence = [
+    >>>     [(24, 26, 24, 25, 26), (26, 25, 24, 25, 26)],  # Example data for node 1
+    >>>     [(20, 23, 22, 18, 21), (21, 20, 22, 20, 21)],  # Example data for node 2
+    >>> ]
+    >>> test = TSCC.assessment.calculate_correctness_indicator(n_nodes, node_data_sequence, error_threshold)
+    >>> print(f'Correctness Indicator (qa): {test}')
+    Correctness Indicator (qa): 0.7
+
+The perfect correctness is not achieved due to three datapoints, which are over our chosen error threshold. With larger
+examples and millions of datapoints and nodes, the error threshold should be adjusted wisely so that you don't get
+a result of 0.99+.
+
+..
+    Overall quality
+    ----------------
+    The following image shows data quality indicators for a synthetic data set before and after quality control (QC) usage.
+    As you might have noticed, the volume indicator does not rely on any reference data. The data volume is enhanced
+    by the QC data set with help of imputing missing values. Data correctness is not as straightforward as
+    different nuances of correctness is needed of different application scenarios. We exemplary show two variations of our
+    correctness indicator. You could also combine and weight the different QC indicators based on your scenario to
+    create a single indicator for your quality issues.
+
+    .. image:: _static/TSCC_qualityIndicators.jpg
+       :alt: Data quality indicators
+       :align: center
+
+    .. code-block:: python
+
+        >>> df_list = []
+        >>> for cur_ID in df[df_id_col].unique():
+        >>>     df_list.append(df[df[df_id_col] == cur_ID].set_index("timestamp")[["value_raw", "value_plaus"]])
+        >>>
+        >>> qv_result = calculate_quality_coefficients(df_list)
+        >>> qv_result[0]
+        0.989752
+        >>> qv_result[1]
+        0.99
+        >>> qv_result[2]
+        {0: {'monitoring_duration': Timedelta('329 days 05:05:00'),
+      'monitoring_duration_raw': Timedelta('329 days 05:05:00'),
+      'timestep': Timedelta('0 days 00:05:00'),
+      'timestep_raw': Timedelta('0 days 00:05:00')},
+     1: {'monitoring_duration': Timedelta('332 days 08:15:00'),
+      'monitoring_duration_raw': Timedelta('332 days 08:15:00'),
+      'timestep': Timedelta('0 days 00:05:00'),
+      'timestep_raw': Timedelta('0 days 00:05:00')}}
+
+    first column is raw value, second column is ground truth value
+
+
+    Interpret results
+
+
+
+
+
+
+
